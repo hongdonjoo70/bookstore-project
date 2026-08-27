@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alardin BookStore</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"    />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <header>
+        <nav id="headermenu">
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">국내서적</a></li>
+                    <li><a href="#">전자책</a></li>
+                    <li><a href="#">만권당</a></li>
+                    <li><a href="#">외국도서</a></li>
+                    <li><a href="#">아라딘궂즈</a></li>
+                    <li><a href="#">온라인중고</a></li>
+                    <li><a href="#">중고매장</a></li>
+                    <li><a href="#">우주점</a></li>
+                    <li><a href="#">음반</a></li>
+                    <li><a href="#">블루레이</a></li>
+                    <li><a href="#">커피</a></li>
+                </ul>
+            </div>
+            <div id="rightmenu">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">장바구니</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id="headersection">
+            <img src="./img/aladin_logo.jpg" id="icon1"> 
+            <div id="searcharea">
+                <form id = "quicksearch">
+                    <div class="select_list popup-full" id="Search-Target-List">
+                        <select name="selectsearcharea">
+                            <option value="All">통합검색</option>
+                            <option value="Book">국내도서</option>
+                            <option value="Foreign">외국도서</option>
+                            <option value="EBook">전자책</option>
+                            <option value="Max">만권당</option>
+                            <option value="Gift">알라딘굿즈</option>
+                            <option value="Used">온라인중고</option>
+                            <option value="UsedStore">중고매장</option>
+                            <option value="Coffee">커피</option>
+                            <option value="Music">음반</option>
+                            <option value="DVD">블루레이</option>
+                            <option value="Talktalk">서재검색</option>
+                        </select>
+                    </div>
+                    <div class="search_input">
+                    <input type="text" id="SearchWord" name="SearchWord" class="inputbox_new ad" value="" autocomplete="off" data-autocomplete-active="1" placeholder=""></div>
+                    <div class="search_button">
+                        <button type="submit" id="SearchSubmit">검색</button>
+                    </div>                     
+                </form>
+            </div>
+            <img src ="./img/334x130.jpg" id="icon2">
+        </section>
+        <div id="submenu">
+            <ul>
+                <li><a href="#">분야보기</a></li>
+                <li><a href="#">오뒷세이아</a></li>
+                <li><a href="#">추천마법사</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">새로나온책</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">정가인하도서</a></li>
+                <li><a href="#">추천도서</a></li>
+                <li><a href="#">작가와의만남</a></li>
+                <li><a href="#">북펀드</a></li>
+            </ul>
+        </div>
+        <hr>
+    </header>
+    <section>
+        //Slide
+          <!-- Swiper -->
+
+    <div
+      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+      class="swiper mySwiper2"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-3.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-4.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-5.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-6.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-9.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/abstract-10.jpg" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"> 편집장의 선택 </div>
+        <div class="swiper-slide"> 추천이벤트 </div>
+        <div class="swiper-slide"> 이주의 책 </div>
+        <div class="swiper-slide"> 신간소개 </div>
+        <div class="swiper-slide"> 눈에 띄는 새책 </div>
+        <div class="swiper-slide"> 화제의 책 </div>
+        <div class="swiper-slide"> 이벤트굿즈 </div>
+        <div class="swiper-slide"> 지금펀딩중 </div>
+        <div class="swiper-slide"> eboook </div>
+      </div>
+    </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        loop: true,
+        spaceBetween: 9,
+        slidesPerView: 9,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper('.mySwiper2', {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>    
+    <footer>
+        <div class="footertop">
+            <div class="notify">
+                <h3>공지사항</h3>
+                <ol>
+                    <li>8월 신용 카드 무이자 안내</li>
+                    <li>[채용공고] UI/UX 디자이너(휴직대체)</li>
+                    <li>중고매장 강서홈플러스점 폐점안내</li>
+                    <li>알라딘 개인정보처리 방침 개정안내 (2026 8월 12일 시행)</li>
+                    <li>[채용공고]프론트엔드 개발자(휴직대체)</li>
+                    <li>[채용공고]UI/UX 디자이너</li>
+                </ol>
+            </div>
+            <div class="search">
+                <h3>검색</h3>
+                <input type="text" class="Search" placeholder="">
+                <div class ="FooterSearchTool1">
+                    <label><input type="radio" value="1" name="FooterSearchTool1" id="FooterSearchTool1_1" class="FooterSearchTool1" checked="checked"><span>FAQ</span></label>
+                    <label><input type="radio" value="2" name="FooterSearchTool1" id="FooterSearchTool1_2" class="FooterSearchTool1" checked="checked"><span>공지사항</span></label>
+                    <label><input type="radio" value="3" name="FooterSearchTool1" id="FooterSearchTool1_3" class="FooterSearchTool1" checked="checked"><span>당첨자발표</span></label>
+                    <label><input type="radio" value="4" name="FooterSearchTool1" id="FooterSearchTool1_4" class="FooterSearchTool1" checked="checked"><span>서비스안내</span></label>
+                </div>
+                <a href="#">이벤트 당첨자발표</a>
+
+            </div>
+            <div class="menu">
+                <h3>빠른서비스</h3>
+                <ol>
+                    <li>반품/교환</li>
+                    <li>신청/증빙서류신청</li>
+                    <li>미배송신고</li>
+                    <li>입금신고</li>
+                </ol>
+            </div>
+            <div class="menu">
+                <h3>출판사,판매자안내</h3>
+                <ol>
+                    <li>제휴 및 마케팅 안내</li>
+                    <li>출판사/공급자안내</li>
+                    <li>광고안내</li>
+                    <li>판매자 매니저</li>
+                    <li>학교/기업/기관 대량구매</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="footerservice">
+            <div>
+                <h3>스페셜서비스</h3>
+                <ol>
+                    <li>독자북펀드</li>
+                    <li>알라딘멤버십</li>
+                    <li>선물하기/선물상품권</li>
+                    <li>알라딘 US</li>
+                    <li>알림센터</li>
+                    <li>품절도서선터</li>
+                    <li>알라딘 캐시</li>
+                    <li>전자책 캐시</li>
+                </ol>
+            </div>
+            <div>
+                <h3>가격만족</h3>
+                <ol>
+                    <li>2천원 추가 마일리지</li>
+                    <li>Thanks to 적립금</li>
+                    <li>최저가 보장제도</li>
+                </ol>
+            </div>
+            <div>
+                <h3>배송만족</h3>
+                <ol>
+                    <li>양탄자 배송/당일배송</li>
+                    <li>편의점 배송</li>
+                    <li>수령일 예고제</li>
+                </ol>
+            </div>
+            <div>
+                <h3>웹 & 모바일</h3>
+                <ol>
+                    <li>Open API</li>
+                    <li>모바일/앱</li>
+                </ol>
+            </div>
+            <div>
+                <h3>제휴서비스</h3>
+                <ol>
+                    <li>문화상품권(지류/온라인)</li>
+                    <li>컬처랜드상품권</li>
+                    <li>에쓰오일 S포인트</li>
+                    <li>문화누리카드</li>
+                    <li>알라딘 전자도서관</li>
+                    <li>도서판매사업자 서비스</li>
+                </ol>
+            </div>
+        </div>
+        <div class="footermenu">
+            <hr>
+            <ol>
+                <li>회사소개</li>
+                <li>채용안내</li>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>청소년 보호정책</li>
+                <li>중고매장</li>
+                <li>제휴마케팅안내</li>
+                <li>판매자 메니저</li>
+                <li>출판사/공급자안내</li>
+                <li>광고안내</li>
+                <li>학교/기업/기관 대량구매</li>
+            </ol>
+            <hr>
+        </div>
+        <div class="footertext">
+            <div class="leftbox">
+                <h3>(주)알라딘커뮤니케이션</h3>
+                <address>
+                    <span>대표이사 최우경</span>    
+                    <span><a href="javascript:fn_ftc_check();">사업자등록 201-81-23094</a></span>
+                    <span>통신판매업신고 2003-서울중구-01520</span>
+                    <span>이메일 privacy@aladin.co.kr</span>
+                    <span>호스팅 제공자 알라딘커뮤니케이션</span>
+                    <span>(본사) 서울시 중구 서소문로 89-31</span>
+                    <div class="copyright">ⓒ Aladin Communication. All Rights Reserved.</div>
+                </address>
+            </div>
+            <div class="cscenter_box">
+                <h3>고객센터 1544-2514 (발신자 부담)</h3>
+                <address>
+                    <span>서울시 마포구 백범로 71 숨도빌딩 7층</span>
+                    <span>Fax 02-6926-2600</span>
+                </address>
+                <div class="cs_link">
+                    <a href="#">1:1 문의</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="shop_info">
+                    <a href="#">중고매장 위치, 영업시간 안내</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+* body {
+    font-family: Malgun Gothic, Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+ul,ol {
+    list-style:none;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,5 @@
+Capture : F12 => Ctl + Shift + P => full
+:피그마 기초 완벽가이드
+ALT : 복제됨, CTRL+D :반복
+
+swiper 로 부터 CSS를 include하고 , CSS 값을 가져옴:stackblitz.com

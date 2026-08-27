@@ -1,0 +1,143 @@
+@charset "utf-8";
+body {
+    width : 1100px;
+}
+
+header {
+    width : 100%;
+    height: 120px;
+    margin : 0;
+}
+#headermenu {
+    display:flex;
+    justify-content: space-between;
+    background-color: #33afe9;
+}
+
+ul {
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+ul li  {
+    padding:0 5px;
+    font-weight:bold;
+    color:white;
+}
+#menu {
+    font-size : 13px;
+    padding:0 4px;
+}
+#rightmenu {
+    font-size : 11px;
+    padding:0 4px;
+}
+
+#headersection {
+    display:flex;
+    margin:10px;
+    align-content: space-between;
+    justify-content:space-between;
+}
+
+#icon1 {
+    width:150px;
+    height:60px;
+}
+
+#quicksearch {
+    display:flex;
+    align-items:center;     
+}
+#icon2 {
+    width:150px;
+    height:60px;
+}
+#submenu {
+    font-size : 11px;
+    width: 800px;
+    align-items: baseline;
+}
+#searcharea {
+    display:flex;
+    align-items:center;
+    width: 500px;
+    height: 50px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    position: relative;
+    top: 5px;
+    line-height: 18px;
+    border-radius: 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-image: none;
+    margin: 0px;
+    padding: 0px;
+}
+#SearchWord {
+    width: 300px;
+}
+#quicksearch {
+    display:flex;
+    align-items: center;
+    margin : 0 0 0 20px;
+}
+footer {
+    width : 100%;
+    height: 800px;
+    margin : 0;
+}
+footer .footertop {
+    width : 100%;
+    height: 200px;
+    display:flex;
+    justify-content:space-around;
+    font-size:smaller;
+}
+footer .footertop .notify {
+    width : 340px;
+}
+footer .footertop .search {
+    width : 340px;
+}
+footer .footerservice {
+    width :100%;
+    display:flex;
+    justify-content:space-between;
+    font-size:smaller;
+    margin:0 20px;
+}
+footer .footerservice h3 {
+    background-color: #eee;
+}
+footer .footermenu {
+    width :100%;
+    font-size:smaller; 
+    margin:0 20px;
+}
+footer .footermenu ol {
+    display:flex;
+    margin:10px 0;  
+}
+footer .footermenu ol li{
+    font-size:smaller; 
+     margin:0 5px;  
+}
+
+footer .footertext {
+    width :100%;
+    font-size:smaller; 
+    display:flex;
+    justify-content:space-between;
+}
+footer .footertext .leftbox {
+    width :60%;
+    font-size:smaller; 
+}
+footer .footertext .cscenter_box {
+    width :30%;
+    font-size:smaller; 
+}
