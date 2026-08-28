@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알라딘(Aladin) 홈페이지 클론</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 최상단 유틸리티 메뉴 -->
+    <div class="top-util">
+        <div class="container util-flex">
+            <div class="util-left">
+                <a href="#">알라딘</a>
+            </div>
+            <div class="util-right">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+                <a href="#">고객센터</a>
+                <a href="#">마이페이지</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메인 헤더 (로고, 검색창) -->
+    <header class="main-header container">
+        <div class="logo">
+            <a href="#"><h1>ALADIN</h1></a>
+        </div>
+        <div class="search-area">
+            <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+            <button id="searchBtn">검색</button>
+        </div>
+        <div class="user-actions">
+            <div class="action-item">
+                <span class="icon">🛒</span>장바구니
+            </div>
+            <div class="action-item">
+                <span class="icon">❤️</span>보관함
+            </div>
+        </div>
+    </header>
+
+    <!-- 글로벌 네비게이션(GNB) -->
+    <nav class="gnb">
+        <div class="container gnb-flex">
+            <ul class="gnb-menu">
+                <li><a href="#" class="active">국내도서</a></li>
+                <li><a href="#">외국도서</a></li>
+                <li><a href="#">eBook</a></li>
+                <li><a href="#">웹소설/코믹</a></li>
+                <li><a href="#">음반/DVD</a></li>
+                <li><a href="#">중고샵</a></li>
+                <li><a href="#">알라딘굿즈</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 컨텐츠 -->
+    <main>
+        <!-- 상단 히어로 (메인 배너 영역) -->
+        <section class="hero-section container">
+            <div class="hero-slider" id="heroSlider">
+                <div class="hero-item"><img src="https://via.placeholder.com/200x300/3a5c9a/fff?text=Book+1" alt="Book 1"></div>
+                <div class="hero-item"><img src="https://via.placeholder.com/200x300/5cb85c/fff?text=Book+2" alt="Book 2"></div>
+                <div class="hero-item"><img src="https://via.placeholder.com/200x300/f0ad4e/fff?text=Book+3" alt="Book 3"></div>
+                <div class="hero-item"><img src="https://via.placeholder.com/200x300/d9534f/fff?text=Book+4" alt="Book 4"></div>
+            </div>
+        </section>
+
+        <!-- 프로모션 배너 (보라색) -->
+        <section class="promo-banner-purple">
+            <div class="container">
+                <h2>이 달의 알라딘 굿즈! 특별한 혜택을 만나보세요.</h2>
+            </div>
+        </section>
+
+        <!-- 도서 추천 리스트 영역 1: 편집장의 선택 -->
+        <section class="book-list-section container">
+            <h3 class="section-title">편집장의 선택 - 국내도서</h3>
+            <div class="book-grid">
+                <!-- Book Card 1 -->
+                <div class="book-card">
+                    <div class="book-cover"><img src="https://via.placeholder.com/160x230/ddd/333?text=Cover+1" alt="도서 표지"></div>
+                    <div class="book-info">
+                        <p class="title">도서 제목 첫번째</p>
+                        <p class="author">저자 이름</p>
+                    </div>
+                </div>
+                <!-- Book Card 2 -->
+                <div class="book-card">
+                    <div class="book-cover"><img src="https://via.placeholder.com/160x230/ddd/333?text=Cover+2" alt="도서 표지"></div>
+                    <div class="book-info">
+                        <p class="title">베스트셀러 도서 제목</p>
+                        <p class="author">저자 이름</p>
+                    </div>
+                </div>
+                <!-- Book Card 3 -->
+                <div class="book-card">
+                    <div class="book-cover"><img src="https://via.placeholder.com/160x230/ddd/333?text=Cover+3" alt="도서 표지"></div>
+                    <div class="book-info">
+                        <p class="title">알라딘 추천 도서</p>
+                        <p class="author">저자 이름</p>
+                    </div>
+                </div>
+                <!-- Book Card 4 -->
+                <div class="book-card">
+                    <div class="book-cover"><img src="https://via.placeholder.com/160x230/ddd/333?text=Cover+4" alt="도서 표지"></div>
+                    <div class="book-info">
+                        <p class="title">재미있는 소설</p>
+                        <p class="author">저자 이름</p>
+                    </div>
+                </div>
+                <!-- Book Card 5 -->
+                <div class="book-card">
+                    <div class="book-cover"><img src="https://via.placeholder.com/160x230/ddd/333?text=Cover+5" alt="도서 표지"></div>
+                    <div class="book-info">
+                        <p class="title">유익한 인문학 도서</p>
+                        <p class="author">저자 이름</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 도서 추천 리스트 영역 2: 베스트셀러 (회색 배경) -->
+        <div class="bg-gray">
+            <section class="book-list-section container">
+                <h3 class="section-title">주간 베스트셀러</h3>
+                <div class="book-grid">
+                    <div class="book-card"><div class="book-cover"><img src="https://via.placeholder.com/160x230/eee/333?text=Best+1" alt="표지"></div><div class="book-info"><p class="title">베스트 1위</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="https://via.placeholder.com/160x230/eee/333?text=Best+2" alt="표지"></div><div class="book-info"><p class="title">베스트 2위</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="https://via.placeholder.com/160x230/eee/333?text=Best+3" alt="표지"></div><div class="book-info"><p class="title">베스트 3위</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="https://via.placeholder.com/160x230/eee/333?text=Best+4" alt="표지"></div><div class="book-info"><p class="title">베스트 4위</p></div></div>
+                    <div class="book-card"><div class="book-cover"><img src="https://via.placeholder.com/160x230/eee/333?text=Best+5" alt="표지"></div><div class="book-info"><p class="title">베스트 5위</p></div></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 하단 푸터 영역 -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="#">회사소개</a> | 
+                <a href="#">이용약관</a> | 
+                <a href="#">개인정보처리방침</a> | 
+                <a href="#">청소년보호정책</a> | 
+                <a href="#">고객센터</a>
+            </div>
+            <div class="footer-info">
+                <p>(주)알라딘커뮤니케이션 | 대표이사 : 홍길동 | 서울특별시 중구 ...</p>
+                <p>사업자등록번호 : 123-45-67890 | 통신판매업신고 : 제2026-서울-0000호</p>
+                <p>고객센터 : 1544-0000 (평일 09:00 ~ 18:00)</p>
+                <p class="copyright">© Aladin Communication. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

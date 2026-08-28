@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>알라딘 인터넷 서점 - 클론</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. 상단 유틸리티 메뉴 -->
+  <header class="header">
+    <div class="top-nav container">
+      <div class="top-left">
+        <a href="#">알라딘 US</a>
+        <a href="#">중고매장</a>
+        <a href="#">알라딘 스페이스</a>
+      </div>
+      <div class="top-right">
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="#">고객센터</a>
+        <a href="#">장바구니</a>
+      </div>
+    </div>
+
+    <!-- 2. 로고 및 검색 영역 -->
+    <div class="search-section container">
+      <div class="logo">
+        <a href="#">aladdin</a>
+      </div>
+      <div class="search-box">
+        <select class="search-category">
+          <option>통합검색</option>
+          <option>국내도서</option>
+          <option>외국도서</option>
+          <option>eBook</option>
+        </select>
+        <input type="text" placeholder="도서명, 저자명, 출판사명 검색">
+        <button type="button" class="btn-search">검색</button>
+      </div>
+      <div class="quick-links">
+        <a href="#">베스트셀러</a>
+        <a href="#">새로나온책</a>
+        <a href="#">이벤트</a>
+      </div>
+    </div>
+
+    <!-- 3. 메인 네비게이션 바 -->
+    <nav class="main-nav">
+      <div class="container nav-content">
+        <div class="category-btn">전체 카테고리 ☰</div>
+        <ul class="nav-links">
+          <li><a href="#" class="active">국내도서</a></li>
+          <li><a href="#">외국도서</a></li>
+          <li><a href="#">eBook</a></li>
+          <li><a href="#">알라딘 굿즈</a></li>
+          <li><a href="#">중고샵</a></li>
+          <li><a href="#">음반</a></li>
+          <li><a href="#">DVD/블루레이</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 메인 컨텐츠 영역 -->
+  <main class="container main-layout">
+    
+    <!-- 좌측 메인 프로모션 / 배너 -->
+    <section class="banner-section">
+      <div class="main-banner">
+        <h2>이달의 주목할 만한 신간</h2>
+        <p>지금 바로 알라딘에서 추천 도서를 만나보세요.</p>
+      </div>
+    </section>
+
+    <!-- 도서 목록 섹션 (편집장의 추천 / 베스트셀러) -->
+    <section class="book-section">
+      <div class="section-title">
+        <h3>편집장의 추천 도서</h3>
+        <a href="#" class="more-link">더보기 &gt;</a>
+      </div>
+
+      <div class="book-grid" id="editor-pick-grid">
+        <!-- 책 카드 1 -->
+        <div class="book-card">
+          <div class="thumb-wrapper">
+            <img src="https://picsum.photos/140/200?random=1" alt="도서 표지 1" class="thumb">
+          </div>
+          <div class="info">
+            <div class="name">모던 자바스크립트 입문</div>
+            <div class="author">홍길동 저</div>
+            <div class="price-row">
+              <span class="price">21,600원</span>
+              <span class="discount">10% ↓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 책 카드 2 -->
+        <div class="book-card">
+          <div class="thumb-wrapper">
+            <img src="https://picsum.photos/140/200?random=2" alt="도서 표지 2" class="thumb">
+          </div>
+          <div class="info">
+            <div class="name">웹 퍼블리싱의 모든 것</div>
+            <div class="author">이순신 저</div>
+            <div class="price-row">
+              <span class="price">18,000원</span>
+              <span class="discount">10% ↓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 책 카드 3 -->
+        <div class="book-card">
+          <div class="thumb-wrapper">
+            <img src="https://picsum.photos/140/200?random=3" alt="도서 표지 3" class="thumb">
+          </div>
+          <div class="info">
+            <div class="name">클린 코드 실전 가이드</div>
+            <div class="author">로버트 마틴 저</div>
+            <div class="price-row">
+              <span class="price">27,000원</span>
+              <span class="discount">10% ↓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 책 카드 4 -->
+        <div class="book-card">
+          <div class="thumb-wrapper">
+            <img src="https://picsum.photos/140/200?random=4" alt="도서 표지 4" class="thumb">
+          </div>
+          <div class="info">
+            <div class="name">생각에 관한 생각</div>
+            <div class="author">대니얼 카너먼 저</div>
+            <div class="price-row">
+              <span class="price">19,800원</span>
+              <span class="discount">10% ↓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>(주)알라딘커뮤니케이션 | 대표이사 : 강희진 | 고객센터 : 1544-2514</p>
+      <p class="copyright">Copyright © Aladin Communication. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
