@@ -84,49 +84,67 @@
         </div>
         <hr>
     </header>
-    <section>
-        //Slide
-          <!-- Swiper -->
 
+   <section>
     <div
       style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
       class="swiper mySwiper2"
     >
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            
-          <img src="https://swiperjs.com/demos/images/abstract-1.jpg" />
+        <div class="swiper-slide" id="editorChoiceBook">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-2.jpg" />
+        <div class="swiper-slide" id="recommandEvent">
+            <div class="event"><img src="img/event/event1.jpg"></div>
+            <div class="event"><img src="img/event/event2.jpg"></div>
+            <div class="event"><img src="img/event/event3.jpg"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-3.jpg" />
+        <div class="swiper-slide" id="weekBook">
+            <p> Week Book</p>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-4.jpg" />
+        <div class="swiper-slide" id="newBook">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-5.jpg" />
+        <div class="swiper-slide" id="noticeableNewBook">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-6.jpg" />
+        <div class="swiper-slide" id="hotIssueBook">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-7.jpg" />
+        <div class="swiper-slide" id="eventGoodBook">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-8.jpg" />
+        <div class="swiper-slide" id="bookFundBook">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-9.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/abstract-10.jpg" />
+        <div class="swiper-slide" id="eBook">
+            <div class="event"><img src="img/ebook/event1.png"></div>
+            <div class="event"><img src="img/ebook/event2.jpg"></div>
+            <div class="event"><img src="img/ebook/event3.png"></div>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </div>
     <div thumbsSlider="" class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -142,6 +160,7 @@
       </div>
     </div>
     </section>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
@@ -156,16 +175,231 @@
       });
       var swiper2 = new Swiper('.mySwiper2', {
         loop: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+        spaceBetween: 9,
         thumbs: {
           swiper: swiper,
         },
       });
-    </script>    
+    </script> 
+
+    <script src="./js/readbookinfo.js"></script>
+    <script>
+        function displayBookData(id, data) {
+            const section = document.querySelector(id);
+            const box = section.querySelectorAll(".book");
+            for (const index in box) {
+                if(data[index].length === 0) {
+                    box[index].innerHTML = "No data found";
+                    continue;
+                }
+
+                // 요소 생성 및 추가
+                box[index].innerHTML = `<img src="${data[index].thumbnail}">
+                <h3>${data[index].title}</h3>
+                `;
+            }
+        }
+        bookData(editorChoiceTitle, editorChoiceBooks).then(() => {
+            displayBookData("#editorChoiceBook", editorChoiceBooks);
+        });
+        bookData(bookOfTheWeekTitle, bookOfTheWeekBooks).then(() => {
+            displayBookData("#weekBook", bookOfTheWeekBooks);
+        });
+        bookData(newBookTitle, newBookBooks).then(() => {
+            displayBookData("#newBook", newBookBooks);
+        });
+        bookData(noticeableNewTitle, noticeableNewBooks).then(() => {
+            displayBookData("#noticeableNewBook", noticeableNewBooks);
+        });
+        bookData(hotIssueTitle, hotIssueBooks).then(() => {
+            displayBookData("#hotIssueBook", hotIssueBooks);
+        });
+        bookData(eventGoodsTitle, eventGoodsBooks).then(() => {
+            displayBookData("#eventGoodBook", eventGoodsBooks);
+        });
+        bookData(bookFundTitle, bookFundBooks).then(() => {
+            displayBookData("#bookFundBook", bookFundBooks);
+        });  
+    </script>
+    <section id="main2">
+        <div id="main2left">
+            <div thumbsSlider="" class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                   <div class="swiper-slide"> 편집장의 선택 </div>
+                   <div class="swiper-slide"> ebook </div>
+                   <div class="swiper-slide"> 외국도서 </div>
+                   <div class="swiper-slide"> 알라된유튜브 </div>
+                   <div class="swiper-slide"> 알라딘굿즈 </div>
+                </div>
+            </div>
+
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                 class="swiper mySwiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="editorChoiceBookmain2">
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                    </div>
+                    <div class="swiper-slide" id="ebookmain2">
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                    </div>
+                    <div class="swiper-slide" id="foreignbookmain2">
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                        <div class="book"></div>
+                    </div>
+                    <div class="swiper-slide" id="youtube">
+                        <div class="event"><img src ="img/ytube/youtube1.jpg"></div>
+                        <div class="event"><img src ="img/ytube/youtube2.jpg"></div>
+                        <div class="event"><img src ="img/ytube/youtube3.jpg"></div>
+                    </div>
+                    <div class="swiper-slide" id="goodsmain2">
+                        <div class="event"></div>
+                        <div class="event"></div>
+                        <div class="event"></div>
+                    </div>                                                        
+                </div>
+            </div>
+        </div>
+        <script>
+            var swiper = new Swiper('.mySwiper3', {
+              loop: true,
+              spaceBetween: 5,
+              slidesPerView: 5,
+              freeMode: true,
+              watchSlidesProgress: true,
+            });
+            var swiper2 = new Swiper('.mySwiper4', {
+              loop: true,
+              spaceBetween: 5,
+              thumbs: {
+                swiper: swiper,
+              },
+            });
+            editorChoiceBooks=[];
+            bookData(editorChoiceTitle, editorChoiceBooks).then(() => {
+                displayBookData("#editorChoiceBookmain2", editorChoiceBooks);
+            });
+
+            bookData(ebookTitles, ebookBooks).then(() => {
+                displayBookData("#ebookmain2", ebookBooks);
+            });
+            
+            bookData(foreignBookTitles, foreignBooks).then(() => {
+                displayBookData("#foreignbookmain2", foreignBooks);
+            });
+
+        </script>
+        <div id="main2right">
+            <div class="swiper mySwiper5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/fund/fund1.jpg"></div>
+                <div class="swiper-slide"><img src="img/fund/fund2.jpg"></div>
+                <div class="swiper-slide"><img src="img/fund/fund3.jpg"></div>
+                <div class="swiper-slide"><img src="img/fund/fund4.jpg"></div>
+                <div class="swiper-slide"><img src="img/fund/fund5.jpg"></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <script>
+            var swiper = new Swiper('.mySwiper5', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+        </script>
+    </section>
+
+    <section class="top10">
+      <div class="top10-head"><strong>이제 베스트셀러 TOP 10</strong></div>
+      <div class="top10-body">
+        <div class="top10-left">
+        </div>
+        <ul class="top10-list">
+        </ul>
+      </div>
+        <div class="top10-right"></div>
+      </div>
+    </section>
+  </main>
+
+    </section>
+  </main>
+
+    <div class="book5section" id="misterybook">
+        <h2 class="sec-title">특별기획 - 다시 뽑아보는 3대 베스트리 <a href="#">›</a></h2>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>        
+        <div class="book"></div>        
+    </div>
+    <div class="book5section" id="chosenbook">
+        <h2 class="sec-title">추천마법사의 섹션 <a href="#"></a></h2>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>        
+        <div class="book"></div>                
+    </div>
+    <div class="book3section" id="issuebook">
+        <h2 class="sec-title">화제의 책</h2>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+    </div>
+    <div class="book5section" id="chosen2book">
+        <h2 class="sec-title">만권당의 추천</h2>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>        
+        <div class="book"></div>                
+    </div>
+    <div class="event3section" id="events">
+        <h2 class="sec-title">알라딘이 만든 사은품</h2>
+        <div class="event3"></div>
+        <div class="event3"></div>
+        <div class="event3"></div>
+    </div>
+    <div class="book5section" id="chosen3book">
+        <h2 class="sec-title">이달의 주목도서</h2>        
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>        
+        <div class="book"></div>                
+    </div>    
+   <div class="book5section" id="weekbook">
+        <h2 class="sec-title">이 주의 특가</h2>  
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>        
+        <div class="book"></div>            
+    </div>       
+   <div class="book5section" id="specialbook">
+        <h2 class="sec-title">알라딘 스페셜</h2>  
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>
+        <div class="book"></div>        
+        <div class="book"></div>            
+    </div>  
+    <div class="event3section" id="events2">
+        <div class="event3"></div>
+        <div class="event3"></div>
+        <div class="event3"></div>
+    </div>         
     <footer>
         <div class="footertop">
             <div class="notify">

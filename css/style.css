@@ -19,16 +19,9 @@
         align-items: center;
       }
 
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
       .swiper {
         width: 100%;
-        height: 300px;
+        height: 150px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -36,6 +29,7 @@
       .swiper-slide {
         background-size: cover;
         background-position: center;
+        display:flex;
       }
 
       .mySwiper2 {
@@ -65,13 +59,67 @@
         height: 100%;
         object-fit: cover;
       }
+      #recommandEvent .event {
+        width :30%;
+        margin : 10px;
+      }
+      #eBook .ebook {
+        width :30%;
+        margin : 10px;
+      }
 /* Main Style */
 .swiper-wrapper {
-    background-color: #33afe9;
+    background-color: white;
 }
 .swiper-slide {
     font-size:12px;
-    background-color: #33afe9;
+    background-color: white;
     color:0;
 }
 
+.swiper-slide .book {
+  background-color: yellow;
+  width :22%;
+  height:100%;
+  margin :10px;
+}
+.swiper-slide .event {
+  background-color: green;
+  width :30%;
+  height:100%;
+  margin :10px;
+}
+#main2 {
+  width:100%;
+  height:400px;
+  display:flex;
+  align-content:space-around;
+}
+#main2 #main2left{
+  width:65%;
+  height:90%;
+  background-color: red;
+}
+
+#main2 #main2right{
+  width:30%;
+  height:90%;
+    background-color: yellow;
+}
+.mySwiper3 {
+  height: 10%;
+  width: 100%;
+}
+.mySwiper4 {
+  height: 90%;
+  width: 100%;
+}
+.mySwiper5 {
+  height: 100%;
+  width: 100%;
+}
+.book5section {
+  width : 100%;
+  height : 450px;
+  margin : 20px 0 20px 0;
+}

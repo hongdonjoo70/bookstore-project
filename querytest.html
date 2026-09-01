@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 연습</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            width: 1300px;
+            height: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-around;
+        }
+
+        section h3 {
+            width: 100%;
+        }
+
+        .box {
+            width: 300px;
+            text-align: center;
+            padding: 15px 30px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 4px 4px 4px #eee;
+        }
+
+        .box p {
+            font-size: 11px;
+            color: #666;
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="output" > Test </div>
+    <div id="wrap">
+
+        <h1>도서 API</h1>
+
+        <section id="newsection">
+            <h3>Best</h3>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </section>
+
+        <section id="sale">
+            <h3>세일 도서 </h3>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </section>
+    </div>
+    <div id="result"> Test </div>
+    <script src="./js/readbookinfo.js"></script>
+    <script>
+        function displayBookData(id, data) {
+            const section = document.querySelector(id);
+            const box = section.querySelectorAll(".box");
+            for (const index in data) {
+                if(data[index].length === 0) {
+                    box[index].innerHTML = "No data found";
+                    continue;
+                }
+
+                // 요소 생성 및 추가
+                box[index].innerHTML = `<img src="${data[index].thumbnail}">
+                <h3>${data[index].title}</h3>
+                <h6>${data[index].authors}</h6>
+                <p>${data[index].contents.substring(0, 60)}</p>
+                `;
+            }
+        }
+    
+        bookData(bestsellerTitle, bestsellersBooks).then(() => {
+            displayBookData("#newsection", bestsellersBooks);
+        });
+        
+        bookData(specialPriceTitle, specialPriceBooks).then(() => {
+            displayBookData("#sale", specialPriceBooks);
+        });
+
+    </script>
+</body>
+
+</html>
