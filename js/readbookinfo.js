@@ -253,6 +253,21 @@
           "Disney/Pixar Toy Story 5: The Junior Novelization (Paperback)",
           "Casa BRUTUS(カ-サ ブル-タス) 2026年 9月號"
         ];
+        const specialBookTitles = [
+          "삼체",
+          "욕구들",
+          "우리는 모두 죽는다는 것을 기억하라",
+          "내가 되는 꿈",
+          "문장강화",
+          "예루살렘의 아이히만",
+          "우리가 열 번을 나고 죽을 때",
+          "경애의 마음",
+          "앤디 위어 우주",
+          "낙하",
+          "빈방의 빛 : 시인이 말하는 호퍼",
+          "못 가본 길이 더 아름답다",
+          "조지 오웰 소설 전집 세트",
+        ];
 
         let bestsellersBooks = [];
         let editorChoiceBooks = [];
@@ -270,6 +285,7 @@
         let bookFundBooks = [];
         let ebookBooks = [];
         let foreignBooks = [];
+        let specialBooks = [];
 
         async function fetchBooks(booktitle) {
             const params = new URLSearchParams({

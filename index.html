@@ -85,7 +85,7 @@
         <hr>
     </header>
 
-   <section>
+   <section id="main1">
     <div
       style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
       class="swiper mySwiper2"
@@ -103,7 +103,6 @@
             <div class="event"><img src="img/event/event3.jpg"></div>
         </div>
         <div class="swiper-slide" id="weekBook">
-            <p> Week Book</p>
             <div class="book"></div>
             <div class="book"></div>
             <div class="book"></div>
@@ -195,10 +194,11 @@
 
                 // 요소 생성 및 추가
                 box[index].innerHTML = `<img src="${data[index].thumbnail}">
-                <h3>${data[index].title}</h3>
+                <h5>${data[index].title}</h5>
                 `;
             }
         }
+
         bookData(editorChoiceTitle, editorChoiceBooks).then(() => {
             displayBookData("#editorChoiceBook", editorChoiceBooks);
         });
@@ -220,16 +220,18 @@
         bookData(bookFundTitle, bookFundBooks).then(() => {
             displayBookData("#bookFundBook", bookFundBooks);
         });  
+
+
     </script>
     <section id="main2">
         <div id="main2left">
             <div thumbsSlider="" class="swiper mySwiper3">
                 <div class="swiper-wrapper">
-                   <div class="swiper-slide"> 편집장의 선택 </div>
-                   <div class="swiper-slide"> ebook </div>
-                   <div class="swiper-slide"> 외국도서 </div>
-                   <div class="swiper-slide"> 알라된유튜브 </div>
-                   <div class="swiper-slide"> 알라딘굿즈 </div>
+                   <div class="swiper-slide">편집장의선택</div>
+                   <div class="swiper-slide">ebook</div>
+                   <div class="swiper-slide">외국도서</div>
+                   <div class="swiper-slide">알라된유튜브</div>
+                   <div class="swiper-slide">알라딘굿즈</div>
                 </div>
             </div>
 
@@ -334,72 +336,271 @@
 
     </section>
   </main>
-
-    <div class="book5section" id="misterybook">
+    <div class="swiper mySwiper6" id="misterybook">
         <h2 class="sec-title">특별기획 - 다시 뽑아보는 3대 베스트리 <a href="#">›</a></h2>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>        
-        <div class="book"></div>        
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-    <div class="book5section" id="chosenbook">
-        <h2 class="sec-title">추천마법사의 섹션 <a href="#"></a></h2>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>        
-        <div class="book"></div>                
+    <script>
+        function displaySwiperData(id, data) {
+            const section = document.querySelector(id);
+            const box = section.querySelectorAll(".swiper-slide");
+            for (const index in box) {
+                if(data[index].length === 0) {
+                    box[index].innerHTML = "No data found";
+                    continue;
+                }
+
+                // 요소 생성 및 추가
+                box[index].innerHTML = `<img src="${data[index].thumbnail}">
+                <h4>${data[index].title}</h4>
+                `;
+            }
+        }
+
+        var swiper = new Swiper('.mySwiper6', {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        bookData(mysteryTitle, mysteryBooks).then(() => {
+            displaySwiperData("#misterybook", mysteryBooks);
+        });
+    </script>
+    <div class="swiper mySwiper7" id="chosenbook">
+        <h2 class="sec-title">추천마법사의 섹션 <a href="#">›</a></h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
     </div>
-    <div class="book3section" id="issuebook">
-        <h2 class="sec-title">화제의 책</h2>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
+    <script>
+        var swiper = new Swiper('.mySwiper7', {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        bookData(mdChoiceTitle, mdChoiceBooks).then(() => {
+            displaySwiperData("#chosenbook", mdChoiceBooks);
+        });
+    </script>
+
+      <div class="swiper mySwiper9" id="issuebook">
+        <h2 class="sec-title">화제의 책 <a href="#">›</a></h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
     </div>
-    <div class="book5section" id="chosen2book">
-        <h2 class="sec-title">만권당의 추천</h2>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>        
-        <div class="book"></div>                
+    <script>
+        var swiper = new Swiper('.mySwiper9', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        hotIssueBooks = [];
+        bookData(hotIssueTitle, hotIssueBooks).then(() => {
+            displaySwiperData("#issuebook", hotIssueBooks);
+        });
+    </script>
+  
+    <div class="swiper mySwiper8" id="chosen2book">
+        <h2 class="sec-title">추천마법사의 섹션 <a href="#">›</a></h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
     </div>
+    <script>
+        var swiper = new Swiper('.mySwiper8', {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        bookData(aladinerChoiceTitle, aladinerChoiceBooks).then(() => {
+            displaySwiperData("#chosen2book", aladinerChoiceBooks);
+        });
+    </script>
     <div class="event3section" id="events">
         <h2 class="sec-title">알라딘이 만든 사은품</h2>
         <div class="event3"></div>
         <div class="event3"></div>
         <div class="event3"></div>
     </div>
-    <div class="book5section" id="chosen3book">
-        <h2 class="sec-title">이달의 주목도서</h2>        
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>        
-        <div class="book"></div>                
-    </div>    
-   <div class="book5section" id="weekbook">
-        <h2 class="sec-title">이 주의 특가</h2>  
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>        
-        <div class="book"></div>            
-    </div>       
-   <div class="book5section" id="specialbook">
-        <h2 class="sec-title">알라딘 스페셜</h2>  
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>
-        <div class="book"></div>        
-        <div class="book"></div>            
-    </div>  
-    <div class="event3section" id="events2">
-        <div class="event3"></div>
-        <div class="event3"></div>
-        <div class="event3"></div>
-    </div>         
+    
+    <div class="swiper mySwiper10" id="chosen3book">
+        <h2 class="sec-title">이달의 주목도서 <a href="#">›</a></h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+        var swiper = new Swiper('.mySwiper10', {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        notableBooks=[];
+        bookData(notableTitle, notableBooks).then(() => {
+            displaySwiperData("#chosen3book", notableBooks);
+        });
+    </script>    
+    <div class="swiper mySwiper11" id="weekbook">
+        <h2 class="sec-title">이 주의 특가 <a href="#">›</a></h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+        var swiper = new Swiper('.mySwiper11', {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        bookData(specialPriceTitle, specialPriceBooks).then(() => {
+            displaySwiperData("#weekbook", specialPriceBooks);
+        });
+    </script>   
+    <div class="swiper mySwiper12" id="selectedbook">
+        <h2 class="sec-title">알라딘 스페셜 <a href="#">›</a></h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>                
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+        var swiper = new Swiper('.mySwiper12', {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        bookData(specialBookTitles, specialBooks).then(() => {
+            displaySwiperData("#selectedbook", specialBooks);
+        });
+    </script>    
+
+        <div class="swiper mySwiper13" id="event">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/events/event1.jpg" alt="Event 1"></div>
+                <div class="swiper-slide"><img src="./img/events/event2.jpg" alt="Event 2"></div>
+                <div class="swiper-slide"><img src="./img/events/event3.jpg" alt="Event 3"></div>
+                <div class="swiper-slide"><img src="./img/events/event4.jpg" alt="Event 4"></div>
+                <div class="swiper-slide"><img src="./img/events/event5.jpg" alt="Event 5"></div>
+                <div class="swiper-slide"><img src="./img/events/event6.jpg" alt="Event 6"></div>
+                <div class="swiper-slide"><img src="./img/events/event7.jpg" alt="Event 7"></div>
+                <div class="swiper-slide"><img src="./img/events/event8.jpg" alt="Event 8"></div>
+                <div class="swiper-slide"><img src="./img/events/event9.jpg" alt="Event 9"></div>
+                <div class="swiper-slide"><img src="./img/events/event10.jpg" alt="Event 10"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> 
+       <script>
+        var swiper = new Swiper('.mySwiper13', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
     <footer>
         <div class="footertop">
             <div class="notify">
