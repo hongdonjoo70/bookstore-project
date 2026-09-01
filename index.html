@@ -147,16 +147,17 @@
     </div>
     <div thumbsSlider="" class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"> 편집장의 선택 </div>
-        <div class="swiper-slide"> 추천이벤트 </div>
-        <div class="swiper-slide"> 이주의 책 </div>
-        <div class="swiper-slide"> 신간소개 </div>
-        <div class="swiper-slide"> 눈에 띄는 새책 </div>
-        <div class="swiper-slide"> 화제의 책 </div>
-        <div class="swiper-slide"> 이벤트굿즈 </div>
-        <div class="swiper-slide"> 지금펀딩중 </div>
-        <div class="swiper-slide"> eboook </div>
+        <div class="swiper-slide">편집장의 선택</div>
+        <div class="swiper-slide">추천이벤트</div>
+        <div class="swiper-slide">이주의 책</div>
+        <div class="swiper-slide">신간소개</div>
+        <div class="swiper-slide">눈에 띄는 새책</div>
+        <div class="swiper-slide">화제의 책</div>
+        <div class="swiper-slide">이벤트굿즈</div>
+        <div class="swiper-slide">지금펀딩중</div>
+        <div class="swiper-slide">eboook</div>
       </div>
+      <div class="right-margin"></div>
     </div>
     </section>
 
@@ -220,7 +221,6 @@
         bookData(bookFundTitle, bookFundBooks).then(() => {
             displayBookData("#bookFundBook", bookFundBooks);
         });  
-
 
     </script>
     <section id="main2">
@@ -574,32 +574,33 @@
         });
     </script>    
 
-        <div class="swiper mySwiper13" id="event">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./img/events/event1.jpg" alt="Event 1"></div>
-                <div class="swiper-slide"><img src="./img/events/event2.jpg" alt="Event 2"></div>
-                <div class="swiper-slide"><img src="./img/events/event3.jpg" alt="Event 3"></div>
-                <div class="swiper-slide"><img src="./img/events/event4.jpg" alt="Event 4"></div>
-                <div class="swiper-slide"><img src="./img/events/event5.jpg" alt="Event 5"></div>
-                <div class="swiper-slide"><img src="./img/events/event6.jpg" alt="Event 6"></div>
-                <div class="swiper-slide"><img src="./img/events/event7.jpg" alt="Event 7"></div>
-                <div class="swiper-slide"><img src="./img/events/event8.jpg" alt="Event 8"></div>
-                <div class="swiper-slide"><img src="./img/events/event9.jpg" alt="Event 9"></div>
-                <div class="swiper-slide"><img src="./img/events/event10.jpg" alt="Event 10"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+    <div class="swiper mySwiper13" id="event">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/events/event1.jpg" alt="Event 1"></div>
+            <div class="swiper-slide"><img src="./img/events/event2.jpg" alt="Event 2"></div>
+            <div class="swiper-slide"><img src="./img/events/event3.jpg" alt="Event 3"></div>
+            <div class="swiper-slide"><img src="./img/events/event4.jpg" alt="Event 4"></div>
+            <div class="swiper-slide"><img src="./img/events/event5.jpg" alt="Event 5"></div>
+            <div class="swiper-slide"><img src="./img/events/event6.jpg" alt="Event 6"></div>
+            <div class="swiper-slide"><img src="./img/events/event7.jpg" alt="Event 7"></div>
+            <div class="swiper-slide"><img src="./img/events/event8.jpg" alt="Event 8"></div>
+            <div class="swiper-slide"><img src="./img/events/event9.jpg" alt="Event 9"></div>
+            <div class="swiper-slide"><img src="./img/events/event10.jpg" alt="Event 10"></div>
+        </div>    
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
         </div> 
-       <script>
-        var swiper = new Swiper('.mySwiper13', {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            spaceBetween: 30,
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
+   <script>
+    var swiper = new Swiper('.mySwiper13', {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
     </script>
     <footer>
         <div class="footertop">
