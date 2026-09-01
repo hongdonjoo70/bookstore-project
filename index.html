@@ -326,16 +326,45 @@
       <div class="top10-body">
         <div class="top10-left">
         </div>
-        <ul class="top10-list">
-        </ul>
-      </div>
-        <div class="top10-right"></div>
+        <div class="top10-list">
+        </div>
+        <div class="top10-list">
+        </div>
+        <div class="top10-right">d</div>
       </div>
     </section>
-  </main>
+    <script>
+        function displayTop10Data(data) {
+            const top10left = document.querySelector(".top10-left");
+            top10left.innerHTML = `
+                <div class="smallbook">
+                <img src="${data[0].thumbnail}">
+                <h3>1</h3>
+                <h6>${data[0].title}</h6> </div>
+                <div class="smallbook">
+                <img src="${data[1].thumbnail}">
+                <h3>2</h3>
+                <h6>${data[1].title}</h6> </div>
+            `
+            const top10lists = document.querySelectorAll(".top10-list");
+            for (let i=2; i<6; i++) {
+                top10lists[0].innerHTML += `<div><h3>${i + 1}</h3>
+                <h5>${data[i].title}</h5></div>
+                `
+            }
+            for (let i=6; i<10; i++) {
+                top10lists[1].innerHTML += `<div><h3>${i + 1}</h3>
+                <h5>${data[i].title}</h5>
+                `
+            }
+        }
 
-    </section>
-  </main>
+        bookData(bestsellerTitle, bestsellersBooks).then(() => {
+            displayTop10Data(bestsellersBooks);
+        });
+
+    </script>
+
     <div class="swiper mySwiper6" id="misterybook">
         <h2 class="sec-title">특별기획 - 다시 뽑아보는 3대 베스트리 <a href="#">›</a></h2>
       <div class="swiper-wrapper">
