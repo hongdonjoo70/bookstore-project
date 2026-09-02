@@ -17,7 +17,7 @@
             "슬로 호시스",
             "엄마가 도망갔다",
             "당신과 내가 대화할 수 있을까",
-            "서리꽃 세트 - 전2권 (초판 한정 케이스 + 조정래 작가노트)",
+            "서리꽃",
             "레몬나무의 바다",
             "동구와 친구들 : 가을 알밤을 찾아라",
             "자유민주주의에 무슨 일이 일어났는가?",
@@ -31,19 +31,7 @@
             "그 길 위에 우리가 있었다",
             "비밀의 들판",
             "그해 선우는",
-            "너는 원래 괜찮은 사람이야",
-            "찌니주의보",
-            "고양이는 고양이가 알려 드림",
-            "시뮬레이션 우주",
-            "도도클럽 1",
-            "서성이다",
-            "초원의 집 세트 - 전9권 (케이스 포함)",
-            "지리의 기원",
-            "번역의 철학",
-            "태양 아래 올리브",
-            "아스파라거스",
-            "낭만적으로 산다",
-            "알파벳 퍼즐러즈"
+            "너는 원래 괜찮은 사람이야"
         ];
 
         // 2. 실시간 클릭 Top 10 (트렌딩 도서)
@@ -271,6 +259,7 @@
 
         let bestsellersBooks = [];
         let editorChoiceBooks = [];
+        let editorChoiceBooks2 = [];
         let trendingBooks = [];
         let mysteryBooks = [];
         let mdChoiceBooks = [];
@@ -280,6 +269,7 @@
         let bookOfTheWeekBooks = [];
         let newBookBooks = [];
         let hotIssueBooks = [];
+        let hotIssueBooks2 = [];
         let noticeableNewBooks = [];
         let eventGoodsBooks = [];
         let bookFundBooks = [];
@@ -318,10 +308,10 @@
                     if(data.documents.length === 0) {
                     // 해당 섹션 내의 .box 요소 1개 선택    
                         result.push ({
-                            thumbnail: "",
+                            thumbnail: "./img/book/test"+(index+1)+".jpg",
                             title: queries[index],
-                            authors: "",
-                            contents: ""
+                            authors: "ccc",
+                            contents: "ddd"
                         });
                         continue;
                     }
@@ -335,11 +325,14 @@
                     });
                 }
             } catch (error) {
-                result.push ({
-                    thumbnail: "",
-                    title: query,
-                    authors: "",
-                    contents: ""
-                });
+                for (let index2=0; index2<queries.length; index2++) {
+                    result.push ({
+                        thumbnail: "./img/book/test"+(index2+1)+".jpg",
+                        title: queries[index2],
+                        authors: "aaa",
+                        contents: "bbb"
+                    });
+                }
+                
             }
         }

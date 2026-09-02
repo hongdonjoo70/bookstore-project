@@ -145,19 +145,21 @@
         </div>
       </div>
     </div>
-    <div thumbsSlider="" class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">편집장의 선택</div>
-        <div class="swiper-slide">추천이벤트</div>
-        <div class="swiper-slide">이주의 책</div>
-        <div class="swiper-slide">신간소개</div>
-        <div class="swiper-slide">눈에 띄는 새책</div>
-        <div class="swiper-slide">화제의 책</div>
-        <div class="swiper-slide">이벤트굿즈</div>
-        <div class="swiper-slide">지금펀딩중</div>
-        <div class="swiper-slide">eboook</div>
-      </div>
-      <div class="right-margin"></div>
+    <div id="mainslider">
+        <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">편집장의 선택</div>
+            <div class="swiper-slide">추천이벤트</div>
+            <div class="swiper-slide">이주의 책</div>
+            <div class="swiper-slide">신간소개</div>
+            <div class="swiper-slide">눈에띄는 새책</div>
+            <div class="swiper-slide">화제의 책</div>
+            <div class="swiper-slide">이벤트굿즈</div>
+            <div class="swiper-slide">지금펀딩중</div>
+            <div class="swiper-slide">eboook</div>
+          </div>
+        </div>
+        <div class="right-margin">||</div>
     </div>
     </section>
 
@@ -262,9 +264,9 @@
                         <div class="event"><img src ="img/ytube/youtube3.jpg"></div>
                     </div>
                     <div class="swiper-slide" id="goodsmain2">
-                        <div class="event"></div>
-                        <div class="event"></div>
-                        <div class="event"></div>
+                        <div class="event"><img src ="img/goods/eventgood1.jpg"></div>
+                        <div class="event"><img src ="img/goods/eventgood2.jpg"></div>
+                        <div class="event"><img src ="img/goods/eventgood3.jpg"></div>
                     </div>                                                        
                 </div>
             </div>
@@ -284,9 +286,8 @@
                 swiper: swiper,
               },
             });
-            editorChoiceBooks=[];
-            bookData(editorChoiceTitle, editorChoiceBooks).then(() => {
-                displayBookData("#editorChoiceBookmain2", editorChoiceBooks);
+            bookData(editorChoiceTitle, editorChoiceBooks2).then(() => {
+                displayBookData("#editorChoiceBookmain2", editorChoiceBooks2);
             });
 
             bookData(ebookTitles, ebookBooks).then(() => {
@@ -330,7 +331,23 @@
         </div>
         <div class="top10-list">
         </div>
-        <div class="top10-right">d</div>
+        <div class="top10-right">
+            <div class="swiper mySwiper15" id="nevents">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+        </div>
       </div>
     </section>
     <script>
@@ -362,9 +379,33 @@
         bookData(bestsellerTitle, bestsellersBooks).then(() => {
             displayTop10Data(bestsellersBooks);
         });
-
+        var swiper = new Swiper('.mySwiper15', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+        const nevents = document.querySelector("#nevents");
+        const neventbox = nevents.querySelectorAll(".swiper-slide");
+        for (let index = 0; index <neventbox.length;index++ ) {
+            neventbox[index].innerHTML = `<img src="img/event/nevent${index+1}.jpg">`;
+        }
     </script>
-
+    <div class="swiper mySwiper16" id="banner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/banner/banner1.png"></div>
+          <div class="swiper-slide"><img src="img/banner/banner2.png"></div>
+          <div class="swiper-slide"><img src="img/banner/banner3.png"></div>
+        </div>
+   </div>     
+   <script>
+        var swiper = new Swiper('.mySwiper16', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+   </script>
     <div class="swiper mySwiper6" id="misterybook">
         <h2 class="sec-title">특별기획 - 다시 뽑아보는 3대 베스트리 <a href="#">›</a></h2>
       <div class="swiper-wrapper">
@@ -471,9 +512,8 @@
                 prevEl: '.swiper-button-prev',
             },
         });
-        hotIssueBooks = [];
-        bookData(hotIssueTitle, hotIssueBooks).then(() => {
-            displaySwiperData("#issuebook", hotIssueBooks);
+        bookData(hotIssueTitle, hotIssueBooks2).then(() => {
+            displaySwiperData("#issuebook", hotIssueBooks2);
         });
     </script>
   
@@ -508,13 +548,46 @@
             displaySwiperData("#chosen2book", aladinerChoiceBooks);
         });
     </script>
-    <div class="event3section" id="events">
-        <h2 class="sec-title">알라딘이 만든 사은품</h2>
-        <div class="event3"></div>
-        <div class="event3"></div>
-        <div class="event3"></div>
+    <div class="swiper mySwiper14" id="events">
+        <h2 class="sec-title">알라딘이 만든 사은품 <a href="#">›</a></h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>                
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
     </div>
-    
+    <script>
+        var swiper = new Swiper('.mySwiper14', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        const section = document.querySelector("#events");
+        const box = section.querySelectorAll(".swiper-slide");
+        for (let index =0; index< box.length; index ++) {
+            box[index].innerHTML = `<img src="img/goods/eventgood${index+1}.jpg">`;
+        }
+        
+    </script>
     <div class="swiper mySwiper10" id="chosen3book">
         <h2 class="sec-title">이달의 주목도서 <a href="#">›</a></h2>
             <div class="swiper-wrapper">
@@ -538,7 +611,6 @@
                 prevEl: '.swiper-button-prev',
             },
         });
-        notableBooks=[];
         bookData(notableTitle, notableBooks).then(() => {
             displaySwiperData("#chosen3book", notableBooks);
         });
