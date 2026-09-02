@@ -145,7 +145,6 @@
         </div>
       </div>
     </div>
-    <div id="mainslider">
         <div thumbsSlider="" class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">편집장의 선택</div>
@@ -157,10 +156,9 @@
             <div class="swiper-slide">이벤트굿즈</div>
             <div class="swiper-slide">지금펀딩중</div>
             <div class="swiper-slide">eboook</div>
+            <div class="swiper-slide" onclick="stopMySwiper()">||</div>
           </div>
         </div>
-        <div class="right-margin">||</div>
-    </div>
     </section>
 
     <!-- Swiper JS -->
@@ -168,13 +166,11 @@
 
     <!-- Initialize Swiper -->
     <script>
+      let autoplay_on = true;
       var swiper1 = new Swiper('.mySwiper', {
-        loop: true,
-        spaceBetween: 9,
-        slidesPerView: 9,
+        slidesPerView: 10,
         freeMode: true,
         watchSlidesProgress: true,
-
       });
       var swiper2 = new Swiper('.mySwiper2', {
         loop: true,
@@ -187,6 +183,17 @@
           swiper: swiper1,
         },
       });
+      function stopMySwiper() {
+          if (autoplay_on == true) {
+            swiper2.autoplay.stop();
+            autoplay_on = false;
+          }
+          else {
+            swiper2.autoplay.delay=2500;
+            swiper2.autoplay.start();
+            autoplay_on = true;
+          }
+      }
     </script> 
 
     <script src="./js/readbookinfo.js"></script>

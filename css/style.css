@@ -40,35 +40,19 @@ html,  body {
   width: 100%;
   height: 10%;
 }
-#mainslider{
-  width:90%;
-  display:flex;
-  background-color: #0ee;
-  margin: 0 auto;
-  justify-content:space-around;
-}
+
 .mySwiper {
-  width: 80%;
+  width: 90%;
   height: 100%;
   box-sizing: border-box;
-  margin: 0 -50px;
   font-size: 12px;
-}
-
-#mainslider .right-margin {
-  width: 15%;
-  height: 80%;
-  padding:0 20px;
-  font-size: 12px;
-  align-items:center;
+  background-color: #0ee;
 }
 
 .mySwiper .swiper-wrapper {
-  width: 80%;
+  width: 100%;
 }
-.mySwiper .right-margin {
-  width: 20%;
-}
+
 .mySwiper .swiper-slide {
     height: 100%;
     opacity: 0.4;
@@ -91,6 +75,7 @@ html,  body {
   height:80%;
   margin :10px;
 }
+
 #main2 {
   width:90%;
   height:300px;
