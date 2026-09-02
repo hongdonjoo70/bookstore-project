@@ -168,18 +168,23 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper('.mySwiper', {
+      var swiper1 = new Swiper('.mySwiper', {
         loop: true,
         spaceBetween: 9,
         slidesPerView: 9,
         freeMode: true,
         watchSlidesProgress: true,
+
       });
       var swiper2 = new Swiper('.mySwiper2', {
         loop: true,
         spaceBetween: 9,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         thumbs: {
-          swiper: swiper,
+          swiper: swiper1,
         },
       });
     </script> 
@@ -272,18 +277,18 @@
             </div>
         </div>
         <script>
-            var swiper = new Swiper('.mySwiper3', {
+            var swiper3 = new Swiper('.mySwiper3', {
               loop: true,
               spaceBetween: 5,
               slidesPerView: 5,
               freeMode: true,
               watchSlidesProgress: true,
             });
-            var swiper2 = new Swiper('.mySwiper4', {
+            var swiper4 = new Swiper('.mySwiper4', {
               loop: true,
               spaceBetween: 5,
               thumbs: {
-                swiper: swiper,
+                swiper: swiper3,
               },
             });
             bookData(editorChoiceTitle, editorChoiceBooks2).then(() => {
@@ -313,7 +318,8 @@
             </div>
         </div>
         <script>
-            var swiper = new Swiper('.mySwiper5', {
+            var swiper5 = new Swiper('.mySwiper5', {
+              slidesPerView: 1,
               navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -379,7 +385,12 @@
         bookData(bestsellerTitle, bestsellersBooks).then(() => {
             displayTop10Data(bestsellersBooks);
         });
-        var swiper = new Swiper('.mySwiper15', {
+        var swiper15 = new Swiper('.mySwiper15', {
+             slidesPerView: 1,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
               navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -397,9 +408,13 @@
           <div class="swiper-slide"><img src="img/banner/banner2.png"></div>
           <div class="swiper-slide"><img src="img/banner/banner3.png"></div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
    </div>     
    <script>
-        var swiper = new Swiper('.mySwiper16', {
+        var swiper16 = new Swiper('.mySwiper16', {
+          loop: true,  
+          slidesPerView: 1,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -439,7 +454,7 @@
             }
         }
 
-        var swiper = new Swiper('.mySwiper6', {
+        var swiper6 = new Swiper('.mySwiper6', {
             slidesPerView: 5,
             slidesPerGroup: 5,
             spaceBetween: 30,
@@ -470,7 +485,7 @@
             <div class="swiper-button-prev"></div>
     </div>
     <script>
-        var swiper = new Swiper('.mySwiper7', {
+        var swiper7 = new Swiper('.mySwiper7', {
             slidesPerView: 5,
             slidesPerGroup: 5,
             spaceBetween: 30,
@@ -502,7 +517,7 @@
             <div class="swiper-button-prev"></div>
     </div>
     <script>
-        var swiper = new Swiper('.mySwiper9', {
+        var swiper9 = new Swiper('.mySwiper9', {
             slidesPerView: 3,
             slidesPerGroup: 3,
             spaceBetween: 30,
@@ -534,7 +549,7 @@
             <div class="swiper-button-prev"></div>
     </div>
     <script>
-        var swiper = new Swiper('.mySwiper8', {
+        var swiper8 = new Swiper('.mySwiper8', {
             slidesPerView: 5,
             slidesPerGroup: 5,
             spaceBetween: 30,
@@ -571,7 +586,7 @@
             <div class="swiper-button-prev"></div>
     </div>
     <script>
-        var swiper = new Swiper('.mySwiper14', {
+        var swiper14 = new Swiper('.mySwiper14', {
             slidesPerView: 3,
             slidesPerGroup: 3,
             spaceBetween: 30,
@@ -601,7 +616,7 @@
             <div class="swiper-button-prev"></div>
     </div>
     <script>
-        var swiper = new Swiper('.mySwiper10', {
+        var swiper10 = new Swiper('.mySwiper10', {
             slidesPerView: 5,
             slidesPerGroup: 5,
             spaceBetween: 30,
@@ -628,7 +643,7 @@
             <div class="swiper-button-prev"></div>
     </div>
     <script>
-        var swiper = new Swiper('.mySwiper11', {
+        var swiper11 = new Swiper('.mySwiper11', {
             slidesPerView: 5,
             slidesPerGroup: 5,
             spaceBetween: 30,
@@ -660,7 +675,7 @@
             <div class="swiper-button-prev"></div>
     </div>
     <script>
-        var swiper = new Swiper('.mySwiper12', {
+        var swiper12 = new Swiper('.mySwiper12', {
             slidesPerView: 5,
             slidesPerGroup: 5,
             spaceBetween: 30,
@@ -692,7 +707,7 @@
         <div class="swiper-button-prev"></div>
         </div> 
    <script>
-    var swiper = new Swiper('.mySwiper13', {
+    var swiper13 = new Swiper('.mySwiper13', {
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 30,
