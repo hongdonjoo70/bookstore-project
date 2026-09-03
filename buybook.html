@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buybook</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"    />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sybstyle.css">
+</head>
+<body>
+    <section id="buyBook">
+        <div class="buybookhead">
+            <div class="booktitle"> </div>
+            <div class="author"> </div>
+        </div>
+        <div class="buybookbody">  
+            <!-- Image Left, Buy Information Right -->
+        </div>
+    </section>
+    <script src="./js/bookdetail.js"></script>
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const bookId = Number(params.get("id"));
+
+    const detailContainer = document.getElementById("buyBook");
+
+    // 2. ID에 해당하는 도서 데이터 검색
+    const targetBook = bookdetailinfo[bookId];
+
+    // 3. 화면 렌더링
+    if (!targetBook) {
+      detailContainer.innerHTML = `
+        <div class="error-msg">
+          <h2>도서 정보를 찾을 수 없습니다.</h2>
+          <p style="margin-top: 8px;">올바른 경로로 접속했는지 확인해 주세요.</p>
+        </div>
+      `;
+    } else {
+      let booktitleBlocks = detailContainer.getElementsByClassName("booktitle");
+      booktitleBlocks[0].innerHTML = targetBook.title;
+      let authorBlocks = detailContainer.getElementsByClassName("author");
+      authorBlocks[0].innerHTML = targetBook.author;
+      let bodyBlocks = detailContainer.getElementsByClassName("buybookbody");
+      bodyBlocks[0].innerHTML =`
+        <img src=${targetBook.img}>
+        <div id ="price">  가격 : ${targetBook.price} </div>
+        <div id ="promotePrice">  할인가 : ${targetBook.promotePrice} </div>
+        <hr>
+        <ul> 
+            <li>장바구니 담기 </li>
+            <li>바로구매 </li>
+            <li>선물하기</li>
+            <li>보관함</li>
+        </ul>
+      `;
+
+
+    }
+  </script>
+</body>
+</html>
