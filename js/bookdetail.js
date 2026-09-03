@@ -26,7 +26,7 @@ A story of giving and receiving, of seeing and being seen, Theo of Golden is an 
 
     {
         title:"인생을 바꾸는 투자학개론heo of Golden (Paperback)",
-        img:"bookdetail/bookimg2.jpg",
+        img:"img/bookdetail/bookimg2.jpg",
         price:21600,
         promotePrice:18360,
         deliveryCost:0,
@@ -51,7 +51,7 @@ A story of giving and receiving, of seeing and being seen, Theo of Golden is an 
     },
         {
         title:"주식의 시대 - EBS 다큐프라임",
-        img:"bookdetail/bookimg3.jpg",
+        img:"img/bookdetail/bookimg3.jpg",
         price:17100,
         promotePrice:14535,
         deliveryCost:0,
