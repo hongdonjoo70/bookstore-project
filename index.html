@@ -198,7 +198,7 @@
             stopslide.innerHTML ='<img src ="img/play.png">';
           }
           else {
-            swiper2.autoplay= {delay:2500,disableOnInteraction: false,};
+            swiper2.autoplay= {delay:2500,disableOnInteraction: false};
             autoplay_on = true;
             stopslide.innerHTML ='<img src ="img/stop.png">'
           }
@@ -444,45 +444,38 @@
             bookData(foreignBookTitles, foreignBooks).then(() => {
                 displayMain2BookData("#foreignbookmain2", foreignBooks);
             });
-            function clearDisplayMain2() {
-                editorChoiceBookmain2.style.display="none";
-                ebookmain2.style.display="none";
-                foreignbookmain2.style.display="none";
-                ytube.style.display="none";
-                main2eventgood.style.display="none";
-                selectEditochoice.style.backgroundColor="#ccc";
-                selectEbook.style.backgroundColor="#ccc";
-                selectForeinBook.style.backgroundColor="#ccc";
-                selectYTube.style.backgroundColor="#ccc";                
-                selectGoods.style.backgroundColor="#ccc";
+            function clearDisplayMain2(selectIndex) {
+                let blocks = [editorChoiceBookmain2,ebookmain2,foreignbookmain2,ytube,main2eventgood];
+                let choices = [selectEditochoice,selectEbook,selectForeinBook,selectYTube,selectGoods];
+                for (let index =0; index<blocks.length;index ++) {
+                    if (index !=selectIndex) {
+                        blocks[index].style.display="none";
+                        choices[index].style.backgroundColor="#ccc";
+                    }
+                    else {
+                        blocks[index].style.display="flex";
+                        choices[index].style.backgroundColor="white";
+                        choices[index].style.borderBottom="2px solid white";
+                    }
+                }               
             }
 
             selectEditochoice.addEventListener('mouseenter', () => {
-                clearDisplayMain2();
-                editorChoiceBookmain2.style.display="flex";
-                selectEditochoice.style.backgroundColor="white";
+                clearDisplayMain2(0);
             });
             selectEbook.addEventListener('mouseenter', () => {
-                clearDisplayMain2();
-                ebookmain2.style.display="flex";
-                selectEbook.style.backgroundColor="white";
+                clearDisplayMain2(1);
+              
             });     
             selectForeinBook.addEventListener('mouseenter', () => {
-                clearDisplayMain2();
-                foreignbookmain2.style.display="flex";
-                selectForeinBook.style.backgroundColor="white";
+                clearDisplayMain2(2);
             });    
             selectYTube.addEventListener('mouseenter', () => {
-                clearDisplayMain2();                
-                ytube.style.display="flex";
-                selectYTube.style.backgroundColor="white";
+                clearDisplayMain2(3);                                 
             });         
             selectGoods.addEventListener('mouseenter', () => {
-                clearDisplayMain2();                
-                main2eventgood.style.display="flex";
-                selectGoods.style.backgroundColor="white";
+                clearDisplayMain2(4);                 
             });         
-            
         </script>
 
     <section class="top10">

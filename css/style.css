@@ -35,6 +35,7 @@ html,  body {
   background-size: cover;
   background-position: center;
   display:flex;
+  align-content: center;
 }
 
 .mySwiper2 .swiper-slide {
@@ -152,6 +153,7 @@ html,  body {
   display:flex;
   flex-direction: row;
 }
+
 #main2header ul li{
   display:flex;
   flex-direction: row;
@@ -159,9 +161,11 @@ html,  body {
   width : 100px;
   height : 25px;
   margin-right:10px;
-  align-items: center;
+  text-align: center;
   background-color: #ccc;
+  border: 2px solid #ccc;
 }
+
 #main2header nav-controls {
   width:5%;
 }
