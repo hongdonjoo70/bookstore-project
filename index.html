@@ -157,7 +157,7 @@
                 <div class="swiper-slide">이벤트굿즈</div>
                 <div class="swiper-slide">지금펀딩중</div>
                 <div class="swiper-slide">eboook</div>
-                <div class="swiper-slide" id ="stopslide" onclick="stopMySwiper()">||</div>
+                <div class="swiper-slide" id ="stopslide" onclick="stopMySwiper()"><img src ="img/stop.png"></div>
               </div>
             </div>
         </section>
@@ -193,14 +193,14 @@
       });
       function stopMySwiper() {
           if (autoplay_on == true) {
-            swiper2.autoplay.pause();
+            swiper2.autoplay = false;;
             autoplay_on = false;
-            stopslide.innerHTML = ">>";
+            stopslide.innerHTML ='<img src ="img/play.png">';
           }
           else {
-            swiper2.autoplay.run();
+            swiper2.autoplay= {delay:2500,disableOnInteraction: false,};
             autoplay_on = true;
-            stopslide.innerHTML = "||";
+            stopslide.innerHTML ='<img src ="img/stop.png">'
           }
       }
     </script> 
@@ -248,92 +248,169 @@
     </script>
     <section id="main2">
         <div id="main2left">
-            <div thumbsSlider="" class="swiper mySwiper3">
-                <div class="swiper-wrapper">
-                   <div class="swiper-slide">편집장의선택</div>
-                   <div class="swiper-slide">ebook</div>
-                   <div class="swiper-slide">외국도서</div>
-                   <div class="swiper-slide">알라된유튜브</div>
-                   <div class="swiper-slide">알라딘굿즈</div>
-                </div>
+          <div id="main2header">
+            <ul>
+                <li class="main2menu" id="selectEditochoice">편집장의선택</li>
+                <li class="main2menu" id="selectEbook">ebook</li>
+                <li class="main2menu" id="selectForeinBook">외국도서</li>
+                <li class="main2menu" id="selectYTube">알라된유튜브</li>
+                <li class="main2menu" id="selectGoods">알라딘굿즈</li>
+            </ul>
+            <div class="nav-controls">
+                <button type="button" class="btn-prev"><</button>
+                <button type="button" class="btn-next">></button>
             </div>
-
-            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                 class="swiper mySwiper4">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" id="editorChoiceBookmain2">
-                        <div class="book"></div>
-                        <div class="book"></div>
-                        <div class="book"></div>
-                        <div class="book"></div>
-                    </div>
-                    <div class="swiper-slide" id="ebookmain2">
-                        <div class="book"></div>
-                        <div class="book"></div>
-                        <div class="book"></div>
-                        <div class="book"></div>
-                    </div>
-                    <div class="swiper-slide" id="foreignbookmain2">
-                        <div class="book"></div>
-                        <div class="book"></div>
-                        <div class="book"></div>
-                        <div class="book"></div>
-                    </div>
-                    <div class="swiper-slide" id="youtube">
-                        <div class="event"><img src ="img/ytube/youtube1.jpg"></div>
-                        <div class="event"><img src ="img/ytube/youtube2.jpg"></div>
-                        <div class="event"><img src ="img/ytube/youtube3.jpg"></div>
-                    </div>
-                    <div class="swiper-slide" id="goodsmain2">
-                        <div class="event"><img src ="img/goods/eventgood1.jpg"></div>
-                        <div class="event"><img src ="img/goods/eventgood2.jpg"></div>
-                        <div class="event"><img src ="img/goods/eventgood3.jpg"></div>
-                    </div>                                                        
-                </div>
-            </div>
+          </div>   
+        <div id="main2main">
+          <div class="swiper mySwiper3" id ="main2eventgood">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/goods/eventgood1.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood2.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood3.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood4.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood5.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood6.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood7.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood8.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood9.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood10.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood11.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood12.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood13.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood14.jpg"></div>
+                <div class="swiper-slide"><img src="img/goods/eventgood15.jpg"></div>
+              </div>
+          </div>
+          <div class="swiper mySwiper20" id ="editorChoiceBookmain2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+              </div>
+          </div>      
+          <div class="swiper mySwiper21" id ="ebookmain2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+              </div>
+          </div>  
+          <div class="swiper mySwiper22" id ="foreignbookmain2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+              </div>
+          </div>                
+          <div class="swiper mySwiper23" id ="ytube">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/ytube/youtube1.jpg"></div>
+                <div class="swiper-slide"><img src="img/ytube/youtube2.jpg"></div>
+                <div class="swiper-slide"><img src="img/ytube/youtube3.jpg"></div>
+                <div class="swiper-slide"><img src="img/ytube/youtube1.jpg"></div>
+                <div class="swiper-slide"><img src="img/ytube/youtube2.jpg"></div>
+                <div class="swiper-slide"><img src="img/ytube/youtube3.jpg"></div>
+              </div>
+          </div>
         </div>
+        </div>
+          <div id="main2right">
+              <div class="swiper mySwiper5">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/fund/fund1.jpg"></div>
+                  <div class="swiper-slide"><img src="img/fund/fund2.jpg"></div>
+                  <div class="swiper-slide"><img src="img/fund/fund3.jpg"></div>
+                  <div class="swiper-slide"><img src="img/fund/fund4.jpg"></div>
+                  <div class="swiper-slide"><img src="img/fund/fund5.jpg"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+          </div>
+        </section>        
         <script>
             var swiper3 = new Swiper('.mySwiper3', {
-              loop: true,
-              spaceBetween: 5,
-              slidesPerView: 5,
-              freeMode: true,
-              watchSlidesProgress: true,
-            });
-            var swiper4 = new Swiper('.mySwiper4', {
-              loop: true,
-              spaceBetween: 5,
-              thumbs: {
-                swiper: swiper3,
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+              spaceBetween: 10,              
+              navigation: {
+                nextEl: '.btn-next',
+                prevEl: '.btn-prev',
+              },
+            });       
+            var swiper20 = new Swiper('.mySwiper20', {
+              slidesPerView: 4,
+              slidesPerGroup: 4,
+              spaceBetween: 10,              
+              navigation: {
+                nextEl: '.btn-next',
+                prevEl: '.btn-prev',
               },
             });
-            bookData(editorChoiceTitle, editorChoiceBooks2).then(() => {
-                displayBookData("#editorChoiceBookmain2", editorChoiceBooks2);
+            var swiper21 = new Swiper('.mySwiper21', {
+              slidesPerView: 4,
+              slidesPerGroup: 4,
+              spaceBetween: 10,              
+              navigation: {
+                nextEl: '.btn-next',
+                prevEl: '.btn-prev',
+              },
             });
-
-            bookData(ebookTitles, ebookBooks).then(() => {
-                displayBookData("#ebookmain2", ebookBooks);
+            var swiper22 = new Swiper('.mySwiper22', {
+              slidesPerView: 4,
+              slidesPerGroup: 4,
+              spaceBetween: 10,              
+              navigation: {
+                nextEl: '.btn-next',
+                prevEl: '.btn-prev',
+              },
             });
-            
-            bookData(foreignBookTitles, foreignBooks).then(() => {
-                displayBookData("#foreignbookmain2", foreignBooks);
+            var swiper23 = new Swiper('.mySwiper23', {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+              spaceBetween: 10,              
+              navigation: {
+                nextEl: '.btn-next',
+                prevEl: '.btn-prev',
+              },
             });
-
-        </script>
-        <div id="main2right">
-            <div class="swiper mySwiper5">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/fund/fund1.jpg"></div>
-                <div class="swiper-slide"><img src="img/fund/fund2.jpg"></div>
-                <div class="swiper-slide"><img src="img/fund/fund3.jpg"></div>
-                <div class="swiper-slide"><img src="img/fund/fund4.jpg"></div>
-                <div class="swiper-slide"><img src="img/fund/fund5.jpg"></div>
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-        <script>
+        
             var swiper5 = new Swiper('.mySwiper5', {
               slidesPerView: 1,
               navigation: {
@@ -341,8 +418,72 @@
                 prevEl: '.swiper-button-prev',
               },
             });
+            function displayMain2BookData(id, data) {
+            const section = document.querySelector(id);
+            const box = section.querySelectorAll(".swiper-slide");
+            for (const index in box) {
+                if(data[index].length === 0) {
+                    box[index].innerHTML = "No data found";
+                    continue;
+                }
+
+                // 요소 생성 및 추가
+                box[index].innerHTML = `<img src="${data[index].thumbnail}">
+                <h5>${data[index].title}</h5>
+                `;
+            }
+        }
+            bookData(editorChoiceTitle, editorChoiceBooks2).then(() => {
+                displayMain2BookData("#editorChoiceBookmain2", editorChoiceBooks2);
+            });
+
+            bookData(ebookTitles, ebookBooks).then(() => {
+                displayMain2BookData("#ebookmain2", ebookBooks);
+            });
+            
+            bookData(foreignBookTitles, foreignBooks).then(() => {
+                displayMain2BookData("#foreignbookmain2", foreignBooks);
+            });
+            function clearDisplayMain2() {
+                editorChoiceBookmain2.style.display="none";
+                ebookmain2.style.display="none";
+                foreignbookmain2.style.display="none";
+                ytube.style.display="none";
+                main2eventgood.style.display="none";
+                selectEditochoice.style.backgroundColor="#ccc";
+                selectEbook.style.backgroundColor="#ccc";
+                selectForeinBook.style.backgroundColor="#ccc";
+                selectYTube.style.backgroundColor="#ccc";                
+                selectGoods.style.backgroundColor="#ccc";
+            }
+
+            selectEditochoice.addEventListener('mouseenter', () => {
+                clearDisplayMain2();
+                editorChoiceBookmain2.style.display="flex";
+                selectEditochoice.style.backgroundColor="white";
+            });
+            selectEbook.addEventListener('mouseenter', () => {
+                clearDisplayMain2();
+                ebookmain2.style.display="flex";
+                selectEbook.style.backgroundColor="white";
+            });     
+            selectForeinBook.addEventListener('mouseenter', () => {
+                clearDisplayMain2();
+                foreignbookmain2.style.display="flex";
+                selectForeinBook.style.backgroundColor="white";
+            });    
+            selectYTube.addEventListener('mouseenter', () => {
+                clearDisplayMain2();                
+                ytube.style.display="flex";
+                selectYTube.style.backgroundColor="white";
+            });         
+            selectGoods.addEventListener('mouseenter', () => {
+                clearDisplayMain2();                
+                main2eventgood.style.display="flex";
+                selectGoods.style.backgroundColor="white";
+            });         
+            
         </script>
-    </section>
 
     <section class="top10">
       <div class="top10-head"><strong>이제 베스트셀러 TOP 10</strong></div>

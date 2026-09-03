@@ -31,6 +31,12 @@ html,  body {
   width: 100%;
   height: 100%;
 }
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  display:flex;
+}
+
 .mySwiper2 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -39,6 +45,7 @@ html,  body {
   justify-content: center;
   align-items: center;
 }
+
 .mySwiper2 {
   height: 88%;
   width: 98%;
@@ -50,10 +57,14 @@ html,  body {
   border-color: aqua;
   display: flex;
 }
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-  display:flex;
+.mySwiper20 .swiper-slide {
+  flex-direction: column;
+}
+.mySwiper21 .swiper-slide {
+  flex-direction: column;
+}
+.mySwiper22 .swiper-slide {
+  flex-direction: column;
 }
 .swiper-slide img {
   /* display: block; */
@@ -101,77 +112,118 @@ html,  body {
   margin :10px;
 }
 #stopslide {
-  text-decoration: bold;
+  align-content: center;
 }
+#stopslide img {
+  width : 12px;
+  height :12px;
+}
+
+/* Second Menu */
 #main2 {
   width:90%;
   height:300px;
   display:flex;
-  margin:0 auto;
-  align-content:space-between;
+  flex-direction: row;
+  margin:10px auto;
 }
 
 #main2 #main2left{
-  width:60%;
-  height:90%;
-}
-
-#main2 #main2right{
-  width:35%;
-  height:90%;
-  margin-left:5%;
-  border: 1px solid #eee;
-}
-.mySwiper3 {
-  height: 10%;
-  width: 100%;
-  margin:10px 50px 0 50px;
-}
-.mySwiper3 .swiper-slide {
-    color:#333;
-    border: 2px solid #eee;
-    background-color: #eee;
-    font-size: 12px;
-    margin:0 5px;
-}
-.mySwiper3 .swiper-slide-thumb-active {
-  background-color: white;
-}
-.mySwiper4 {
-  height: 90%;
-  width: 100%;
-  display:flex;
-}
-.mySwiper4 .swiper-slide .book {
-      width :20%;
-      height:80%;
-      margin :10px;
-}
-.mySwiper4 .event {
-  width :30%;
-  height:80%;
-  margin :5px;
-}   
-.mySwiper4 .event img{
-  width :100%;
+  width:65%;
   height:100%;
-}   
-.swiper-button-next {
-  border: 1px solid #eee;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  color:#444;
+  display:flex;
+  flex-direction: column;
 }
-.swiper-button-prev {
-  border: 1px solid #eee;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  color:#444;
+#main2 #main2right{
+  width:30%;
+  height:100%;
+  margin-left:10%;
+  border: 2px solid #eee;
+}
+#main2header {
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  border-bottom: #ccc;
+  width:100%;
+}
+#main2header ul {
+  width:90%;
+  display:flex;
+  flex-direction: row;
+}
+#main2header ul li{
+  display:flex;
+  flex-direction: row;
+  font-size: 14px;
+  width : 100px;
+  height : 25px;
+  margin-right:10px;
+  align-items: center;
+  background-color: #ccc;
+}
+#main2header nav-controls {
+  width:5%;
+}
+#main2main {
+  width:100%;
+  margin-top:2%;
+  height : 90%;
+}
+#main2left .mySwiper3 {
+  position: relative;
+  top:0;
+  left:0;
+  display:none;
+  border-bottom: #ccc;
+  margin-bottom: 5px;
+  height:90%;
+}
+#main2left .mySwiper20 {
+  position: relative;
+  top:0;
+  left:0;
+  display:none;
+  flex-direction: row;
+  border-bottom: #ccc;
+  margin-bottom: 5px;
+}
+#main2left .mySwiper21 {
+  position: relative;
+  top:0;
+  left:0;
+  display:none;
+  flex-direction: row;
+  border-bottom: #ccc;
+  margin-bottom: 5px;
+}
+#main2left .mySwiper22 {
+  position: relative;
+  top:0;
+  left:0;
+  display:none;
+  flex-direction: row;
+  border-bottom: #ccc;
+  margin-bottom: 5px;
+}
+#main2left .mySwiper23 {
+  position: relative;
+  top:0;
+  left:0;
+  display:flex;
+  flex-direction: row;
+  border-bottom: #ccc;
+  margin-bottom: 5px;
 }
 
-
+.swiper-button-next,.swiper-button-prev {
+  border-color: #333;
+  color:#333;
+  border-radius: 50%;
+  border:solid 1px;
+  width:20px;
+  height:20px;
+}
 .mySwiper5 {
   height : 100%;
   width: 80%;
@@ -186,12 +238,13 @@ html,  body {
   height: 200px;
   display:flex;
   flex-direction:column;
-  margin : 0 auto;
+  margin : 30px auto;
 }
 
 .top10 .top10-head {
   width: 100%;  
   height: 20%;
+  margin-bottom: 10px;
 } 
 .top10 .top10-body {
   width: 100%;
@@ -213,6 +266,7 @@ html,  body {
   display:flex;
   flex-direction:row;
   margin:5px;
+  border-bottom:solid 1px #555;
 }
 .top10 .top10-body .top10-list div h3{
   width: 30%;
@@ -222,21 +276,23 @@ html,  body {
 }
 .top10 .top10-body .smallbook{
   width: 100%;
-  height: 50%;
+  height: 35%;
   display:flex;
   flex-direction:row;
+  border-bottom:solid 1px #555;
 }
 .top10 .top10-body .smallbook img{
-  width: 20%;
-  height: 80%;
+  width: 30%;
+  height: 90%;
 }
 .top10 .top10-body .smallbook h3{
-  width: 20%;
-  height: 80%;
+  width: 10%;
+  height: 90%;
 }
 .top10 .top10-body .smallbook h6{
-  width: 60%;
+  width: 50%;
 }
+
 .top10 .top10-body .top10-right {
   width: 25%;
   height: 100%;
