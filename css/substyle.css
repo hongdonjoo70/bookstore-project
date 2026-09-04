@@ -130,3 +130,47 @@
     font-weight: 700;
     margin-bottom: 5px;
 }
+
+.buyInfo ul {
+    display:flex;
+    flex-direction: row;
+    width:80%;
+    justify-content: space-around;
+}
+.buyInfo ul li{
+    height: 30px;
+    font-size:14px;
+    text-align: center;
+    border:3px static black;
+    background-color: red;
+    color:white;
+
+}
+.buyInfo ul li:nth-child(3){
+    height: 30px;
+    font-size:14px;
+    text-align: center;
+    border:2px static red;
+    background-color: white;
+    color:red;
+}
+.buyInfo ul li:nth-child(4){
+    height: 30px;
+    font-size:14px;
+    text-align: center;
+    border:2px static red;
+    background-color: white;
+    color:red;
+}
+
+.bookDetailInfoSub {
+    display:flex;
+    flex-direction: row;
+}
+.bookDetailInfoSub div {
+    width: 30%;
+}
+
+.bookDetailInfoSub .detail {
+    width: 60%;
+}

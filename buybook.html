@@ -7,6 +7,7 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"    />
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/substyle.css">
@@ -57,11 +58,7 @@
                   오후 1시까지 주문하면 밤 11시 
                   <span class="ytz_txt">잠들기전 배송</span>
                 </div>
-              </div>
-              <div class="buyInfo">
-              </div>              
-              <div class="buyInfo">
-              </div>              
+              </div>           
               <div class="buyInfo">
                 <p>수량</p>
                 <div class="stepper-vertical">
@@ -72,9 +69,82 @@
                   </div>
                 </div>
               </div>              
+              <div class="buyInfo">
+                <ul>
+                  <li>장바구니담기</li>
+                  <li>바로구매</li>
+                  <li>선물하기</li>
+                  <li>보관함</li>
+                </ul>
+              </div>              
            </div>
         </div>
     </section>
+    <section class ="bookDetailInfo">
+      <div class ="bookDetailInfoSub">
+        <div> 기본정보</div>
+        <div class="detail"></div>
+      </div>
+      <div class ="bookDetailInfoSub">
+        <div>책소개</div>
+        <div class="detail"></div>
+      </div>
+       <div class ="bookDetailInfoSub">
+        <div>저자및 역자 소개</div>
+        <div class="detail"></div>
+      </div>  
+       <div class ="bookDetailInfoSub">
+        <div>출판사 소개</div>
+        <div class="detail"></div>
+      </div>          
+    </section>
+    <section class="bookReturnInfo">
+    </section>
+    <div class="footermenu">
+        <hr>
+        <ol>
+            <li>회사소개</li>
+            <li>채용안내</li>
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>청소년 보호정책</li>
+            <li>중고매장</li>
+            <li>제휴마케팅안내</li>
+            <li>판매자 메니저</li>
+            <li>출판사/공급자안내</li>
+            <li>광고안내</li>
+            <li>학교/기업/기관 대량구매</li>
+        </ol>
+        <hr>
+    </div>
+    <div class="footertext">
+        <div class="leftbox">
+            <h3>(주)알라딘커뮤니케이션</h3>
+            <address>
+                <span>대표이사 최우경</span>    
+                <span><a href="javascript:fn_ftc_check();">사업자등록 201-81-23094</a></span>
+                <span>통신판매업신고 2003-서울중구-01520</span>
+                <span>이메일 privacy@aladin.co.kr</span>
+                <span>호스팅 제공자 알라딘커뮤니케이션</span>
+                <span>(본사) 서울시 중구 서소문로 89-31</span>
+                <div class="copyright">ⓒ Aladin Communication. All Rights Reserved.</div>
+            </address>
+        </div>
+        <div class="cscenter_box">
+            <h3>고객센터 1544-2514 (발신자 부담)</h3>
+            <address>
+                <span>서울시 마포구 백범로 71 숨도빌딩 7층</span>
+                <span>Fax 02-6926-2600</span>
+            </address>
+            <div class="cs_link">
+                <a href="#">1:1 문의</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="shop_info">
+                <a href="#">중고매장 위치, 영업시간 안내</a>
+            </div>
+        </div>
+    </div>
     <script src="./js/bookdetail.js"></script>
     <script>
     const params = new URLSearchParams(window.location.search);
@@ -98,6 +168,7 @@
       let authorBlocks = detailContainer.getElementsByClassName("author");
       let bookImg = detailContainer.querySelector(".bookimg");
       let bookInfos= detailContainer.querySelectorAll(".buyInfo");
+      let bookDetailInfos = document.querySelectorAll(".bookDetailInfoSub");
 
       booktitleBlocks[0].innerHTML = targetBook.title;
       authorBlocks[0].innerHTML = targetBook.author;
@@ -111,6 +182,16 @@
       <h6>최대 1만원 또는 2만원 할인(전월 30만원 또는 60만원 이용 시) / 카드 발급월 +1개월까지는 전월 실적이 없어도 최대 1만원 혜택 제공</h6>
       `;
       bookInfos[4].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].price/100}원 + 멤버십(3-1%) <br> + 5만원이상 구매시 2000원 v &#x20DE`;
+
+      bookDetailInfos[0].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].basicInfo}
+      `;
+      bookDetailInfos[1].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].bookInfo}
+      `;
+      bookDetailInfos[2].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].author}<br>
+      ${bookdetailinfo[bookId].authorInfo}
+      `;
+      bookDetailInfos[3].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].publisher}
+      `;
     }
     function stepUp(id) {
       document.getElementById(id).stepUp();

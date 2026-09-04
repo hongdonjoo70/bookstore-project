@@ -93,54 +93,53 @@ footer {
     height: 800px;
     margin : 0;
 }
-footer .footertop {
+.footertop {
     width : 100%;
     height: 200px;
     display:flex;
     justify-content:space-around;
     font-size:smaller;
 }
-footer .footertop .notify {
+.footertop .notify {
     width : 340px;
 }
-footer .footertop .search {
+.footertop .search {
     width : 340px;
 }
-footer .footerservice {
+.footerservice {
     width :100%;
     display:flex;
     justify-content:space-between;
     font-size:smaller;
     margin:0 20px;
 }
-footer .footerservice h3 {
+.footerservice h3 {
     background-color: #eee;
 }
-footer .footermenu {
+.footermenu {
     width :100%;
     font-size:smaller; 
     margin:0 20px;
 }
-footer .footermenu ol {
+.footermenu ol {
     display:flex;
     margin:10px 0;  
 }
-footer .footermenu ol li{
+.footermenu ol li{
     font-size:smaller; 
      margin:0 5px;  
 }
-
-footer .footertext {
+ .footertext {
     width :100%;
     font-size:smaller; 
     display:flex;
     justify-content:space-between;
 }
-footer .footertext .leftbox {
+.footertext .leftbox {
     width :60%;
     font-size:smaller; 
 }
-footer .footertext .cscenter_box {
+.footertext .cscenter_box {
     width :30%;
     font-size:smaller; 
 }
