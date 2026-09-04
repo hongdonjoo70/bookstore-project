@@ -16,6 +16,10 @@
 }
 .bookimg img {
     width :100%;
+    transition: transform 0.3s ease;
+}
+.bookimg img:hover {
+    transform: rotateY(60deg);
 }
 .buybookbody .bookInfo{
     width:50%;
@@ -30,6 +34,7 @@
     margin-top:20px;
     align-items:space-between;
 }
+
 .buyInfo p {
     width :40%;
 }
@@ -39,4 +44,89 @@
 .buybookbody ul {
     display:flex;
     flex-direction: row;
+}
+#downcoupon div{
+    background-color: red;
+    color:white;
+}
+#downcoupon div img {
+    width :10px;
+    margin-right:5px;
+}
+    .stepper-vertical {
+      display: inline-flex;
+      align-items: stretch;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+      height: 40px;
+    }
+
+    /* 숫자 입력창 */
+    .stepper-vertical input[type="number"] {
+      width: 70px;
+      border: none;
+      padding: 0 10px;
+      font-size: 1rem;
+      text-align: center;
+      outline: none;
+    }
+
+    /* 브라우저 기본 스피너 제거 */
+    .stepper-vertical input[type="number"]::-webkit-outer-spin-button,
+    .stepper-vertical input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* 상하 버튼 묶음 (세로 배치) */
+    .btn-group-vertical {
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid #ced4da;
+      width: 24px;
+    }
+
+    /* 개별 상/하 버튼 */
+    .stepper-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: #f8f9fa;
+      cursor: pointer;
+      padding: 0;
+      font-size: 9px;
+      color: #495057;
+      transition: background-color 0.15s;
+    }
+
+    .stepper-btn:hover {
+      background: #e9ecef;
+    }
+
+    .stepper-btn:active {
+      background: #dee2e6;
+    }
+
+    /* 위 버튼 아래에 얇은 구분선 */
+    .stepper-btn.up {
+      border-bottom: 1px solid #ced4da;
+    }
+
+  .p_ytz_delivery {
+    display: inline-block;
+    height: 22px;
+    line-height: 23px;
+    background-color: #ffeecc;
+    padding: 0 5px;
+    border-radius: 4px;
+    color: #fe6600;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    font-family: "Roboto", "Noto Sans KR", "Apple SD Gothic Neo", "Microsoft YaHei UI", "Malgun Gothic", sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
 }

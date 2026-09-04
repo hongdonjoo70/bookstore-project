@@ -16,6 +16,7 @@
         <div class="buybookhead">
             <div class="booktitle"> </div>
             <div class="author"></div>
+            <hr>
         </div>
         <div class="buybookbody">  
            <div class="bookimg">
@@ -37,22 +38,25 @@
                 <div></div>
               </div>
               <hr>
-              <div class="buyInfo">
+              <div class="buyInfo" id="downcoupon">
                 <p>추가할인</p>
-                <div>최대 3000원 할인쿠폰받기<img src="img/btn_down.png"></div>
+                <div>최대 3000원 할인쿠폰받기 <img src="img/btn_down.png"> </div>
               </div>
-
               <div class="buyInfo">
                 <p>마일리지</p>
                 <h4></h4>
               </div>
               <div class="buyInfo">
                 <p>배송료</p>
-                <h4></h4>
+                <h4>무료</h4>
               </div>
               <div class="buyInfo">
                 <p>수령예상일</p>
-                <h4></h4>
+                <div>
+                  <span class="p_ytz_delivery">양탄자배송</span><br>
+                  오후 1시까지 주문하면 밤 11시 
+                  <span class="ytz_txt">잠들기전 배송</span>
+                </div>
               </div>
               <div class="buyInfo">
               </div>              
@@ -62,10 +66,10 @@
                 <p>수량</p>
                 <div class="stepper-vertical">
                   <input type="number" id="quantity" value="1" min="0" max="100" step="1">
-                  <!-- <div class="btn-group-vertical">
+                  <div class="btn-group-vertical">
                     <button type="button" class="stepper-btn up" onclick="stepUp('quantity')">&#9650;</button>
                     <button type="button" class="stepper-btn down" onclick="stepDown('quantity')">&#9660;</button>
-                  </div> -->
+                  </div>
                 </div>
               </div>              
            </div>
@@ -106,8 +110,7 @@
       <h5>알라딘 만권당 삼성카드, 알라딘 15% 청구 할인   > &#x20DE</h5>
       <h6>최대 1만원 또는 2만원 할인(전월 30만원 또는 60만원 이용 시) / 카드 발급월 +1개월까지는 전월 실적이 없어도 최대 1만원 혜택 제공</h6>
       `;
-
-
+      bookInfos[4].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].price/100}원 + 멤버십(3-1%) <br> + 5만원이상 구매시 2000원 v &#x20DE`;
     }
     function stepUp(id) {
       document.getElementById(id).stepUp();

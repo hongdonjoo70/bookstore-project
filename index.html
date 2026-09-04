@@ -148,15 +148,15 @@
         </div>
             <div thumbsSlider="" class="swiper mySwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">편집장의 선택</div>
-                <div class="swiper-slide">추천이벤트</div>
-                <div class="swiper-slide">이주의 책</div>
-                <div class="swiper-slide">신간소개</div>
-                <div class="swiper-slide">눈에띄는 새책</div>
-                <div class="swiper-slide">화제의 책</div>
-                <div class="swiper-slide">이벤트굿즈</div>
-                <div class="swiper-slide">지금펀딩중</div>
-                <div class="swiper-slide">eboook</div>
+                <div class="swiper-slide"><b>편집장의 선택</b></div>
+                <div class="swiper-slide"><b>추천이벤트</b></div>
+                <div class="swiper-slide"><b>이주의 책</b></div>
+                <div class="swiper-slide"><b>신간소개</b></div>
+                <div class="swiper-slide"><b>눈에띄는 새책</b></div>
+                <div class="swiper-slide"><b>화제의 책</b></div>
+                <div class="swiper-slide"><b>이벤트굿즈</b></div>
+                <div class="swiper-slide"><b>지금펀딩중</b></div>
+                <div class="swiper-slide"><b>eboook</b></div>
                 <div class="swiper-slide" id ="stopslide" onclick="stopMySwiper()"><img src ="img/stop.png"></div>
               </div>
             </div>
@@ -174,7 +174,6 @@
 
     <!-- Initialize Swiper -->
     <script>
-      let autoplay_on = true;
       var swiper1 = new Swiper('.mySwiper', {
         slidesPerView: 10,
         freeMode: true,
@@ -192,14 +191,12 @@
         },
       });
       function stopMySwiper() {
-          if (autoplay_on == true) {
-            swiper2.autoplay = false;;
-            autoplay_on = false;
+          if (swiper2.autoplay.paused!=true) {
+            swiper2.autoplay.pause();
             stopslide.innerHTML ='<img src ="img/play.png">';
           }
           else {
-            swiper2.autoplay= {delay:2500,disableOnInteraction: false};
-            autoplay_on = true;
+            swiper2.autoplay.resume();
             stopslide.innerHTML ='<img src ="img/stop.png">'
           }
       }
