@@ -23,6 +23,10 @@
            </div>
            <div class="bookInfo">
               <div class="buyInfo">
+                <p>정가</p>
+                <h4></h4>
+              </div>
+              <div class="buyInfo">
                 <p>판매가</p>
                 <h4></h4>
               </div>
@@ -31,9 +35,13 @@
                 <p>카드최대혜택가</p>
                 <h4></h4>
                 <div></div>
-                
               </div>
               <hr>
+              <div class="buyInfo">
+                <p>추가할인</p>
+                <div>최대 3000원 할인쿠폰받기<img src="img/btn_down.png"></div>
+              </div>
+
               <div class="buyInfo">
                 <p>마일리지</p>
                 <h4></h4>
@@ -52,10 +60,14 @@
               </div>              
               <div class="buyInfo">
                 <p>수량</p>
-                <select></select>
-
+                <div class="stepper-vertical">
+                  <input type="number" id="quantity" value="1" min="0" max="100" step="1">
+                  <!-- <div class="btn-group-vertical">
+                    <button type="button" class="stepper-btn up" onclick="stepUp('quantity')">&#9650;</button>
+                    <button type="button" class="stepper-btn down" onclick="stepDown('quantity')">&#9660;</button>
+                  </div> -->
+                </div>
               </div>              
-
            </div>
         </div>
     </section>
@@ -86,12 +98,25 @@
       booktitleBlocks[0].innerHTML = targetBook.title;
       authorBlocks[0].innerHTML = targetBook.author;
       bookImg.innerHTML= `<img src=${targetBook.img}>`;
-      bookInfos[0].querySelector("h4").innerHTML = bookdetailinfo[bookId].price;
-      bookInfos[1].querySelector("h4").innerHTML = bookdetailinfo[bookId].promotePrice;
-
+      //Update Book Information
+      bookInfos[0].querySelector("h4").innerHTML =`
+         <s>${bookdetailinfo[bookId].originalPrice.toLocaleString()}</s> 원`;
+      bookInfos[1].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].price.toLocaleString()} 원`;
+      bookInfos[2].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].promotePrice.toLocaleString()} 원<br>
+      <h5>알라딘 만권당 삼성카드, 알라딘 15% 청구 할인   > &#x20DE</h5>
+      <h6>최대 1만원 또는 2만원 할인(전월 30만원 또는 60만원 이용 시) / 카드 발급월 +1개월까지는 전월 실적이 없어도 최대 1만원 혜택 제공</h6>
+      `;
 
 
     }
+    function stepUp(id) {
+      document.getElementById(id).stepUp();
+    }
+
+    function stepDown(id) {
+      document.getElementById(id).stepDown();
+    }
+
   </script>
 </body>
 </html>

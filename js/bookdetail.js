@@ -2,6 +2,7 @@ const bookdetailinfo = [
     {
         title:"Theo of Golden (Paperback)",
         img:"img/bookdetail/bookimg1.jpg",
+        originalPrice:30000,
         price:19900,
         promotePrice:16915,
         deliveryCost:0,
