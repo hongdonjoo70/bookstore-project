@@ -28,10 +28,7 @@
             "에티의 여름",
             "언어화를 위한 소설 사고",
             "코끼리 고모부",
-            "그 길 위에 우리가 있었다",
-            "비밀의 들판",
-            "그해 선우는",
-            "너는 원래 괜찮은 사람이야"
+            "그 길 위에 우리가 있었다"
         ];
 
         // 2. 실시간 클릭 Top 10 (트렌딩 도서)
@@ -61,19 +58,7 @@
             "태양은 가득히",
             "빅 픽처",
             "나오미와 가나코",
-            "상복의 랑데부",
-            "이유",
-            "심플 플랜",
-            "토니와 수잔",
-            "외딴집",
-            "이누가미 일족",
-            "해바라기가 피지 않는 여름",
-            "9마일은 너무 멀다",
-            "오드 토머스",
-            "철교 살인 사건",
-            "재능 있는 리플리",
-            "무덤으로 향하다",
-            "삼나무에 내리는 눈"
+            "상복의 랑데부"
         ];
 
         // 4. 만권당 MD의 선택
@@ -94,7 +79,12 @@
             "봄 여름 가을 겨울, 시와 함께",
             "레몬은 시다",
             "고래의 노래",
-            "토끼 씨의 완벽한 가방"
+            "토끼 씨의 완벽한 가방",
+            "2120",
+            "손끝까지 숨이 차면",
+            "극한 진화의 세계",
+            "슬기로운 외국어 생활",
+            "전략적 방임 교육"
         ];
 
         // 6. 이달의 특가
@@ -103,7 +93,12 @@
             "100억 젊은 부자들이 온다",
             "트렌드 코리아 2026",
             "마흔에 읽는 쇼펜하우어",
-            "탐라순력도 1702년, 제주를 돌아보다"
+            "탐라순력도 1702년, 제주를 돌아보다",
+            "일러스트로 보는 영국 건축의 언어",
+            "기막힌 SNS 수학",
+            "베니스 건축 스케치북",
+            "수리수리봉봉 마법사",
+            "꿈은 토리노를 달리고"
         ];
 
         // 7. 알라디너의 선택
@@ -112,7 +107,15 @@
             "깨끗한 존경",
             "시간의 감촉",
             "에티의 여름",
-            "그림자를 이으면 길이 된다"
+            "그림자를 이으면 길이 된다",
+            "노무현 평전",
+            "신경 끄기의 기술",
+            "기쁨에서 슬품에도 아랑곳없이",
+            "브레인 악셀",
+            "백야",
+            "당신과 내가 대화할 수 있을까",
+            "문해내공"
+
         ];
 
         const bookOfTheWeekTitle = [
@@ -206,7 +209,7 @@
           "자유민주주의에 무슨 일이 일어났는가?",
           "어떻게 살아낼 것인가",
           "에티의 여름",
-          "[세트] 피를 마시는 새 오디오북 (총8권)",
+          "피를 마시는 새 오디오북",
           "언어화를 위한 소설 사고",
           "찌니주의보",
           "당신의 독자가 될게요",
@@ -215,30 +218,24 @@
           "안녕, 피터팬",
           "투명한 나선",
           "인비인",
-          "책 읽고 싶어서 회사를 그만뒀습니다",
-          "낭만적으로 산다",
-          "살",
-          "신의 숨결에 날리는 깃털",
-          "죽음의 수용소 이후",
-          "주와 연",
-          "팔레스타인 번역가의 이중생활"
+          "책 읽고 싶어서 회사를 그만뒀습니다"
         ];
         const foreignBookTitles = [
-          "Theo of Golden (Paperback)",
-          "Spider-Man: Brand New Day - The Art of the Movie (Hardcover)",
-          "Dragon Masters #32 : Heart of the Ruby Dragon (A Branches Book) (Paperback)",
-          "ペイジェムウィ-クリ- コンパクト-i メモ日曜 パ-ルブル- 2208 (2027年1月始まり)",
-          "The Odyssey: The Official Screenplay (Paperback)",
-          "Under the Oak Tree: Volume 3 (the Comic) (Hardcover)",
-          "Paw Patrol Dino Rescue My Busy Books (Board Book + 피규어 10개 + 플레이매트)",
+          "Theo of Golden",
+          "Spider-Man: Brand New Day - The Art of the Movie",
+          "Dragon Masters #32 : Heart of the Ruby Dragon",
+          "ペイジェムウィ-クリ- コンパクト-i メモ日曜 パ-ルブル",
+          "The Odyssey: The Official Screenplay",
+          "Under the Oak Tree: Volume 3",
+          "Paw Patrol Dino Rescue My Busy Books",
           "spoon.2Di vol.136",
-          "Inner Excellence: Train Your Mind for Extraordinary Performance and the Best Possible Life (Paperback)",
-          "The Odyssey (Paperback, Deckle Edge)",
-          "Magic School Bus : Science Readers Box #1 페이퍼백 10종 박스 세트 (미국판) (Paperback + StoryPlus QR)",
-          "CanCam(キャンキャン) 2026年 10月號 スペシャル版 [雜誌]",
-          "Disney/Pixar the Art of Toy Story 5 (Hardcover)",
-          "Poor Charlie's Almanack: The Essential Wit and Wisdom of Charles T. Munger (Paperback)",
-          "Disney/Pixar Toy Story 5: The Junior Novelization (Paperback)",
+          "Inner Excellence: Train Your Mind for Extraordinary Performance and the Best Possible Life",
+          "The Odyssey",
+          "Magic School Bus : Science Readers Box ",
+          "CanCam(キャンキャン) 2026年 10月號",
+          "Disney/Pixar the Art of Toy Story 5",
+          "Poor Charlie's Almanack: The Essential Wit and Wisdom of Charles T. Munger",
+          "Disney/Pixar Toy Story 5: The Junior Novelization",
           "Casa BRUTUS(カ-サ ブル-タス) 2026年 9月號"
         ];
         const specialBookTitles = [
@@ -252,9 +249,6 @@
           "경애의 마음",
           "앤디 위어 우주",
           "낙하",
-          "빈방의 빛 : 시인이 말하는 호퍼",
-          "못 가본 길이 더 아름답다",
-          "조지 오웰 소설 전집 세트",
         ];
 
         let bestsellersBooks = [];
@@ -288,7 +282,7 @@
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {
-                    Authorization: "KakaoAK xfa669dbee43bf25c0ad9d49c6126a5c6"
+                    Authorization: "KakaoAK fa669dbee43bf25c0ad9d49c6126a5c6"
                 }
             });
 

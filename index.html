@@ -214,8 +214,9 @@
                 }
 
                 // 요소 생성 및 추가
-                box[index].innerHTML = `<img src="${data[index].thumbnail}">
-                <h5>${data[index].title}</h5>
+                box[index].innerHTML = `<a href="buybook.html?id=${index%3}">
+                <img src="${data[index].thumbnail}">
+                <h5>${data[index].title}</h5></a>
                 `;
             }
         }
@@ -340,9 +341,9 @@
                 <div class="swiper-slide"><img src="img/ytube/youtube1.jpg"></div>
                 <div class="swiper-slide"><img src="img/ytube/youtube2.jpg"></div>
                 <div class="swiper-slide"><img src="img/ytube/youtube3.jpg"></div>
-                <div class="swiper-slide"><img src="img/ytube/youtube1.jpg"></div>
-                <div class="swiper-slide"><img src="img/ytube/youtube2.jpg"></div>
                 <div class="swiper-slide"><img src="img/ytube/youtube3.jpg"></div>
+                <div class="swiper-slide"><img src="img/ytube/youtube4.jpg"></div>
+                <div class="swiper-slide"><img src="img/ytube/youtube5.jpg"></div>
               </div>
           </div>
         </div>
@@ -425,8 +426,9 @@
                 }
 
                 // 요소 생성 및 추가
-                box[index].innerHTML = `<img src="${data[index].thumbnail}">
-                <h5>${data[index].title}</h5>
+                box[index].innerHTML = `<a href="buybook.html?id=${index%3}">
+                    <img src="${data[index].thumbnail}">
+                    <h5>${data[index].title}</h5></a>
                 `;
             }
         }
@@ -580,6 +582,9 @@
         <div class="swiper-slide"></div>
         <div class="swiper-slide"></div>
         <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
@@ -595,8 +600,9 @@
                 }
 
                 // 요소 생성 및 추가
-                box[index].innerHTML = `<img src="${data[index].thumbnail}">
-                <h4>${data[index].title}</h4>
+                box[index].innerHTML = `<a href="buybook.html?id=${index%3}">
+                <img src="${data[index].thumbnail}">
+                <h4>${data[index].title}</h4></a>
                 `;
             }
         }
@@ -618,8 +624,6 @@
     <div class="swiper mySwiper7" id="chosenbook">
         <h2 class="sec-title">추천마법사의 섹션 <a href="#">›</a></h2>
             <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
@@ -659,11 +663,31 @@
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
     </div>
     <script>
+        function displaySwiperData3(id, data) {
+            const section = document.querySelector(id);
+            const box = section.querySelectorAll(".swiper-slide");
+            for (const index in box) {
+                if(data[index].length === 0) {
+                    box[index].innerHTML = "No data found";
+                    continue;
+                }
+
+                // 요소 생성 및 추가
+                box[index].innerHTML = `
+                <img src="${data[index].thumbnail}" href="buybook.html?id=${index%3}">
+                <div> <a href="buybook.html?id=${index%3}">
+                   <h4>${data[index].title}</h4><br>
+                   <h5>${data[index].contents}</h5>
+                </a></div>
+                `;
+            }
+        }
         var swiper9 = new Swiper('.mySwiper9', {
             slidesPerView: 3,
             slidesPerGroup: 3,
@@ -675,13 +699,16 @@
             },
         });
         bookData(hotIssueTitle, hotIssueBooks2).then(() => {
-            displaySwiperData("#issuebook", hotIssueBooks2);
+            displaySwiperData3("#issuebook", hotIssueBooks2);
         });
     </script>
   
     <div class="swiper mySwiper8" id="chosen2book">
         <h2 class="sec-title">추천마법사의 섹션 <a href="#">›</a></h2>
             <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
@@ -758,6 +785,11 @@
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>                
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -785,6 +817,11 @@
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
                 <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>                
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>

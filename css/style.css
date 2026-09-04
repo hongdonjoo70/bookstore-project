@@ -363,25 +363,34 @@ html,  body {
   margin : 20px 0 20px 0;
   flex-direction:column;
 }
+
 .mySwiper9 {
   width: 90%;
-  height:300px;
-}
-.mySwiper9 .swiper-wrapper {
-  width : 20%;
-  height : 90%;
-}
-.mySwiper9 .swiper-slide {
-  width : 100%;
-  margin : 20px 0 20px 0;
-  background-color: #ddd;
-}
-.mySwiper9 .swiper-slide img {
-  width : 35%;
-  margin : 10px;
-  height: 70%;
+  height:250px;
 }
 
+.mySwiper9 .swiper-slide {
+  width : 80%;
+  margin : 20px 0 20px 0;
+  background-color: #ddd;
+  display:flex;
+  flex-direction: row;
+  align-items:space-between;
+}
+
+.mySwiper9 .swiper-slide img {
+  margin : 10px;
+  width : 40%;
+  height: 70%;
+}
+.mySwiper9 .swiper-slide div {
+  width : 60%;
+  height: 80%;
+  display: -webkit-box;
+    -webkit-line-clamp: 6;      /* 보여줄 최대 줄 수 (3줄) */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 .mySwiper10 {
   width: 90%;
   height:400px;
