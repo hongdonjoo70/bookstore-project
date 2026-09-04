@@ -600,10 +600,9 @@
                 }
 
                 // 요소 생성 및 추가
-                box[index].innerHTML = `<a href="buybook.html?id=${index%3}">
+                box[index].innerHTML = `<a href="buybook.html?id=${index%3}"">
                 <img src="${data[index].thumbnail}">
-                <h4>${data[index].title}</h4></a>
-                `;
+                <h4>${data[index].title}</h4></a>`;
             }
         }
 
@@ -679,12 +678,12 @@
                 }
 
                 // 요소 생성 및 추가
-                box[index].innerHTML = `
-                <img src="${data[index].thumbnail}" href="buybook.html?id=${index%3}">
-                <div> <a href="buybook.html?id=${index%3}">
+                box[index].innerHTML = `<a href="buybook.html?id=${index%3}">
+                <img src="${data[index].thumbnail}">
+                <div> 
                    <h4>${data[index].title}</h4><br>
                    <h5>${data[index].contents}</h5>
-                </a></div>
+                </div></a>
                 `;
             }
         }
