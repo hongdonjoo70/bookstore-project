@@ -282,7 +282,7 @@
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {
-                    Authorization: "KakaoAK xfa669dbee43bf25c0ad9d49c6126a5c6"
+                    Authorization: "KakaoAK fa669dbee43bf25c0ad9d49c6126a5c6"
                 }
             });
 
