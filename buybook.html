@@ -13,6 +13,79 @@
     <link rel="stylesheet" href="css/substyle.css">
 </head>
 <body>
+      <header>
+        <nav id="headermenu">
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">국내서적</a></li>
+                    <li><a href="#">전자책</a></li>
+                    <li><a href="#">만권당</a></li>
+                    <li><a href="#">외국도서</a></li>
+                    <li><a href="#">아라딘궂즈</a></li>
+                    <li><a href="#">온라인중고</a></li>
+                    <li><a href="#">중고매장</a></li>
+                    <li><a href="#">우주점</a></li>
+                    <li><a href="#">음반</a></li>
+                    <li><a href="#">블루레이</a></li>
+                    <li><a href="#">커피</a></li>
+                </ul>
+            </div>
+            <div id="rightmenu">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">장바구니</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id="headersection">
+            <img src="./img/aladin_logo.jpg" id="icon1"> 
+            <div id="searcharea">
+                <form id = "quicksearch">
+                    <div class="select_list popup-full" id="Search-Target-List">
+                        <select name="selectsearcharea">
+                            <option value="All">통합검색</option>
+                            <option value="Book">국내도서</option>
+                            <option value="Foreign">외국도서</option>
+                            <option value="EBook">전자책</option>
+                            <option value="Max">만권당</option>
+                            <option value="Gift">알라딘굿즈</option>
+                            <option value="Used">온라인중고</option>
+                            <option value="UsedStore">중고매장</option>
+                            <option value="Coffee">커피</option>
+                            <option value="Music">음반</option>
+                            <option value="DVD">블루레이</option>
+                            <option value="Talktalk">서재검색</option>
+                        </select>
+                    </div>
+                    <div class="search_input">
+                    <input type="text" id="SearchWord" name="SearchWord" class="inputbox_new ad" value="" autocomplete="off" data-autocomplete-active="1" placeholder=""></div>
+                    <div class="search_button">
+                        <button type="submit" id="SearchSubmit">검색</button>
+                    </div>                     
+                </form>
+            </div>
+            <img src ="./img/334x130.jpg" id="icon2">
+        </section>
+        <div id="submenu">
+            <ul>
+                <li><a href="#">분야보기</a></li>
+                <li><a href="#">오뒷세이아</a></li>
+                <li><a href="#">추천마법사</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">새로나온책</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">정가인하도서</a></li>
+                <li><a href="#">추천도서</a></li>
+                <li><a href="#">작가와의만남</a></li>
+                <li><a href="#">북펀드</a></li>
+            </ul>
+        </div>
+        <hr>
+    </header>
     <section id="buyBook">
         <div class="buybookhead">
             <div class="booktitle"> </div>
@@ -97,6 +170,18 @@
         <div>출판사 소개</div>
         <div class="detail"></div>
       </div>      
+      <div class="buyerInfo">
+        <h2>구매자 분포</h2>
+        <div><h3></h3><h3><section></section></h3><h3>10대</h3><h3><section></section></h3><h3></h3>   </div> 
+        <div><h3></h3><h3><section></section></h3><h3>20대</h3><h3><section></section></h3><h3></h3>   </div>
+        <div><h3></h3><h3><section></section></h3><h3>30대</h3><h3><section></section></h3><h3></h3>   </div>
+        <div><h3></h3><h3><section></section></h3><h3>40대</h3><h3><section></section></h3><h3></h3>   </div>
+        <div><h3></h3><h3><section></section></h3><h3>50대</h3><h3><section></section></h3><h3></h3>    </div>
+        <div><h3></h3><h3><section></section></h3><h3>60대</h3><h3><section></section></h3><h3></h3>   </div>
+        <div>
+            <h3></h3><h3>여성</h3><h3></h3><h3>남성</h3><h3></h3>
+        </div>
+      </div>
       <div class ="bookDetailInfoSub">
         <div>반품/교환안내</div>
         <div class="detail"></div>
@@ -173,6 +258,8 @@
       let bookImg = detailContainer.querySelector(".bookimg");
       let bookInfos= detailContainer.querySelectorAll(".buyInfo");
       let bookDetailInfos = document.querySelectorAll(".bookDetailInfoSub");
+      let buyerInfoBlock = document.querySelector(".buyerInfo");
+      let buyerInfos = buyerInfoBlock.querySelectorAll("div");
 
       booktitleBlocks[0].innerHTML = targetBook.title;
       authorBlocks[0].innerHTML = targetBook.author;
@@ -196,6 +283,22 @@
       `;
       bookDetailInfos[3].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].publisher}
       `;
+      //Update Buyer Information
+      //buyerInfos[0].querySelectorAll("h3")[1].querySelector("section").style.width = index * 2+10;
+      buyerInfos[0].querySelectorAll("h3")[1].querySelector("section").style.left = index * 2;
+      for (let index =1 ; index < 6;index ++) {
+        buyerInfos[index].querySelectorAll("h3")[0].innerHTML = bookdetailinfo[bookId].buyerInfo[0][index];
+        buyerInfos[index].querySelectorAll("h3")[1].querySelector("section").style.width = index * 2+10;
+        buyerInfos[index].querySelectorAll("h3")[1].querySelector("section").style.left = index * 2;
+        //buyerInfos[index].querySelectorAll("section")[0].style.width = bookdetailinfo[bookId].buyerInfo[0][index]*2;
+        // buyerInfos[index].querySelectorAll("h3")[3].querySelector("section").style.left =index*10+10;
+        // buyerInfos[index].querySelectorAll("h3")[3].querySelector("section").style.width = index * 2+20;
+        buyerInfos[index].querySelectorAll("h3")[4].innerHTML = bookdetailinfo[bookId].buyerInfo[1][index];
+        // (100-bookdetailinfo[bookId].buyerInfo[0][index])*2;
+        //buyerInfos[index].querySelectorAll("section")[1].style.width = bookdetailinfo[bookId].buyerInfo[0][index]*2;
+      }
+
+
       // refund information
       bookDetailInfos[4].querySelector(".detail").innerHTML = `
       <table>

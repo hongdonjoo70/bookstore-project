@@ -10,6 +10,7 @@ html,  body {
   width:5%;
   height:50px;
 }
+
 #main_ .left-float img {
   width:70px;
 }
@@ -17,9 +18,17 @@ html,  body {
 #main_ .right-float {
   width:70px;
 }
+#main_ .right-float h6{
+  background-color: red;
+  color:white;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
 #main_ .right-float img {
   width:70px;
-  height:70px;
+  height:90px;
 }
 #main1 {
   width:90%;
@@ -321,7 +330,8 @@ html,  body {
 }
 .mySwiper16 {
   height : 200px;
-  width: 80%;
+  width: 90%;
+  padding-left:40px;
 }
 .mySwiper16 .swiper-slide {
   width : 80%;
