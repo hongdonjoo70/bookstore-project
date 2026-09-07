@@ -96,7 +96,11 @@
        <div class ="bookDetailInfoSub">
         <div>출판사 소개</div>
         <div class="detail"></div>
-      </div>          
+      </div>      
+      <div class ="bookDetailInfoSub">
+        <div>반품/교환안내</div>
+        <div class="detail"></div>
+      </div>        
     </section>
     <section class="bookReturnInfo">
     </section>
@@ -191,6 +195,17 @@
       ${bookdetailinfo[bookId].authorInfo}
       `;
       bookDetailInfos[3].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].publisher}
+      `;
+      // refund information
+      bookDetailInfos[4].querySelector(".detail").innerHTML = `
+      <table>
+        <tr><th> 반품/교환 방법 </th><th>${etcText.refundMethod}</th> </tr>
+        <tr><th> 반품/교환 가능기간 </th><th> ${etcText.refundPeriod}</th> </tr>
+        <tr><th> 반품/교환 비용 </th><th>${etcText.refundCost}</th> </tr>
+        <tr><th> 반품/교환 불가 사유 </th><th>${etcText.refundRejectReason}</th> </tr>
+        <tr><th> 소비자 피해보상
+환불지연에 따른 배상</th><th>${etcText.Compensation}</th> </tr>
+      </table>
       `;
     }
     function stepUp(id) {

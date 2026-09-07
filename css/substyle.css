@@ -174,3 +174,21 @@
 .bookDetailInfoSub .detail {
     width: 60%;
 }
+.bookDetailInfoSub .detail table{
+    border-collapse: collapse;  
+}
+.bookDetailInfoSub .detail table th:nth-child(1){
+    width : 25%;
+    font-style: normal;
+    font-weight: nornmal; /* Normal Font*/
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #eee;
+}
+.bookDetailInfoSub .detail table th:nth-child(2){
+    width : 75%;
+    font-style:normal;
+    font-weight: nornmal; /* Normal Font*/
+    border-top: 1px solid  black;
+    border-left: 1px solid  black;
+}
