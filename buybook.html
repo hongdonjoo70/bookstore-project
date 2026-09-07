@@ -169,17 +169,81 @@
        <div class ="bookDetailInfoSub">
         <div>출판사 소개</div>
         <div class="detail"></div>
-      </div>      
-      <div class="buyerInfo">
-        <h2>구매자 분포</h2>
-        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>10대</h3><h3><section class ="buyer"></section></h3><h3></h3></div> 
-        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>20대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
-        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>30대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
-        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>40대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
-        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>50대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
-        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>60대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
-        <div> <h4>여성</h4><h4>남성</h4> </div>
-      </div>
+      </div>     
+      <session class="bookbuyerInfo">
+        <div class="buyerInfo">
+          <session>구매자 분포</session>
+          <div><section></section><section><nav class ="buyer"></nav></section><section>10대</section><section><nav class ="buyer"></nav></section><section></section></div> 
+          <div><section></section><section><nav class ="buyer"></nav></section><section>20대</section><section><nav class ="buyer"></nav></section><section></section></div>
+          <div><section></section><section><nav class ="buyer"></nav></section><section>30대</section><section><nav class ="buyer"></nav></section><section></section></div>
+          <div><section></section><section><nav class ="buyer"></nav></section><section>40대</section><section><nav class ="buyer"></nav></section><section></section></div>
+          <div><section></section><section><nav class ="buyer"></nav></section><section>50대</section><section><nav class ="buyer"></nav></section><section></section></div>
+          <div><section></section><section><nav class ="buyer"></nav></section><section>60대</section><section><nav class ="buyer"></nav></section><section></section></div>
+          <div> <div>여성</div><div>남성</div> </div>
+        </div>
+        <div class="rateInfo">
+          <div class="text">평점 분포</div>
+          <div>
+            <div class "rateInfoBackground">
+              ★★★★★
+              <div class "rateInfoActual">
+                ★★★★★
+              </div>
+            </div>
+            <div class="text"></div>
+          </div>
+          <div>
+            <div class "rateInfoBackground">
+              ★★★★★
+              <div class "rateInfoActual">
+                ★★★★★
+              </div>
+            </div>
+            <section><nav class ="buyer"></nav></section>
+            <div class="text"></div>
+          </div>
+          <div>
+            <div class "rateInfoBackground">
+              ★★★★★
+              <div class "rateInfoActual">
+                ★★★★★
+              </div>
+            </div>
+            <section><nav class ="buyer"></nav></section>
+            <div class="text"></div>
+          </div>
+          <div>
+            <div class "rateInfoBackground">
+              ★★★★★
+              <div class "rateInfoActual">
+                ★★★★★
+              </div>
+            </div>
+            <section><nav class ="buyer"></nav></section>
+            <div class="text"></div>
+          </div>
+          <div>
+            <div class "rateInfoBackground">
+              ★★★★★
+              <div class "rateInfoActual">
+                ★★★★★
+              </div>
+            </div>
+            <section><nav class ="buyer"></nav></section>
+            <div class="text"></div>
+          </div>
+          <div>
+            <div class "rateInfoBackground">
+              ★★★★★
+              <div class "rateInfoActual">
+                ★★★★★
+              </div>
+            </div>
+            <section><nav class ="buyer"></nav></section>
+            <div class="text"></div>
+          </div>                                        
+        </div>
+      </session> 
       <div class ="bookDetailInfoSub">
         <div>반품/교환안내</div>
         <div class="detail"></div>
@@ -282,16 +346,14 @@
       bookDetailInfos[3].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].publisher}
       `;
       //Update Buyer Information
-      let widthValue =2.0; //Total Width 
       for (let index =0 ; index < 6;index ++) {
-        buyerInfos[index].querySelectorAll("h3")[0].innerHTML = `${bookdetailinfo[bookId].buyerInfo[0][index]} %`;
-        buyerInfos[index].querySelectorAll(".buyer")[0].style.width = bookdetailinfo[bookId].buyerInfo[0][index] * (widthValue) + "px";
-        buyerInfos[index].querySelectorAll(".buyer")[0].style.left = (100-bookdetailinfo[bookId].buyerInfo[0][index])*widthValue + "px";
+        buyerInfos[index].querySelectorAll("section")[0].innerHTML = `${bookdetailinfo[bookId].buyerInfo[0][index]} %`;
+        buyerInfos[index].querySelectorAll(".buyer")[0].style.width = bookdetailinfo[bookId].buyerInfo[0][index]  + "%";
+        buyerInfos[index].querySelectorAll(".buyer")[0].style.left = (100-bookdetailinfo[bookId].buyerInfo[0][index])+ "%";
 
-        buyerInfos[index].querySelectorAll(".buyer")[1].style.width = bookdetailinfo[bookId].buyerInfo[1][index]*widthValue + "px";
+        buyerInfos[index].querySelectorAll(".buyer")[1].style.width = bookdetailinfo[bookId].buyerInfo[1][index] + "%";
         buyerInfos[index].querySelectorAll(".buyer")[1].style.left = 0;
-        buyerInfos[index].querySelectorAll("h3")[4].innerHTML = `${bookdetailinfo[bookId].buyerInfo[1][index]} %`
-
+        buyerInfos[index].querySelectorAll("section")[4].innerHTML = `${bookdetailinfo[bookId].buyerInfo[1][index]} %`
       }
 
 

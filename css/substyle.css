@@ -181,6 +181,10 @@
 .bookDetailInfoSub .detail {
     width: 60%;
 }
+.bookbuyerInfo {
+    display:flex;
+    flex-direction: row;
+}
 
 .buyerInfo {
     width:50%;
@@ -194,13 +198,13 @@
     flex-direction: row;
     margin-bottom: 20px;
 }
-.buyerInfo div h3:nth-of-type(2) {
+.buyerInfo div section:nth-of-type(2) {
     width:200px;
     display:flex;
     background-color: #eee;
 }
 
-.buyerInfo div h3:nth-of-type(4) {
+.buyerInfo div section:nth-of-type(4) {
     width:200px;
     display:flex;
     background-color: #eee;
@@ -214,15 +218,18 @@
     justify-content: space-evenly;
 }
 
-.buyerInfo div h4  {
+.buyerInfo div seciton  {
     width : 50px;
 }
-.buyerInfo div h3 section {
+.buyerInfo div section nav {
     position:relative;
     top:0;
     left:100px;
     width:100px;
     background-color: red;
+}
+.bookbuyerInfo .rateInfo {
+    width :40%;
 }
 
 .bookDetailInfoSub {
