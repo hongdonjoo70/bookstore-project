@@ -172,15 +172,13 @@
       </div>      
       <div class="buyerInfo">
         <h2>구매자 분포</h2>
-        <div><h3></h3><h3><section></section></h3><h3>10대</h3><h3><section></section></h3><h3></h3>   </div> 
-        <div><h3></h3><h3><section></section></h3><h3>20대</h3><h3><section></section></h3><h3></h3>   </div>
-        <div><h3></h3><h3><section></section></h3><h3>30대</h3><h3><section></section></h3><h3></h3>   </div>
-        <div><h3></h3><h3><section></section></h3><h3>40대</h3><h3><section></section></h3><h3></h3>   </div>
-        <div><h3></h3><h3><section></section></h3><h3>50대</h3><h3><section></section></h3><h3></h3>    </div>
-        <div><h3></h3><h3><section></section></h3><h3>60대</h3><h3><section></section></h3><h3></h3>   </div>
-        <div>
-            <h3></h3><h3>여성</h3><h3></h3><h3>남성</h3><h3></h3>
-        </div>
+        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>10대</h3><h3><section class ="buyer"></section></h3><h3></h3></div> 
+        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>20대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
+        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>30대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
+        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>40대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
+        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>50대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
+        <div><h3></h3><h3><section class ="buyer"></section></h3><h3>60대</h3><h3><section class ="buyer"></section></h3><h3></h3></div>
+        <div> <h4>여성</h4><h4>남성</h4> </div>
       </div>
       <div class ="bookDetailInfoSub">
         <div>반품/교환안내</div>
@@ -259,7 +257,7 @@
       let bookInfos= detailContainer.querySelectorAll(".buyInfo");
       let bookDetailInfos = document.querySelectorAll(".bookDetailInfoSub");
       let buyerInfoBlock = document.querySelector(".buyerInfo");
-      let buyerInfos = buyerInfoBlock.querySelectorAll("div");
+      let buyerInfos = buyerInfoBlock.getElementsByTagName("div");
 
       booktitleBlocks[0].innerHTML = targetBook.title;
       authorBlocks[0].innerHTML = targetBook.author;
@@ -284,18 +282,16 @@
       bookDetailInfos[3].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].publisher}
       `;
       //Update Buyer Information
-      //buyerInfos[0].querySelectorAll("h3")[1].querySelector("section").style.width = index * 2+10;
-      buyerInfos[0].querySelectorAll("h3")[1].querySelector("section").style.left = index * 2;
-      for (let index =1 ; index < 6;index ++) {
-        buyerInfos[index].querySelectorAll("h3")[0].innerHTML = bookdetailinfo[bookId].buyerInfo[0][index];
-        buyerInfos[index].querySelectorAll("h3")[1].querySelector("section").style.width = index * 2+10;
-        buyerInfos[index].querySelectorAll("h3")[1].querySelector("section").style.left = index * 2;
-        //buyerInfos[index].querySelectorAll("section")[0].style.width = bookdetailinfo[bookId].buyerInfo[0][index]*2;
-        // buyerInfos[index].querySelectorAll("h3")[3].querySelector("section").style.left =index*10+10;
-        // buyerInfos[index].querySelectorAll("h3")[3].querySelector("section").style.width = index * 2+20;
-        buyerInfos[index].querySelectorAll("h3")[4].innerHTML = bookdetailinfo[bookId].buyerInfo[1][index];
-        // (100-bookdetailinfo[bookId].buyerInfo[0][index])*2;
-        //buyerInfos[index].querySelectorAll("section")[1].style.width = bookdetailinfo[bookId].buyerInfo[0][index]*2;
+      let widthValue =2.0; //Total Width 
+      for (let index =0 ; index < 6;index ++) {
+        buyerInfos[index].querySelectorAll("h3")[0].innerHTML = `${bookdetailinfo[bookId].buyerInfo[0][index]} %`;
+        buyerInfos[index].querySelectorAll(".buyer")[0].style.width = bookdetailinfo[bookId].buyerInfo[0][index] * (widthValue) + "px";
+        buyerInfos[index].querySelectorAll(".buyer")[0].style.left = (100-bookdetailinfo[bookId].buyerInfo[0][index])*widthValue + "px";
+
+        buyerInfos[index].querySelectorAll(".buyer")[1].style.width = bookdetailinfo[bookId].buyerInfo[1][index]*widthValue + "px";
+        buyerInfos[index].querySelectorAll(".buyer")[1].style.left = 0;
+        buyerInfos[index].querySelectorAll("h3")[4].innerHTML = `${bookdetailinfo[bookId].buyerInfo[1][index]} %`
+
       }
 
 
