@@ -184,64 +184,80 @@
         <div class="rateInfo">
           <div class="text">평점 분포</div>
           <div>
-            <div class "rateInfoBackground">
-              ★★★★★
-              <div class "rateInfoActual">
+            <div class="rateInfoBackground">
+              <div>★★★★★
+                <div class="rateInfoActual">
                 ★★★★★
               </div>
+            </div>
             </div>
             <div class="text"></div>
           </div>
           <div>
-            <div class "rateInfoBackground">
-              ★★★★★
-              <div class "rateInfoActual">
+            <div class="rateInfoBackground">
+              <div>★★★★★
+                <div class="rateInfoActual" style="width: 100%;">
                 ★★★★★
               </div>
+            </div>
             </div>
             <section><nav class ="buyer"></nav></section>
             <div class="text"></div>
           </div>
           <div>
-            <div class "rateInfoBackground">
-              ★★★★★
-              <div class "rateInfoActual">
+            <div class="rateInfoBackground">
+              <div>★★★★★
+                <div class="rateInfoActual" style="width: 80%;">
                 ★★★★★
               </div>
+            </div>
             </div>
             <section><nav class ="buyer"></nav></section>
             <div class="text"></div>
           </div>
           <div>
-            <div class "rateInfoBackground">
-              ★★★★★
-              <div class "rateInfoActual">
+            <div class="rateInfoBackground">
+              <div>★★★★★
+                <div class="rateInfoActual" style="width: 60%;">
                 ★★★★★
               </div>
+            </div>
             </div>
             <section><nav class ="buyer"></nav></section>
             <div class="text"></div>
           </div>
           <div>
-            <div class "rateInfoBackground">
-              ★★★★★
-              <div class "rateInfoActual">
+            <div class="rateInfoBackground">
+              <div>★★★★★
+                <div class="rateInfoActual" style="width: 40%;">
                 ★★★★★
               </div>
+            </div>
             </div>
             <section><nav class ="buyer"></nav></section>
             <div class="text"></div>
           </div>
           <div>
-            <div class "rateInfoBackground">
-              ★★★★★
-              <div class "rateInfoActual">
+            <div class="rateInfoBackground">
+              <div>★★★★★
+                <div class="rateInfoActual" style="width: 20%;">
                 ★★★★★
               </div>
             </div>
+            </div>
             <section><nav class ="buyer"></nav></section>
             <div class="text"></div>
-          </div>                                        
+          </div>   
+          <div class="rateInfoBackground">
+              <div>★★★★★
+                <div class="rateInfoActual" style="width: 0%;">
+                ★★★★★
+              </div>
+            </div>
+            </div>
+            <section><nav class ="buyer"></nav></section>
+            <div class="text"></div>
+          </div>                                      
         </div>
       </session> 
       <div class ="bookDetailInfoSub">
@@ -322,6 +338,7 @@
       let bookDetailInfos = document.querySelectorAll(".bookDetailInfoSub");
       let buyerInfoBlock = document.querySelector(".buyerInfo");
       let buyerInfos = buyerInfoBlock.getElementsByTagName("div");
+      let rateInfo = document.querySelector(".rateInfoActual");
 
       booktitleBlocks[0].innerHTML = targetBook.title;
       authorBlocks[0].innerHTML = targetBook.author;
@@ -355,8 +372,7 @@
         buyerInfos[index].querySelectorAll(".buyer")[1].style.left = 0;
         buyerInfos[index].querySelectorAll("section")[4].innerHTML = `${bookdetailinfo[bookId].buyerInfo[1][index]} %`
       }
-
-
+      rateInfo.style.width =  (bookdetailinfo[bookId].rate *10) + "%";
       // refund information
       bookDetailInfos[4].querySelector(".detail").innerHTML = `
       <table>

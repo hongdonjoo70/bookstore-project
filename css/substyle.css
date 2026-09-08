@@ -41,6 +41,7 @@
 .buyInfo h4 {
     width :50%;
 }
+
 .buybookbody ul {
     display:flex;
     flex-direction: row;
@@ -230,6 +231,31 @@
 }
 .bookbuyerInfo .rateInfo {
     width :40%;
+}
+.rateInfoBackground {
+    width :100px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+}
+
+.rateInfoBackground div{
+      position: relative;
+      display: inline-block;
+      color: #ddd; /* 비어있는 별 색상 */
+      line-height: 1;
+}
+
+.rateInfoBackground div .rateInfoActual {
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      color: #f5b301; /* 채워질 별 색상(노란색) */
+      line-height: 1;
+      width: 20%; /* 이 값을 0~100%로 변경하여 점수 조절 */
 }
 
 .bookDetailInfoSub {

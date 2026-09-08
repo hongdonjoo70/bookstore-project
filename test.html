@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .star-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 24px;
+    }
+    .stars-outer {
+      position: relative;
+      display: inline-block;
+      color: #ddd; /* 비어있는 별 색상 */
+      line-height: 1;
+    }
+    /* .stars-outer::before {
+      content: "★★★★★"; 
+    } */
+    .stars-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      color: #f5b301; /* 채워질 별 색상(노란색) */
+      line-height: 1;
+      width: 0%; /* 이 값을 0~100%로 변경하여 점수 조절 */
+    }
+    /* .stars-inner::before {
+      content: "★★★★★"; 
+    } */
+    .rating-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 예시: 10점 만점에 7.5점인 경우 -> (7.5 / 10) * 100 = 75% -->
+  <div class="star-wrapper">
+    <div class="stars-outer">
+        ★★★★★
+      <div class="stars-inner" style="width: 75%;">★★★★★</div>
+    </div>
+    <span class="rating-text">7.5 / 10점</span>
+  </div>
+
+  <!-- 예시: 0점인 경우 -> width: 0% -->
+  <div class="star-wrapper">
+    <div class="stars-outer">
+        ★★★★★
+      <div class="stars-inner" style="width: 20%;">★★★★★</div>
+    </div>
+    <span class="rating-text">0 / 10점</span>
+  </div>
+
+</body>
+</html>

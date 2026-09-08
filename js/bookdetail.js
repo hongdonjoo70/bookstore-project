@@ -6,7 +6,7 @@ const bookdetailinfo = [
         price:19900,
         promotePrice:16915,
         deliveryCost:0,
-        rate:0.0,
+        rate:9.0,
         buyerInfo:[[10,20,30,10,10,20],[10,40,30,0,10,10]],
         basicInfo : `
                     외국도서 > 소설/시/희곡 > 소설 > 문학<br>
@@ -60,7 +60,7 @@ A story of giving and receiving, of seeing and being seen, Theo of Golden is an 
         price:17100,
         promotePrice:14535,
         deliveryCost:0,
-        rate:9.8,
+        rate:9.4,
         buyerInfo:[[10,30,10,20,20,10],[20,20,20,20,10,10]],
         basicInfo : `국내도서 > 경제경영 > 재테크/투자 > 주식/펀드<br>
 국내도서 > 경제경영 > 경제학/경제일반 > 경제이야기<br>
