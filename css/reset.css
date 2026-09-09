@@ -1,14 +1,18 @@
 @charset "utf-8";
+
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 * body {
     font-family: Malgun Gothic, Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
-ul,ol {
-    list-style:none;
+
+ul,
+ol {
+    list-style: none;
 }
 
 a {

@@ -1,153 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alardin BookStore</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-    <header>
-        <nav id="headermenu">
-            <div id="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">국내서적</a></li>
-                    <li><a href="#">전자책</a></li>
-                    <li><a href="#">만권당</a></li>
-                    <li><a href="#">외국도서</a></li>
-                    <li><a href="#">아라딘궂즈</a></li>
-                    <li><a href="#">온라인중고</a></li>
-                    <li><a href="#">중고매장</a></li>
-                    <li><a href="#">우주점</a></li>
-                    <li><a href="#">음반</a></li>
-                    <li><a href="#">블루레이</a></li>
-                    <li><a href="#">커피</a></li>
-                </ul>
-            </div>
-            <div id="rightmenu">
-                <ul>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="#">마이페이지</a></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">장바구니</a></li>
-                </ul>
-            </div>
-        </nav>
-        <section id="headersection">
-            <img src="./img/aladin_logo.jpg" id="icon1"> 
-            <div id="searcharea">
-                <form id = "quicksearch">
-                    <div class="select_list popup-full" id="Search-Target-List">
-                        <select name="selectsearcharea">
-                            <option value="All">통합검색</option>
-                            <option value="Book">국내도서</option>
-                            <option value="Foreign">외국도서</option>
-                            <option value="EBook">전자책</option>
-                            <option value="Max">만권당</option>
-                            <option value="Gift">알라딘굿즈</option>
-                            <option value="Used">온라인중고</option>
-                            <option value="UsedStore">중고매장</option>
-                            <option value="Coffee">커피</option>
-                            <option value="Music">음반</option>
-                            <option value="DVD">블루레이</option>
-                            <option value="Talktalk">서재검색</option>
-                        </select>
-                    </div>
-                    <div class="search_input">
-                    <input type="text" id="SearchWord" name="SearchWord" class="inputbox_new ad" value="" autocomplete="off" data-autocomplete-active="1" placeholder=""></div>
-                    <div class="search_button">
-                        <button type="submit" id="SearchSubmit">검색</button>
-                    </div>                     
-                </form>
-            </div>
-            <img src ="./img/334x130.jpg" id="icon2">
-        </section>
-        <div id="submenu">
+<header>
+    <nav id="headermenu">
+        <div id="menu">
             <ul>
-                <li><a href="#">분야보기</a></li>
-                <li><a href="#">오뒷세이아</a></li>
-                <li><a href="#">추천마법사</a></li>
-                <li><a href="#">베스트</a></li>
-                <li><a href="#">새로나온책</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">정가인하도서</a></li>
-                <li><a href="#">추천도서</a></li>
-                <li><a href="#">작가와의만남</a></li>
-                <li><a href="#">북펀드</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">국내서적</a></li>
+                <li><a href="#">전자책</a></li>
+                <li><a href="#">만권당</a></li>
+                <li><a href="#">외국도서</a></li>
+                <li><a href="#">아라딘궂즈</a></li>
+                <li><a href="#">온라인중고</a></li>
+                <li><a href="#">중고매장</a></li>
+                <li><a href="#">우주점</a></li>
+                <li><a href="#">음반</a></li>
+                <li><a href="#">블루레이</a></li>
+                <li><a href="#">커피</a></li>
             </ul>
         </div>
-        <hr>
-    </header>
-    <div id="main_" >
-        <div class="left-float"><img src="img/float/left.jpg"></div>
-        <section id="main1">
-        <div
-          style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-          class="swiper mySwiper2"
-        >
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" id="editorChoiceBook">
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-            </div>
-            <div class="swiper-slide" id="recommandEvent">
-                <div class="event"><img src="img/event/event1.jpg"></div>
-                <div class="event"><img src="img/event/event2.jpg"></div>
-                <div class="event"><img src="img/event/event3.jpg"></div>
-            </div>
-            <div class="swiper-slide" id="weekBook">
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-            </div>
-            <div class="swiper-slide" id="newBook">
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-            </div>
-            <div class="swiper-slide" id="noticeableNewBook">
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-            </div>
-            <div class="swiper-slide" id="hotIssueBook">
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-            </div>
-            <div class="swiper-slide" id="eventGoodBook">
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-            </div>
-            <div class="swiper-slide" id="bookFundBook">
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-                <div class="book"></div>
-            </div>
-            <div class="swiper-slide" id="eBook">
-                <div class="event"><img src="img/ebook/event1.png"></div>
-                <div class="event"><img src="img/ebook/event2.jpg"></div>
-                <div class="event"><img src="img/ebook/event3.png"></div>
-            </div>
-          </div>
+        <div id="rightmenu">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">장바구니</a></li>
+            </ul>
         </div>
-            <div thumbsSlider="" class="swiper mySwiper">
-              <div class="swiper-wrapper">
+    </nav>
+    <section id="headersection">
+        <img src="./img/aladin_logo.jpg" id="icon1" alt="aladin_logo">
+        <div id="searcharea">
+            <form id="quicksearch">
+                <div class="select_list popup-full" id="Search-Target-List">
+                    <select name="selectsearcharea">
+                        <option value="All">통합검색</option>
+                        <option value="Book">국내도서</option>
+                        <option value="Foreign">외국도서</option>
+                        <option value="EBook">전자책</option>
+                        <option value="Max">만권당</option>
+                        <option value="Gift">알라딘굿즈</option>
+                        <option value="Used">온라인중고</option>
+                        <option value="UsedStore">중고매장</option>
+                        <option value="Coffee">커피</option>
+                        <option value="Music">음반</option>
+                        <option value="DVD">블루레이</option>
+                        <option value="Talktalk">서재검색</option>
+                    </select>
+                </div>
+                <div class="search_input">
+                    <input type="text" id="SearchWord" name="SearchWord" class="inputbox_new ad" value=""
+                        autocomplete="off" data-autocomplete-active="1" placeholder="">
+                </div>
+                <div class="search_button">
+                    <button type="submit" id="SearchSubmit">검색</button>
+                </div>
+            </form>
+        </div>
+        <img src="./img/334x130.jpg" id="icon2" alt="logo2">
+    </section>
+    <div id="submenu">
+        <ul>
+            <li><a href="#">분야보기</a></li>
+            <li><a href="#">오뒷세이아</a></li>
+            <li><a href="#">추천마법사</a></li>
+            <li><a href="#">베스트</a></li>
+            <li><a href="#">새로나온책</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">정가인하도서</a></li>
+            <li><a href="#">추천도서</a></li>
+            <li><a href="#">작가와의만남</a></li>
+            <li><a href="#">북펀드</a></li>
+        </ul>
+    </div>
+    <hr>
+</header>
+<div id="main_">
+    <div class="left-float"><img src="img/float/left.jpg" alt="left promotion"></div>
+    <section id="main1">
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="editorChoiceBook">
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                </div>
+                <div class="swiper-slide" id="recommandEvent">
+                    <div class="event"><img src="img/event/event1.jpg" alt ="event1"></div>
+                    <div class="event"><img src="img/event/event2.jpg" alt ="event2"></div>
+                    <div class="event"><img src="img/event/event3.jpg" alt ="event3"></div>
+                </div>
+                <div class="swiper-slide" id="weekBook">
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                </div>
+                <div class="swiper-slide" id="newBook">
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                </div>
+                <div class="swiper-slide" id="noticeableNewBook">
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                </div>
+                <div class="swiper-slide" id="hotIssueBook">
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                </div>
+                <div class="swiper-slide" id="eventGoodBook">
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                </div>
+                <div class="swiper-slide" id="bookFundBook">
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                    <div class="book"></div>
+                </div>
+                <div class="swiper-slide" id="eBook">
+                    <div class="event"><img src="img/ebook/event1.png"></div>
+                    <div class="event"><img src="img/ebook/event2.jpg"></div>
+                    <div class="event"><img src="img/ebook/event3.png"></div>
+                </div>
+            </div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
                 <div class="swiper-slide"><b>편집장의 선택</b></div>
                 <div class="swiper-slide"><b>추천이벤트</b></div>
                 <div class="swiper-slide"><b>이주의 책</b></div>
@@ -157,26 +155,26 @@
                 <div class="swiper-slide"><b>이벤트굿즈</b></div>
                 <div class="swiper-slide"><b>지금펀딩중</b></div>
                 <div class="swiper-slide"><b>eboook</b></div>
-                <div class="swiper-slide" id ="stopslide" onclick="stopMySwiper()"><img src ="img/stop.png"></div>
-              </div>
+                <div class="swiper-slide" id="stopslide" onclick="stopMySwiper()"><img src="img/stop.png" alt="swiper stop"></div>
             </div>
-        </section>
-        <div class="right-float">
-           <h6>알라딘 US</h6>
-           <h6>도서관사서</h6>
-           <img src ="img/float/right1.jpg">
-           <img src ="img/float/right2.jpg">
-           <img src ="img/float/right3.jpg">
         </div>
+    </section>
+    <div class="right-float">
+        <h6>알라딘 US</h6>
+        <h6>도서관사서</h6>
+        <img src="img/float/right1.jpg" alt="promotion1">
+        <img src="img/float/right2.jpg" alt="promotion2">
+        <img src="img/float/right3.jpg" alt="promotion3">
     </div>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+</div>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
-    <script src="./js/readbookinfo.js"></script>
+<script src="./js/readbookinfo.js"></script>
 
-    <section id="main2">
-        <div id="main2left">
-          <div id="main2header">
+<section id="main2">
+    <div id="main2left">
+        <div id="main2header">
             <ul>
                 <li class="main2menu" id="selectEditochoice">편집장의선택</li>
                 <li class="main2menu" id="selectEbook">ebook</li>
@@ -185,117 +183,118 @@
                 <li class="main2menu" id="selectGoods">알라딘굿즈</li>
             </ul>
             <div class="nav-controls">
-                <button type="button" class="btn-prev"><</button>
-                <button type="button" class="btn-next">></button>
+                <button type="button" class="btn-prev">
+                    << /button>
+                        <button type="button" class="btn-next">></button>
             </div>
-          </div>   
+        </div>
         <div id="main2main">
-          <div class="swiper mySwiper3" id ="main2eventgood">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/goods/eventgood1.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood2.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood3.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood4.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood5.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood6.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood7.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood8.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood9.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood10.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood11.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood12.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood13.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood14.jpg"></div>
-                <div class="swiper-slide"><img src="img/goods/eventgood15.jpg"></div>
-              </div>
-          </div>
-          <div class="swiper mySwiper20" id ="editorChoiceBookmain2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-              </div>
-          </div>      
-          <div class="swiper mySwiper21" id ="ebookmain2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-              </div>
-          </div>  
-          <div class="swiper mySwiper22" id ="foreignbookmain2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-              </div>
-          </div>                
-          <div class="swiper mySwiper23" id ="ytube">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/ytube/youtube1.jpg"></div>
-                <div class="swiper-slide"><img src="img/ytube/youtube2.jpg"></div>
-                <div class="swiper-slide"><img src="img/ytube/youtube3.jpg"></div>
-                <div class="swiper-slide"><img src="img/ytube/youtube3.jpg"></div>
-                <div class="swiper-slide"><img src="img/ytube/youtube4.jpg"></div>
-                <div class="swiper-slide"><img src="img/ytube/youtube5.jpg"></div>
-              </div>
-          </div>
-        </div>
-        </div>
-          <div id="main2right">
-              <div class="swiper mySwiper5">
+            <div class="swiper mySwiper3" id="main2eventgood">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="img/fund/fund1.jpg"></div>
-                  <div class="swiper-slide"><img src="img/fund/fund2.jpg"></div>
-                  <div class="swiper-slide"><img src="img/fund/fund3.jpg"></div>
-                  <div class="swiper-slide"><img src="img/fund/fund4.jpg"></div>
-                  <div class="swiper-slide"><img src="img/fund/fund5.jpg"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood1.jpg" alt="eventgood1"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood2.jpg" alt="eventgood2"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood3.jpg" alt="eventgood3"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood4.jpg" alt="eventgood4"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood5.jpg" alt="eventgood5"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood6.jpg" alt="eventgood6"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood7.jpg" alt="eventgood7"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood8.jpg" alt="eventgood8"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood9.jpg" alt="eventgood9"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood10.jpg" alt="eventgood10"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood11.jpg" alt="eventgood11"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood12.jpg" alt="eventgood12"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood13.jpg" alt="eventgood13"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood14.jpg" alt="eventgood14"></div>
+                    <div class="swiper-slide"><img src="img/goods/eventgood15.jpg" alt="eventgood15"></div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-          </div>
-        </section>        
+            </div>
+            <div class="swiper mySwiper20" id="editorChoiceBookmain2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+            </div>
+            <div class="swiper mySwiper21" id="ebookmain2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+            </div>
+            <div class="swiper mySwiper22" id="foreignbookmain2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+            </div>
+            <div class="swiper mySwiper23" id="ytube">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/ytube/youtube1.jpg" alt="youtube1"></div>
+                    <div class="swiper-slide"><img src="img/ytube/youtube2.jpg" alt="youtube2"></div>
+                    <div class="swiper-slide"><img src="img/ytube/youtube3.jpg" alt="youtube3"></div>
+                    <div class="swiper-slide"><img src="img/ytube/youtube4.jpg" alt="youtube4"></div>
+                    <div class="swiper-slide"><img src="img/ytube/youtube5.jpg" alt="youtube5"></div>
+                    <div class="swiper-slide"><img src="img/ytube/youtube6.jpg" alt="youtube6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main2right">
+        <div class="swiper mySwiper5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/fund/fund1.jpg" alt="fund1"></div>
+                <div class="swiper-slide"><img src="img/fund/fund2.jpg" alt="fund2"></div>
+                <div class="swiper-slide"><img src="img/fund/fund3.jpg" alt="fund3"></div>
+                <div class="swiper-slide"><img src="img/fund/fund4.jpg" alt="fund4"></div>
+                <div class="swiper-slide"><img src="img/fund/fund5.jpg" alt="fund5"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
 
-    <section class="top10">
-      <div class="top10-head"><strong>이제 베스트셀러 TOP 10</strong></div>
-      <div class="top10-body">
+<section class="top10">
+    <div class="top10-head"><strong>이제 베스트셀러 TOP 10</strong></div>
+    <div class="top10-body">
         <div class="top10-left">
         </div>
         <div class="top10-list">
@@ -304,45 +303,45 @@
         </div>
         <div class="top10-right">
             <div class="swiper mySwiper15" id="nevents">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
-      </div>
-    </section>
-    <div class="swiper mySwiper16" id="banner">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="img/banner/banner1.png"></div>
-          <div class="swiper-slide"><img src="img/banner/banner2.png"></div>
-          <div class="swiper-slide"><img src="img/banner/banner3.png"></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-   </div>     
-   <script>
-        var swiper16 = new Swiper('.mySwiper16', {
-          loop: true,  
-          slidesPerView: 1,
-          navigation: {
+    </div>
+</section>
+<div class="swiper mySwiper16" id="banner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/banner/banner1.png" alt="banner1"></div>
+        <div class="swiper-slide"><img src="img/banner/banner2.png" alt="banner2"></div>
+        <div class="swiper-slide"><img src="img/banner/banner3.png" alt="banner3"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<script>
+    var swiper16 = new Swiper('.mySwiper16', {
+        loop: true,
+        slidesPerView: 1,
+        navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-          },
-        });
-   </script>
-    <div class="swiper mySwiper6" id="misterybook">
-        <h2 class="sec-title">특별기획 - 다시 뽑아보는 3대 베스트리 <a href="#">›</a></h2>
-      <div class="swiper-wrapper">
+        },
+    });
+</script>
+<div class="swiper mySwiper6" id="misterybook">
+    <h2 class="sec-title">특별기획 - 다시 뽑아보는 3대 베스트리 <a href="#">›</a></h2>
+    <div class="swiper-wrapper">
         <div class="swiper-slide"></div>
         <div class="swiper-slide"></div>
         <div class="swiper-slide"></div>
@@ -355,298 +354,303 @@
         <div class="swiper-slide"></div>
         <div class="swiper-slide"></div>
         <div class="swiper-slide"></div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
 
-    <div class="swiper mySwiper7" id="chosenbook">
-        <h2 class="sec-title">추천마법사의 섹션 <a href="#">›</a></h2>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+<div class="swiper mySwiper7" id="chosenbook">
+    <h2 class="sec-title">추천마법사의 섹션 <a href="#">›</a></h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
 
-      <div class="swiper mySwiper9" id="issuebook">
-        <h2 class="sec-title">화제의 책 <a href="#">›</a></h2>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+<div class="swiper mySwiper9" id="issuebook">
+    <h2 class="sec-title">화제의 책 <a href="#">›</a></h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
     </div>
-  
-    <div class="swiper mySwiper8" id="chosen2book">
-        <h2 class="sec-title">추천마법사의 섹션 <a href="#">›</a></h2>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<div class="swiper mySwiper8" id="chosen2book">
+    <h2 class="sec-title">추천마법사의 섹션 <a href="#">›</a></h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
 
-    <div class="swiper mySwiper14" id="events">
-        <h2 class="sec-title">알라딘이 만든 사은품 <a href="#">›</a></h2>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>                
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+<div class="swiper mySwiper14" id="events">
+    <h2 class="sec-title">알라딘이 만든 사은품 <a href="#">›</a></h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
 
-    <div class="swiper mySwiper10" id="chosen3book">
-        <h2 class="sec-title">이달의 주목도서 <a href="#">›</a></h2>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>                
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+<div class="swiper mySwiper10" id="chosen3book">
+    <h2 class="sec-title">이달의 주목도서 <a href="#">›</a></h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
     </div>
-  
-    <div class="swiper mySwiper11" id="weekbook">
-        <h2 class="sec-title">이 주의 특가 <a href="#">›</a></h2>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>                
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-    </div>   
-    <div class="swiper mySwiper12" id="selectedbook">
-        <h2 class="sec-title">알라딘 스페셜 <a href="#">›</a></h2>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>                
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-    </div>    
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
 
-    <div class="swiper mySwiper13" id="event">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./img/events/event1.jpg" alt="Event 1"></div>
-            <div class="swiper-slide"><img src="./img/events/event2.jpg" alt="Event 2"></div>
-            <div class="swiper-slide"><img src="./img/events/event3.jpg" alt="Event 3"></div>
-            <div class="swiper-slide"><img src="./img/events/event4.jpg" alt="Event 4"></div>
-            <div class="swiper-slide"><img src="./img/events/event5.jpg" alt="Event 5"></div>
-            <div class="swiper-slide"><img src="./img/events/event6.jpg" alt="Event 6"></div>
-            <div class="swiper-slide"><img src="./img/events/event7.jpg" alt="Event 7"></div>
-            <div class="swiper-slide"><img src="./img/events/event8.jpg" alt="Event 8"></div>
-            <div class="swiper-slide"><img src="./img/events/event9.jpg" alt="Event 9"></div>
-            <div class="swiper-slide"><img src="./img/events/event10.jpg" alt="Event 10"></div>
-        </div>    
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        </div> 
-    <script src="./js/main.js"></script>        
-    <footer>
-        <div class="footertop">
-            <div class="notify">
-                <h3>공지사항</h3>
-                <ol>
-                    <li>8월 신용 카드 무이자 안내</li>
-                    <li>[채용공고] UI/UX 디자이너(휴직대체)</li>
-                    <li>중고매장 강서홈플러스점 폐점안내</li>
-                    <li>알라딘 개인정보처리 방침 개정안내 (2026 8월 12일 시행)</li>
-                    <li>[채용공고]프론트엔드 개발자(휴직대체)</li>
-                    <li>[채용공고]UI/UX 디자이너</li>
-                </ol>
-            </div>
-            <div class="search">
-                <h3>검색</h3>
-                <input type="text" class="Search" placeholder="">
-                <div class ="FooterSearchTool1">
-                    <label><input type="radio" value="1" name="FooterSearchTool1" id="FooterSearchTool1_1" class="FooterSearchTool1" checked="checked"><span>FAQ</span></label>
-                    <label><input type="radio" value="2" name="FooterSearchTool1" id="FooterSearchTool1_2" class="FooterSearchTool1" checked="checked"><span>공지사항</span></label>
-                    <label><input type="radio" value="3" name="FooterSearchTool1" id="FooterSearchTool1_3" class="FooterSearchTool1" checked="checked"><span>당첨자발표</span></label>
-                    <label><input type="radio" value="4" name="FooterSearchTool1" id="FooterSearchTool1_4" class="FooterSearchTool1" checked="checked"><span>서비스안내</span></label>
-                </div>
-                <a href="#">이벤트 당첨자발표</a>
+<div class="swiper mySwiper11" id="weekbook">
+    <h2 class="sec-title">이 주의 특가 <a href="#">›</a></h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<div class="swiper mySwiper12" id="selectedbook">
+    <h2 class="sec-title">알라딘 스페셜 <a href="#">›</a></h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
 
-            </div>
-            <div class="menu">
-                <h3>빠른서비스</h3>
-                <ol>
-                    <li>반품/교환</li>
-                    <li>신청/증빙서류신청</li>
-                    <li>미배송신고</li>
-                    <li>입금신고</li>
-                </ol>
-            </div>
-            <div class="menu">
-                <h3>출판사,판매자안내</h3>
-                <ol>
-                    <li>제휴 및 마케팅 안내</li>
-                    <li>출판사/공급자안내</li>
-                    <li>광고안내</li>
-                    <li>판매자 매니저</li>
-                    <li>학교/기업/기관 대량구매</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="footerservice">
-            <div>
-                <h3>스페셜서비스</h3>
-                <ol>
-                    <li>독자북펀드</li>
-                    <li>알라딘멤버십</li>
-                    <li>선물하기/선물상품권</li>
-                    <li>알라딘 US</li>
-                    <li>알림센터</li>
-                    <li>품절도서선터</li>
-                    <li>알라딘 캐시</li>
-                    <li>전자책 캐시</li>
-                </ol>
-            </div>
-            <div>
-                <h3>가격만족</h3>
-                <ol>
-                    <li>2천원 추가 마일리지</li>
-                    <li>Thanks to 적립금</li>
-                    <li>최저가 보장제도</li>
-                </ol>
-            </div>
-            <div>
-                <h3>배송만족</h3>
-                <ol>
-                    <li>양탄자 배송/당일배송</li>
-                    <li>편의점 배송</li>
-                    <li>수령일 예고제</li>
-                </ol>
-            </div>
-            <div>
-                <h3>웹 & 모바일</h3>
-                <ol>
-                    <li>Open API</li>
-                    <li>모바일/앱</li>
-                </ol>
-            </div>
-            <div>
-                <h3>제휴서비스</h3>
-                <ol>
-                    <li>문화상품권(지류/온라인)</li>
-                    <li>컬처랜드상품권</li>
-                    <li>에쓰오일 S포인트</li>
-                    <li>문화누리카드</li>
-                    <li>알라딘 전자도서관</li>
-                    <li>도서판매사업자 서비스</li>
-                </ol>
-            </div>
-        </div>
-        <div class="footermenu">
-            <hr>
+<div class="swiper mySwiper13" id="event">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./img/events/event1.jpg" alt="Event 1"></div>
+        <div class="swiper-slide"><img src="./img/events/event2.jpg" alt="Event 2"></div>
+        <div class="swiper-slide"><img src="./img/events/event3.jpg" alt="Event 3"></div>
+        <div class="swiper-slide"><img src="./img/events/event4.jpg" alt="Event 4"></div>
+        <div class="swiper-slide"><img src="./img/events/event5.jpg" alt="Event 5"></div>
+        <div class="swiper-slide"><img src="./img/events/event6.jpg" alt="Event 6"></div>
+        <div class="swiper-slide"><img src="./img/events/event7.jpg" alt="Event 7"></div>
+        <div class="swiper-slide"><img src="./img/events/event8.jpg" alt="Event 8"></div>
+        <div class="swiper-slide"><img src="./img/events/event9.jpg" alt="Event 9"></div>
+        <div class="swiper-slide"><img src="./img/events/event10.jpg" alt="Event 10"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<script src="./js/main.js"></script>
+<footer>
+    <div class="footertop">
+        <div class="notify">
+            <h3>공지사항</h3>
             <ol>
-                <li>회사소개</li>
-                <li>채용안내</li>
-                <li>이용약관</li>
-                <li>개인정보처리방침</li>
-                <li>청소년 보호정책</li>
-                <li>중고매장</li>
-                <li>제휴마케팅안내</li>
-                <li>판매자 메니저</li>
+                <li>8월 신용 카드 무이자 안내</li>
+                <li>[채용공고] UI/UX 디자이너(휴직대체)</li>
+                <li>중고매장 강서홈플러스점 폐점안내</li>
+                <li>알라딘 개인정보처리 방침 개정안내 (2026 8월 12일 시행)</li>
+                <li>[채용공고]프론트엔드 개발자(휴직대체)</li>
+                <li>[채용공고]UI/UX 디자이너</li>
+            </ol>
+        </div>
+        <div class="search">
+            <h3>검색</h3>
+            <input type="text" class="Search" placeholder="">
+            <div class="FooterSearchTool1">
+                <label><input type="radio" value="1" name="FooterSearchTool1" id="FooterSearchTool1_1"
+                        class="FooterSearchTool1" checked="checked"><span>FAQ</span></label>
+                <label><input type="radio" value="2" name="FooterSearchTool1" id="FooterSearchTool1_2"
+                        class="FooterSearchTool1" checked="checked"><span>공지사항</span></label>
+                <label><input type="radio" value="3" name="FooterSearchTool1" id="FooterSearchTool1_3"
+                        class="FooterSearchTool1" checked="checked"><span>당첨자발표</span></label>
+                <label><input type="radio" value="4" name="FooterSearchTool1" id="FooterSearchTool1_4"
+                        class="FooterSearchTool1" checked="checked"><span>서비스안내</span></label>
+            </div>
+            <a href="#">이벤트 당첨자발표</a>
+
+        </div>
+        <div class="menu">
+            <h3>빠른서비스</h3>
+            <ol>
+                <li>반품/교환</li>
+                <li>신청/증빙서류신청</li>
+                <li>미배송신고</li>
+                <li>입금신고</li>
+            </ol>
+        </div>
+        <div class="menu">
+            <h3>출판사,판매자안내</h3>
+            <ol>
+                <li>제휴 및 마케팅 안내</li>
                 <li>출판사/공급자안내</li>
                 <li>광고안내</li>
+                <li>판매자 매니저</li>
                 <li>학교/기업/기관 대량구매</li>
             </ol>
-            <hr>
         </div>
-        <div class="footertext">
-            <div class="leftbox">
-                <h3>(주)알라딘커뮤니케이션</h3>
-                <address>
-                    <span>대표이사 최우경</span>    
-                    <span><a href="javascript:fn_ftc_check();">사업자등록 201-81-23094</a></span>
-                    <span>통신판매업신고 2003-서울중구-01520</span>
-                    <span>이메일 privacy@aladin.co.kr</span>
-                    <span>호스팅 제공자 알라딘커뮤니케이션</span>
-                    <span>(본사) 서울시 중구 서소문로 89-31</span>
-                    <div class="copyright">ⓒ Aladin Communication. All Rights Reserved.</div>
-                </address>
+    </div>
+
+    <div class="footerservice">
+        <div>
+            <h3>스페셜서비스</h3>
+            <ol>
+                <li>독자북펀드</li>
+                <li>알라딘멤버십</li>
+                <li>선물하기/선물상품권</li>
+                <li>알라딘 US</li>
+                <li>알림센터</li>
+                <li>품절도서선터</li>
+                <li>알라딘 캐시</li>
+                <li>전자책 캐시</li>
+            </ol>
+        </div>
+        <div>
+            <h3>가격만족</h3>
+            <ol>
+                <li>2천원 추가 마일리지</li>
+                <li>Thanks to 적립금</li>
+                <li>최저가 보장제도</li>
+            </ol>
+        </div>
+        <div>
+            <h3>배송만족</h3>
+            <ol>
+                <li>양탄자 배송/당일배송</li>
+                <li>편의점 배송</li>
+                <li>수령일 예고제</li>
+            </ol>
+        </div>
+        <div>
+            <h3>웹 & 모바일</h3>
+            <ol>
+                <li>Open API</li>
+                <li>모바일/앱</li>
+            </ol>
+        </div>
+        <div>
+            <h3>제휴서비스</h3>
+            <ol>
+                <li>문화상품권(지류/온라인)</li>
+                <li>컬처랜드상품권</li>
+                <li>에쓰오일 S포인트</li>
+                <li>문화누리카드</li>
+                <li>알라딘 전자도서관</li>
+                <li>도서판매사업자 서비스</li>
+            </ol>
+        </div>
+    </div>
+    <div class="footermenu">
+        <hr>
+        <ol>
+            <li>회사소개</li>
+            <li>채용안내</li>
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>청소년 보호정책</li>
+            <li>중고매장</li>
+            <li>제휴마케팅안내</li>
+            <li>판매자 메니저</li>
+            <li>출판사/공급자안내</li>
+            <li>광고안내</li>
+            <li>학교/기업/기관 대량구매</li>
+        </ol>
+        <hr>
+    </div>
+    <div class="footertext">
+        <div class="leftbox">
+            <h3>(주)알라딘커뮤니케이션</h3>
+            <address>
+                <span>대표이사 최우경</span>
+                <span><a href="javascript:fn_ftc_check();">사업자등록 201-81-23094</a></span>
+                <span>통신판매업신고 2003-서울중구-01520</span>
+                <span>이메일 privacy@aladin.co.kr</span>
+                <span>호스팅 제공자 알라딘커뮤니케이션</span>
+                <span>(본사) 서울시 중구 서소문로 89-31</span>
+                <div class="copyright">ⓒ Aladin Communication. All Rights Reserved.</div>
+            </address>
+        </div>
+        <div class="cscenter_box">
+            <h3>고객센터 1544-2514 (발신자 부담)</h3>
+            <address>
+                <span>서울시 마포구 백범로 71 숨도빌딩 7층</span>
+                <span>Fax 02-6926-2600</span>
+            </address>
+            <div class="cs_link">
+                <a href="#">1:1 문의</a>
+                <a href="#">FAQ</a>
             </div>
-            <div class="cscenter_box">
-                <h3>고객센터 1544-2514 (발신자 부담)</h3>
-                <address>
-                    <span>서울시 마포구 백범로 71 숨도빌딩 7층</span>
-                    <span>Fax 02-6926-2600</span>
-                </address>
-                <div class="cs_link">
-                    <a href="#">1:1 문의</a>
-                    <a href="#">FAQ</a>
-                </div>
-                <div class="shop_info">
-                    <a href="#">중고매장 위치, 영업시간 안내</a>
-                </div>
+            <div class="shop_info">
+                <a href="#">중고매장 위치, 영업시간 안내</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
+
 </html>

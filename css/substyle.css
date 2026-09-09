@@ -1,123 +1,132 @@
 @charset "utf-8";
+
 #buyBook {
-    display:flex;
-    flex-direction:column;
-    width:1000px;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
 }
+
 .buybookbody {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .buybookbody .bookimg {
-    width:40%;
-    height:100%;
+    width: 40%;
+    height: 100%;
 }
+
 .bookimg img {
-    width :100%;
+    width: 100%;
     transition: transform 0.3s ease;
 }
+
 .bookimg img:hover {
     transform: rotateY(60deg);
 }
-.buybookbody .bookInfo{
-    width:50%;
-    height:100%;
-    display:flex;
+
+.buybookbody .bookInfo {
+    width: 50%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
 }
 
 .bookInfo .buyInfo {
-    display:flex;
-    flex-direction : row;
-    margin-top:20px;
-    align-items:space-between;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: space-between;
 }
 
 .buyInfo p {
-    width :40%;
+    width: 40%;
 }
+
 .buyInfo h4 {
-    width :50%;
+    width: 50%;
 }
 
 .buybookbody ul {
-    display:flex;
+    display: flex;
     flex-direction: row;
 }
-#downcoupon div{
+
+#downcoupon div {
     background-color: red;
-    color:white;
+    color: white;
 }
+
 #downcoupon div img {
-    width :10px;
-    margin-right:5px;
+    width: 10px;
+    margin-right: 5px;
 }
-    .stepper-vertical {
-      display: inline-flex;
-      align-items: stretch;
-      border: 1px solid #ced4da;
-      border-radius: 6px;
-      overflow: hidden;
-      background: #fff;
-      height: 40px;
-    }
 
-    /* 숫자 입력창 */
-    .stepper-vertical input[type="number"] {
-      width: 70px;
-      border: none;
-      padding: 0 10px;
-      font-size: 1rem;
-      text-align: center;
-      outline: none;
-    }
+.stepper-vertical {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    height: 40px;
+}
 
-    /* 브라우저 기본 스피너 제거 */
-    .stepper-vertical input[type="number"]::-webkit-outer-spin-button,
-    .stepper-vertical input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
+/* 숫자 입력창 */
+.stepper-vertical input[type="number"] {
+    width: 70px;
+    border: none;
+    padding: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+}
 
-    /* 상하 버튼 묶음 (세로 배치) */
-    .btn-group-vertical {
-      display: flex;
-      flex-direction: column;
-      border-left: 1px solid #ced4da;
-      width: 24px;
-    }
+/* 브라우저 기본 스피너 제거 */
+.stepper-vertical input[type="number"]::-webkit-outer-spin-button,
+.stepper-vertical input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-    /* 개별 상/하 버튼 */
-    .stepper-btn {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      background: #f8f9fa;
-      cursor: pointer;
-      padding: 0;
-      font-size: 9px;
-      color: #495057;
-      transition: background-color 0.15s;
-    }
+/* 상하 버튼 묶음 (세로 배치) */
+.btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #ced4da;
+    width: 24px;
+}
 
-    .stepper-btn:hover {
-      background: #e9ecef;
-    }
+/* 개별 상/하 버튼 */
+.stepper-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    padding: 0;
+    font-size: 9px;
+    color: #495057;
+    transition: background-color 0.15s;
+}
 
-    .stepper-btn:active {
-      background: #dee2e6;
-    }
+.stepper-btn:hover {
+    background: #e9ecef;
+}
 
-    /* 위 버튼 아래에 얇은 구분선 */
-    .stepper-btn.up {
-      border-bottom: 1px solid #ced4da;
-    }
+.stepper-btn:active {
+    background: #dee2e6;
+}
 
-  .p_ytz_delivery {
+/* 위 버튼 아래에 얇은 구분선 */
+.stepper-btn.up {
+    border-bottom: 1px solid #ced4da;
+}
+
+.p_ytz_delivery {
     display: inline-block;
     height: 22px;
     line-height: 23px;
@@ -133,48 +142,53 @@
 }
 
 .buyInfo ul {
-    display:flex;
+    display: flex;
     flex-direction: row;
-    width:80%;
+    width: 80%;
     justify-content: space-around;
 }
-.buyInfo ul li{
-    padding-top:10px;
-    padding-bottom:10px;
-    font-size:14px;
+
+.buyInfo ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
     text-align: center;
     align-items: center;
     place-items: center;
     background-color: red;
-    color:white;
+    color: white;
 
 }
-.buyInfo ul li:nth-child(1){
-    width : 100px;
+
+.buyInfo ul li:nth-child(1) {
+    width: 100px;
 
 }
-.buyInfo ul li:nth-child(2){
-    width : 80px;
+
+.buyInfo ul li:nth-child(2) {
+    width: 80px;
 }
 
-.buyInfo ul li:nth-child(3){
-    width : 80px;
+.buyInfo ul li:nth-child(3) {
+    width: 80px;
     background-color: white;
     border-style: solid;
     border-color: red;
-    border-style:solid;
-    border-width:1px;
-    color:red;
+    border-style: solid;
+    border-width: 1px;
+    color: red;
 }
-.buyInfo ul li:nth-child(4){
-    width : 80px;
+
+.buyInfo ul li:nth-child(4) {
+    width: 80px;
     background-color: white;
-    color:red;
+    color: red;
     border-style: solid;
     border-color: red;
-    border-style:solid;
-    border-width:1px;
+    border-style: solid;
+    border-width: 1px;
 }
+
 .bookDetailInfoSub div {
     width: 30%;
 }
@@ -182,147 +196,164 @@
 .bookDetailInfoSub .detail {
     width: 60%;
 }
+
 .bookbuyerInfo {
-    display:flex;
+    display: flex;
     flex-direction: row;
 }
 
 .buyerInfo {
-    width:50%;
-    margin:auto;
-    display:flex;
+    width: 50%;
+    margin: auto;
+    display: flex;
     text-align: center;
     flex-direction: column;
 }
+
 .buyerInfo div {
-    display:flex;
+    display: flex;
     flex-direction: row;
     margin-bottom: 20px;
 }
+
 .buyerInfo div session {
-    width : 50px;
+    width: 50px;
 }
+
 .buyerInfo div session:nth-of-type(2) {
-    width:200px;
-    display:flex;
+    width: 200px;
+    display: flex;
     background-color: #eee;
 }
 
 .buyerInfo div session:nth-of-type(4) {
-    width:200px;
-    display:flex;
+    width: 200px;
+    display: flex;
     background-color: #eee;
 }
+
 .buyerInfo div:nth-of-type(7) {
-    width:100%;
-    display:flex;
+    width: 100%;
+    display: flex;
     flex-direction: row;
     background-color: white;
-    margin:0 auto;
+    margin: 0 auto;
     justify-content: space-evenly;
 }
 
 
 .buyerInfo div session nav {
-    position:relative;
-    top:0;
-    left:100px;
-    width:100px;
+    position: relative;
+    top: 0;
+    left: 100px;
+    width: 100px;
     background-color: red;
 }
+
 .bookbuyerInfo .rateInfo {
-    width :40%;
+    width: 40%;
 }
+
 .rateInfo {
-    display:flex;
-    flex-direction :column;
+    display: flex;
+    flex-direction: column;
 }
+
 #rateInfoHead {
-    display:flex;
+    display: flex;
     flex-direction: row;
-    margin :0 50px ;
+    margin: 0 50px;
 }
 
 #rateInfoHead .text {
     text-align: center;
-    margin:8px 0 0 50px;
-    font-size:20px;
+    margin: 8px 0 0 50px;
+    font-size: 20px;
 }
+
 .rateAndBar {
     display: flex;
     flex-direction: row;
-    margin-top:5px;
+    margin-top: 5px;
 }
+
 .rateAndBar session {
-    width:150px;
-    display:flex;
-    margin-left:50px;
-    margin-top:5px;
+    width: 150px;
+    display: flex;
+    margin-left: 50px;
+    margin-top: 5px;
     background-color: #eee;
 }
 
 .rateAndBar session .buyer {
-    position:relative;
-    top:0;
-    left:50%;
-    width:50%;
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: 50%;
     background-color: #f5b301;
 }
 
 .rateInfoBackground {
-    width :100px;
+    width: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
     font-size: 24px;
 }
 
-.rateInfoBackground .star{
-      position: relative;
-      color: #ddd; /* 비어있는 별 색상 */
+.rateInfoBackground .star {
+    position: relative;
+    color: #ddd;
+    /* 비어있는 별 색상 */
 }
 
 .rateInfoBackground .star .rateInfoActual {
-      position: absolute;
-      top: 0;
-      left: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      color: #f5b301; /* 채워질 별 색상(노란색) */
-      width: 20%; /* 이 값을 0~100%로 변경하여 점수 조절 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #f5b301;
+    /* 채워질 별 색상(노란색) */
+    width: 20%;
+    /* 이 값을 0~100%로 변경하여 점수 조절 */
 }
+
 .rateAndBar .text {
-    margin-left:20px;
-    font-size:18px;
-    margin-top:5px;
+    margin-left: 20px;
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .bookDetailInfoSub {
-    margin-top:20px;
-    display:flex;
+    margin-top: 20px;
+    display: flex;
     flex-direction: row;
 }
 
-.bookDetailInfoSub .detail table{
-    border-collapse: collapse;  
+.bookDetailInfoSub .detail table {
+    border-collapse: collapse;
 }
+
 .bookDetailInfoSub .detail table tr th {
     font-style: normal;
-    font-weight: normal; /* Normal Font*/
-    text-align:left; 
+    font-weight: normal;
+    /* Normal Font*/
+    text-align: left;
     border-top: 1px solid #555;
     border-bottom: 1px solid #555;
     line-height: 25px;
     padding-left: 10px
 }
 
-.bookDetailInfoSub .detail table tr th:nth-child(1){
-    width : 25%;
+.bookDetailInfoSub .detail table tr th:nth-child(1) {
+    width: 25%;
     border-right: 1px solid #555;
     background-color: #eee;
-    font-size:14px;
+    font-size: 14px;
 }
-.bookDetailInfoSub .detail table tr th:nth-child(2){
-    width : 75%;
-    font-size:12px;
+
+.bookDetailInfoSub .detail table tr th:nth-child(2) {
+    width: 75%;
+    font-size: 12px;
 }
