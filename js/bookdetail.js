@@ -200,6 +200,7 @@ if (!targetBook) {
       </table>
       `;
 }
+
 function stepUp(id) {
     document.getElementById(id).stepUp();
 }
@@ -207,3 +208,34 @@ function stepUp(id) {
 function stepDown(id) {
     document.getElementById(id).stepDown();
 }
+
+var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 5,
+    slidesPerGroup: 5,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+function displaySwiperDataDetail(id, data) {
+    const section = document.querySelector(id);
+    const box = section.querySelectorAll(".swiper-slide");
+    for (const index in box) {
+        if (data[index].length === 0) {
+            box[index].innerHTML = "No data found";
+            continue;
+        }
+
+        // 요소 생성 및 추가
+        box[index].innerHTML = `<a href="buybook.html?id=${index % 3}"">
+                <img src="${data[index].thumbnail}" alt ="${data[index].title}">
+                <h4>${data[index].title}</h4></a>`;
+    }
+}
+
+bookData(otherBookTitles, otherBooks).then(() => {
+    displaySwiperDataDetail("#otherBooks", otherBooks);
+});

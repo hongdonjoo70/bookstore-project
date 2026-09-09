@@ -250,6 +250,18 @@ const specialBookTitles = [
     "앤디 위어 우주",
     "낙하",
 ];
+const otherBookTitles = [
+    "손끝까지 숨이 차면",
+    "노무현 평전",
+    "찌니주의보",
+    "오뒷세이아",
+    "살 것인가, 팔 것인가, 버틸 것인가 Buy·Sell·Hold",
+    "오디세이아 ",
+    "칵테일을 마시는 철학자들",
+    "타이거! 타이거!",
+    "엔시티피케이션",
+    "엄마가 도망갔다"
+];
 
 let bestsellersBooks = [];
 let editorChoiceBooks = [];
@@ -270,6 +282,7 @@ let bookFundBooks = [];
 let ebookBooks = [];
 let foreignBooks = [];
 let specialBooks = [];
+let otherBooks =[];
 
 async function fetchBooks(booktitle) {
     const params = new URLSearchParams({
@@ -299,7 +312,7 @@ async function bookData(queries, result) {
         //output.innerHTML += queries.length;
         for (const index in queries) {
             const data = await fetchBooks(queries[index]);
-            if (data.documents.length === 0) {
+            if (data.documents.length == 0) {
                 // 해당 섹션 내의 .box 요소 1개 선택    
                 result.push({
                     thumbnail: "./img/book/test" + (index + 1) + ".jpg",
@@ -319,6 +332,7 @@ async function bookData(queries, result) {
             });
         }
     } catch (error) {
+        result.length = 0;
         for (let index2 = 0; index2 < queries.length; index2++) {
             result.push({
                 thumbnail: "./img/book/test" + (index2 + 1) + ".jpg",

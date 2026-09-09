@@ -325,6 +325,23 @@
     margin-top: 5px;
 }
 
+
+.mySwiper {
+  width: 90%;
+  height: 400px;
+}
+
+.mySwiper .swiper-wrapper {
+  width: 20%;
+  height: 70%;
+}
+
+.mySwiper .swiper-slide {
+  width: 100%;
+  margin: 20px 0 20px 0;
+  flex-direction: column;
+}
+
 .bookDetailInfoSub {
     margin-top: 20px;
     display: flex;
