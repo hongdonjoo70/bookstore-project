@@ -173,91 +173,92 @@
       <session class="bookbuyerInfo">
         <div class="buyerInfo">
           <session>구매자 분포</session>
-          <div><section></section><section><nav class ="buyer"></nav></section><section>10대</section><section><nav class ="buyer"></nav></section><section></section></div> 
-          <div><section></section><section><nav class ="buyer"></nav></section><section>20대</section><section><nav class ="buyer"></nav></section><section></section></div>
-          <div><section></section><section><nav class ="buyer"></nav></section><section>30대</section><section><nav class ="buyer"></nav></section><section></section></div>
-          <div><section></section><section><nav class ="buyer"></nav></section><section>40대</section><section><nav class ="buyer"></nav></section><section></section></div>
-          <div><section></section><section><nav class ="buyer"></nav></section><section>50대</section><section><nav class ="buyer"></nav></section><section></section></div>
-          <div><section></section><section><nav class ="buyer"></nav></section><section>60대</section><section><nav class ="buyer"></nav></section><section></section></div>
+          <div><session></session><session><nav class ="buyer"></nav></session><session>10대</session><session><nav class ="buyer"></nav></session><session></session></div> 
+          <div><session></session><session><nav class ="buyer"></nav></session><session>20대</session><session><nav class ="buyer"></nav></session><session></session></div>
+          <div><session></session><session><nav class ="buyer"></nav></session><session>30대</session><session><nav class ="buyer"></nav></session><session></session></div>
+          <div><session></session><session><nav class ="buyer"></nav></session><session>40대</session><session><nav class ="buyer"></nav></session><session></session></div>
+          <div><session></session><session><nav class ="buyer"></nav></session><session>50대</session><session><nav class ="buyer"></nav></session><session></session></div>
+          <div><session></session><session><nav class ="buyer"></nav></session><session>60대</session><session><nav class ="buyer"></nav></session><session></session></div>
           <div> <div>여성</div><div>남성</div> </div>
         </div>
         <div class="rateInfo">
           <div class="text">평점 분포</div>
-          <div>
+          <div id = "rateInfoHead">
             <div class="rateInfoBackground">
-              <div>★★★★★
+              <div class="star">★★★★★
                 <div class="rateInfoActual">
                 ★★★★★
+                </div>
               </div>
             </div>
-            </div>
-            <div class="text"></div>
+            <div class="text">1</div>
           </div>
-          <div>
+          <div class="rateAndBar">
             <div class="rateInfoBackground">
-              <div>★★★★★
+              <div class="star">★★★★★
                 <div class="rateInfoActual" style="width: 100%;">
                 ★★★★★
+                </div>
               </div>
             </div>
-            </div>
-            <section><nav class ="buyer"></nav></section>
-            <div class="text"></div>
+            <session><nav class ="buyer"></nav></session>
+            <div class="text">1</div>
           </div>
-          <div>
+          <div class="rateAndBar">
             <div class="rateInfoBackground">
-              <div>★★★★★
+              <div class="star">★★★★★
                 <div class="rateInfoActual" style="width: 80%;">
                 ★★★★★
               </div>
             </div>
             </div>
-            <section><nav class ="buyer"></nav></section>
-            <div class="text"></div>
+            <session><nav class ="buyer"></nav></session>
+            <div class="text">2</div>
           </div>
-          <div>
+          <div class="rateAndBar">
             <div class="rateInfoBackground">
-              <div>★★★★★
+              <div class="star">★★★★★
                 <div class="rateInfoActual" style="width: 60%;">
                 ★★★★★
               </div>
             </div>
             </div>
-            <section><nav class ="buyer"></nav></section>
-            <div class="text"></div>
+            <session><nav class ="buyer"></nav></session>
+            <div class="text">3</div>
           </div>
-          <div>
+          <div class="rateAndBar">
             <div class="rateInfoBackground">
-              <div>★★★★★
+              <div class="star">★★★★★
                 <div class="rateInfoActual" style="width: 40%;">
                 ★★★★★
+               </div>
               </div>
             </div>
-            </div>
-            <section><nav class ="buyer"></nav></section>
-            <div class="text"></div>
+            <session><nav class ="buyer"></nav></session>
+            <div class="text">4</div>
           </div>
-          <div>
+          <div class="rateAndBar">
             <div class="rateInfoBackground">
-              <div>★★★★★
+              <div class="star">★★★★★
                 <div class="rateInfoActual" style="width: 20%;">
                 ★★★★★
               </div>
             </div>
             </div>
-            <section><nav class ="buyer"></nav></section>
-            <div class="text"></div>
+            <session><nav class ="buyer"></nav></session>
+            <div class="text">5</div>
           </div>   
-          <div class="rateInfoBackground">
-              <div>★★★★★
-                <div class="rateInfoActual" style="width: 0%;">
-                ★★★★★
-              </div>
+          <div class="rateAndBar">
+            <div class="rateInfoBackground">
+                <div class="star">★★★★★
+                  <div class="rateInfoActual" style="width: 0%;">
+                  ★★★★★
+                  </div>
+                </div>
             </div>
-            </div>
-            <section><nav class ="buyer"></nav></section>
-            <div class="text"></div>
-          </div>                                      
+            <session><nav class ="buyer"></nav></session>
+            <div class="text">6</div>                                     
+          </div>
         </div>
       </session> 
       <div class ="bookDetailInfoSub">
@@ -313,86 +314,5 @@
         </div>
     </div>
     <script src="./js/bookdetail.js"></script>
-    <script>
-    const params = new URLSearchParams(window.location.search);
-    const bookId = Number(params.get("id"));
-
-    const detailContainer = document.getElementById("buyBook");
-
-    // 2. ID에 해당하는 도서 데이터 검색
-    const targetBook = bookdetailinfo[bookId];
-
-    // 3. 화면 렌더링
-    if (!targetBook) {
-      detailContainer.innerHTML = `
-        <div class="error-msg">
-          <h2>도서 정보를 찾을 수 없습니다.</h2>
-          <p style="margin-top: 8px;">올바른 경로로 접속했는지 확인해 주세요.</p>
-        </div>
-      `;
-    } else {
-      let booktitleBlocks = detailContainer.getElementsByClassName("booktitle");
-      let authorBlocks = detailContainer.getElementsByClassName("author");
-      let bookImg = detailContainer.querySelector(".bookimg");
-      let bookInfos= detailContainer.querySelectorAll(".buyInfo");
-      let bookDetailInfos = document.querySelectorAll(".bookDetailInfoSub");
-      let buyerInfoBlock = document.querySelector(".buyerInfo");
-      let buyerInfos = buyerInfoBlock.getElementsByTagName("div");
-      let rateInfo = document.querySelector(".rateInfoActual");
-
-      booktitleBlocks[0].innerHTML = targetBook.title;
-      authorBlocks[0].innerHTML = targetBook.author;
-      bookImg.innerHTML= `<img src=${targetBook.img}>`;
-      //Update Book Information
-      bookInfos[0].querySelector("h4").innerHTML =`
-         <s>${bookdetailinfo[bookId].originalPrice.toLocaleString()}</s> 원`;
-      bookInfos[1].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].price.toLocaleString()} 원`;
-      bookInfos[2].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].promotePrice.toLocaleString()} 원<br>
-      <h5>알라딘 만권당 삼성카드, 알라딘 15% 청구 할인   > &#x20DE</h5>
-      <h6>최대 1만원 또는 2만원 할인(전월 30만원 또는 60만원 이용 시) / 카드 발급월 +1개월까지는 전월 실적이 없어도 최대 1만원 혜택 제공</h6>
-      `;
-      bookInfos[4].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].price/100}원 + 멤버십(3-1%) <br> + 5만원이상 구매시 2000원 v &#x20DE`;
-
-      bookDetailInfos[0].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].basicInfo}
-      `;
-      bookDetailInfos[1].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].bookInfo}
-      `;
-      bookDetailInfos[2].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].author}<br>
-      ${bookdetailinfo[bookId].authorInfo}
-      `;
-      bookDetailInfos[3].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].publisher}
-      `;
-      //Update Buyer Information
-      for (let index =0 ; index < 6;index ++) {
-        buyerInfos[index].querySelectorAll("section")[0].innerHTML = `${bookdetailinfo[bookId].buyerInfo[0][index]} %`;
-        buyerInfos[index].querySelectorAll(".buyer")[0].style.width = bookdetailinfo[bookId].buyerInfo[0][index]  + "%";
-        buyerInfos[index].querySelectorAll(".buyer")[0].style.left = (100-bookdetailinfo[bookId].buyerInfo[0][index])+ "%";
-
-        buyerInfos[index].querySelectorAll(".buyer")[1].style.width = bookdetailinfo[bookId].buyerInfo[1][index] + "%";
-        buyerInfos[index].querySelectorAll(".buyer")[1].style.left = 0;
-        buyerInfos[index].querySelectorAll("section")[4].innerHTML = `${bookdetailinfo[bookId].buyerInfo[1][index]} %`
-      }
-      rateInfo.style.width =  (bookdetailinfo[bookId].rate *10) + "%";
-      // refund information
-      bookDetailInfos[4].querySelector(".detail").innerHTML = `
-      <table>
-        <tr><th> 반품/교환 방법 </th><th>${etcText.refundMethod}</th> </tr>
-        <tr><th> 반품/교환 가능기간 </th><th> ${etcText.refundPeriod}</th> </tr>
-        <tr><th> 반품/교환 비용 </th><th>${etcText.refundCost}</th> </tr>
-        <tr><th> 반품/교환 불가 사유 </th><th>${etcText.refundRejectReason}</th> </tr>
-        <tr><th> 소비자 피해보상
-환불지연에 따른 배상</th><th>${etcText.Compensation}</th> </tr>
-      </table>
-      `;
-    }
-    function stepUp(id) {
-      document.getElementById(id).stepUp();
-    }
-
-    function stepDown(id) {
-      document.getElementById(id).stepDown();
-    }
-
-  </script>
 </body>
 </html>

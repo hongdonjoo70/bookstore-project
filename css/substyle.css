@@ -199,13 +199,16 @@
     flex-direction: row;
     margin-bottom: 20px;
 }
-.buyerInfo div section:nth-of-type(2) {
+.buyerInfo div session {
+    width : 50px;
+}
+.buyerInfo div session:nth-of-type(2) {
     width:200px;
     display:flex;
     background-color: #eee;
 }
 
-.buyerInfo div section:nth-of-type(4) {
+.buyerInfo div session:nth-of-type(4) {
     width:200px;
     display:flex;
     background-color: #eee;
@@ -219,10 +222,8 @@
     justify-content: space-evenly;
 }
 
-.buyerInfo div seciton  {
-    width : 50px;
-}
-.buyerInfo div section nav {
+
+.buyerInfo div session nav {
     position:relative;
     top:0;
     left:100px;
@@ -232,30 +233,68 @@
 .bookbuyerInfo .rateInfo {
     width :40%;
 }
+.rateInfo {
+    display:flex;
+    flex-direction :column;
+}
+#rateInfoHead {
+    display:flex;
+    flex-direction: row;
+    margin :0 50px ;
+}
+
+#rateInfoHead .text {
+    text-align: center;
+    margin:8px 0 0 50px;
+    font-size:20px;
+}
+.rateAndBar {
+    display: flex;
+    flex-direction: row;
+    margin-top:5px;
+}
+.rateAndBar session {
+    width:150px;
+    display:flex;
+    margin-left:50px;
+    margin-top:5px;
+    background-color: #eee;
+}
+
+.rateAndBar session .buyer {
+    position:relative;
+    top:0;
+    left:50%;
+    width:50%;
+    background-color: #f5b301;
+}
+
 .rateInfoBackground {
     width :100px;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 8px;
     font-size: 24px;
 }
 
-.rateInfoBackground div{
+.rateInfoBackground .star{
       position: relative;
-      display: inline-block;
       color: #ddd; /* 비어있는 별 색상 */
-      line-height: 1;
 }
 
-.rateInfoBackground div .rateInfoActual {
+.rateInfoBackground .star .rateInfoActual {
       position: absolute;
       top: 0;
       left: 0;
       white-space: nowrap;
       overflow: hidden;
       color: #f5b301; /* 채워질 별 색상(노란색) */
-      line-height: 1;
       width: 20%; /* 이 값을 0~100%로 변경하여 점수 조절 */
+}
+.rateAndBar .text {
+    margin-left:20px;
+    font-size:18px;
+    margin-top:5px;
 }
 
 .bookDetailInfoSub {

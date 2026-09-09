@@ -6,7 +6,8 @@ const bookdetailinfo = [
         price:19900,
         promotePrice:16915,
         deliveryCost:0,
-        rate:9.0,
+        rate:9.3,
+        rates_info:[10,20,20,10,20,20],
         buyerInfo:[[10,20,30,10,10,20],[10,40,30,0,10,10]],
         basicInfo : `
                     외국도서 > 소설/시/희곡 > 소설 > 문학<br>
@@ -34,6 +35,7 @@ A story of giving and receiving, of seeing and being seen, Theo of Golden is an 
         promotePrice:18360,
         deliveryCost:0,
         rate:9.8,
+        rates_info:[10,20,20,10,20,20],
         buyerInfo:[[10,20,20,10,20,20],[10,5,35,0,0,50]],
         basicInfo : `국내도서 > 경제경영 > 재테크/투자 > 재테크/투자 일반<br>
                 국내도서 > 경제경영 > 재테크/투자 > 주식/펀드`,
@@ -61,6 +63,7 @@ A story of giving and receiving, of seeing and being seen, Theo of Golden is an 
         promotePrice:14535,
         deliveryCost:0,
         rate:9.4,
+        rates_info:[10,20,20,10,20,20],
         buyerInfo:[[10,30,10,20,20,10],[20,20,20,20,10,10]],
         basicInfo : `국내도서 > 경제경영 > 재테크/투자 > 주식/펀드<br>
 국내도서 > 경제경영 > 경제학/경제일반 > 경제이야기<br>
@@ -115,3 +118,90 @@ o 신선도 문제로 일정 기한 경과 시 상품 가치가 현저하게 감
     Compensation:`o 상품의 불량에 의한 반품, 교환, A/S, 환불, 품질보증 및 피해보상 등에 관한 사항은 소비자분쟁해결기준 (공정거래위원회 고시)에 준하여 처리됨<br>
 o 대금 환불 및 환불 지연에 따른 배상금 지급 조건, 절차 등은 전자상거래 등에서의 소비자 보호에 관한 법률에 따라 처리함`
 };
+
+    const params = new URLSearchParams(window.location.search);
+    const bookId = Number(params.get("id"));
+
+    const detailContainer = document.getElementById("buyBook");
+
+    // 2. ID에 해당하는 도서 데이터 검색
+    const targetBook = bookdetailinfo[bookId];
+
+    // 3. 화면 렌더링
+    if (!targetBook) {
+      detailContainer.innerHTML = `
+        <div class="error-msg">
+          <h2>도서 정보를 찾을 수 없습니다.</h2>
+          <p style="margin-top: 8px;">올바른 경로로 접속했는지 확인해 주세요.</p>
+        </div>
+      `;
+    } else {
+      let booktitleBlocks = detailContainer.getElementsByClassName("booktitle");
+      let authorBlocks = detailContainer.getElementsByClassName("author");
+      let bookImg = detailContainer.querySelector(".bookimg");
+      let bookInfos= detailContainer.querySelectorAll(".buyInfo");
+      let bookDetailInfos = document.querySelectorAll(".bookDetailInfoSub");
+      let buyerInfoBlock = document.querySelector(".buyerInfo");
+      let buyerInfos = buyerInfoBlock.getElementsByTagName("div");
+      let rateText = rateInfoHead.querySelector(".text");
+      let rateInfo = document.querySelector(".rateInfoActual");
+      let rateInfos = document.querySelectorAll(".text");
+
+      booktitleBlocks[0].innerHTML = targetBook.title;
+      authorBlocks[0].innerHTML = targetBook.author;
+      bookImg.innerHTML= `<img src=${targetBook.img}>`;
+      //Update Book Information
+      bookInfos[0].querySelector("h4").innerHTML =`
+         <s>${bookdetailinfo[bookId].originalPrice.toLocaleString()}</s> 원`;
+      bookInfos[1].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].price.toLocaleString()} 원`;
+      bookInfos[2].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].promotePrice.toLocaleString()} 원<br>
+      <h5>알라딘 만권당 삼성카드, 알라딘 15% 청구 할인   > &#x20DE</h5>
+      <h6>최대 1만원 또는 2만원 할인(전월 30만원 또는 60만원 이용 시) / 카드 발급월 +1개월까지는 전월 실적이 없어도 최대 1만원 혜택 제공</h6>
+      `;
+      bookInfos[4].querySelector("h4").innerHTML = `${bookdetailinfo[bookId].price/100}원 + 멤버십(3-1%) <br> + 5만원이상 구매시 2000원 v &#x20DE`;
+
+      bookDetailInfos[0].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].basicInfo}
+      `;
+      bookDetailInfos[1].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].bookInfo}
+      `;
+      bookDetailInfos[2].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].author}<br>
+      ${bookdetailinfo[bookId].authorInfo}
+      `;
+      bookDetailInfos[3].querySelector(".detail").innerHTML = `${bookdetailinfo[bookId].publisher}
+      `;
+      //Update Buyer Information
+      for (let index =0 ; index < 6;index ++) {
+        buyerInfos[index].querySelectorAll("session")[0].innerHTML = `${bookdetailinfo[bookId].buyerInfo[0][index]} %`;
+        buyerInfos[index].querySelectorAll(".buyer")[0].style.width = bookdetailinfo[bookId].buyerInfo[0][index]  + "%";
+        buyerInfos[index].querySelectorAll(".buyer")[0].style.left = (100-bookdetailinfo[bookId].buyerInfo[0][index])+ "%";
+
+        buyerInfos[index].querySelectorAll(".buyer")[1].style.width = bookdetailinfo[bookId].buyerInfo[1][index] + "%";
+        buyerInfos[index].querySelectorAll(".buyer")[1].style.left = 0;
+        buyerInfos[index].querySelectorAll("session")[4].innerHTML = `${bookdetailinfo[bookId].buyerInfo[1][index]} %`
+      }
+      rateInfo.style.width =  (bookdetailinfo[bookId].rate *10) + "%";
+      rateText.innerHTML = (bookdetailinfo[bookId].rate.toFixed(1));
+
+      for (let index =2; index < 8; index ++) {
+        rateInfos[index].innerHTML = bookdetailinfo[bookId].rates_info[index-2]+"%";
+        
+      }
+      // refund information
+      bookDetailInfos[4].querySelector(".detail").innerHTML = `
+      <table>
+        <tr><th> 반품/교환 방법 </th><th>${etcText.refundMethod}</th> </tr>
+        <tr><th> 반품/교환 가능기간 </th><th> ${etcText.refundPeriod}</th> </tr>
+        <tr><th> 반품/교환 비용 </th><th>${etcText.refundCost}</th> </tr>
+        <tr><th> 반품/교환 불가 사유 </th><th>${etcText.refundRejectReason}</th> </tr>
+        <tr><th> 소비자 피해보상
+환불지연에 따른 배상</th><th>${etcText.Compensation}</th> </tr>
+      </table>
+      `;
+    }
+    function stepUp(id) {
+      document.getElementById(id).stepUp();
+    }
+
+    function stepDown(id) {
+      document.getElementById(id).stepDown();
+    }
