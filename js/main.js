@@ -18,11 +18,11 @@ var swiper2 = new Swiper('.mySwiper2', {
 function stopMySwiper() {
     if (swiper2.autoplay.paused != true) {
         swiper2.autoplay.pause();
-        stopslide.innerHTML = '<img src ="img/play.png">';
+        stopslide.innerHTML = '<img src ="img/play.png" alt="play">';
     }
     else {
         swiper2.autoplay.resume();
-        stopslide.innerHTML = '<img src ="img/stop.png">'
+        stopslide.innerHTML = '<img src ="img/stop.png" alt="stop">'
     }
 }
 
@@ -131,7 +131,7 @@ function displayMain2BookData(id, data) {
 
         // 요소 생성 및 추가
         box[index].innerHTML = `<a href="buybook.html?id=${index % 3}">
-                    <img src="${data[index].thumbnail}">
+                    <img src="${data[index].thumbnail}" alt="${data[index].title}">
                     <h5>${data[index].title}</h5></a>
                 `;
     }
@@ -183,23 +183,23 @@ function displayTop10Data(data) {
     const top10left = document.querySelector(".top10-left");
     top10left.innerHTML = `
                 <div class="smallbook">
-                <img src="${data[0].thumbnail}">
+                <img src="${data[0].thumbnail}" alt ="${data[0].title}">
                 <h3>1</h3>
-                <h6>${data[0].title}</h6> </div>
+                <h5>${data[0].title}</h5> </div>
                 <div class="smallbook">
-                <img src="${data[1].thumbnail}">
+                <img src="${data[1].thumbnail}" alt="${data[1].title}">
                 <h3>2</h3>
-                <h6>${data[1].title}</h6> </div>
+                <h5>${data[1].title}</h5> </div>
             `
     const top10lists = document.querySelectorAll(".top10-list");
     for (let i = 2; i < 6; i++) {
         top10lists[0].innerHTML += `<div><h3>${i + 1}</h3>
-                <h5>${data[i].title}</h5></div>
+                <h6>${data[i].title}</h6></div>
                 `
     }
     for (let i = 6; i < 10; i++) {
         top10lists[1].innerHTML += `<div><h3>${i + 1}</h3>
-                <h5>${data[i].title}</h5>
+                <h6>${data[i].title}</h6>
                 `
     }
 }
@@ -221,7 +221,7 @@ var swiper15 = new Swiper('.mySwiper15', {
 const nevents = document.querySelector("#nevents");
 const neventbox = nevents.querySelectorAll(".swiper-slide");
 for (let index = 0; index < neventbox.length; index++) {
-    neventbox[index].innerHTML = `<img src="img/event/nevent${index + 1}.jpg">`;
+    neventbox[index].innerHTML = `<img src="img/event/nevent${index + 1}.jpg" alt ="nevent${index+1}">`;
 }
 function displaySwiperData(id, data) {
     const section = document.querySelector(id);
@@ -234,7 +234,7 @@ function displaySwiperData(id, data) {
 
         // 요소 생성 및 추가
         box[index].innerHTML = `<a href="buybook.html?id=${index % 3}"">
-                <img src="${data[index].thumbnail}">
+                <img src="${data[index].thumbnail}" alt ="${data[index].title}">
                 <h4>${data[index].title}</h4></a>`;
     }
 }
@@ -278,7 +278,7 @@ function displaySwiperData3(id, data) {
 
         // 요소 생성 및 추가
         box[index].innerHTML = `<a href="buybook.html?id=${index % 3}">
-                <img src="${data[index].thumbnail}">
+                <img src="${data[index].thumbnail}" alt ="${data[index].title}">
                 <div> 
                    <h4>${data[index].title}</h4><br>
                    <h5>${data[index].contents}</h5>
@@ -327,7 +327,7 @@ var swiper14 = new Swiper('.mySwiper14', {
 const section = document.querySelector("#events");
 const box = section.querySelectorAll(".swiper-slide");
 for (let index = 0; index < box.length; index++) {
-    box[index].innerHTML = `<img src="img/goods/eventgood${index + 1}.jpg">`;
+    box[index].innerHTML = `<img src="img/goods/eventgood${index + 1}.jpg" alt="eventgood${index+1}">`;
 }
 
 var swiper10 = new Swiper('.mySwiper10', {
@@ -377,6 +377,14 @@ var swiper13 = new Swiper('.mySwiper13', {
     slidesPerGroup: 3,
     spaceBetween: 30,
     loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+var swiper16 = new Swiper('.mySwiper16', {
+    loop: true,
+    slidesPerView: 1,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

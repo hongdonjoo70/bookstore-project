@@ -142,10 +142,11 @@ if (!targetBook) {
     let bookInfos = detailContainer.querySelectorAll(".buyInfo");
     let bookDetailInfos = document.querySelectorAll(".bookDetailInfoSub");
     let buyerInfoBlock = document.querySelector(".buyerInfo");
-    let buyerInfos = buyerInfoBlock.getElementsByTagName("div");
+    let buyerInfos = buyerInfoBlock.getElementsByClassName("buyerDist");
     let rateText = rateInfoHead.querySelector(".text");
     let rateInfo = document.querySelector(".rateInfoActual");
     let rateInfos = document.querySelectorAll(".text");
+    let rateDists = document.querySelectorAll(".buyerBase");
 
     booktitleBlocks[0].innerHTML = targetBook.title;
     authorBlocks[0].innerHTML = targetBook.author;
@@ -171,20 +172,21 @@ if (!targetBook) {
       `;
     //Update Buyer Information
     for (let index = 0; index < 6; index++) {
-        buyerInfos[index].querySelectorAll("session")[0].innerHTML = `${bookdetailinfo[bookId].buyerInfo[0][index]} %`;
+
+        buyerInfos[index].querySelectorAll("div")[0].innerHTML = `${bookdetailinfo[bookId].buyerInfo[0][index]} %`;
         buyerInfos[index].querySelectorAll(".buyer")[0].style.width = bookdetailinfo[bookId].buyerInfo[0][index] + "%";
         buyerInfos[index].querySelectorAll(".buyer")[0].style.left = (100 - bookdetailinfo[bookId].buyerInfo[0][index]) + "%";
 
         buyerInfos[index].querySelectorAll(".buyer")[1].style.width = bookdetailinfo[bookId].buyerInfo[1][index] + "%";
         buyerInfos[index].querySelectorAll(".buyer")[1].style.left = 0;
-        buyerInfos[index].querySelectorAll("session")[4].innerHTML = `${bookdetailinfo[bookId].buyerInfo[1][index]} %`
+        buyerInfos[index].querySelectorAll("div")[4].innerHTML = `${bookdetailinfo[bookId].buyerInfo[1][index]} %`
     }
     rateInfo.style.width = (bookdetailinfo[bookId].rate * 10) + "%";
     rateText.innerHTML = (bookdetailinfo[bookId].rate.toFixed(1));
-
+    ;
     for (let index = 2; index < 8; index++) {
-        rateInfos[index].innerHTML = bookdetailinfo[bookId].rates_info[index - 2] + "%";
-
+        rateDists[index-2].querySelector(".buyer").style.width = bookdetailinfo[bookId].rates_info[index - 2] + "%";
+        rateInfos[index].innerHTML = bookdetailinfo[bookId].rates_info[index - 2].toFixed(1) + "%";
     }
     // refund information
     bookDetailInfos[4].querySelector(".detail").innerHTML = `

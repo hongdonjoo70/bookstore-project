@@ -216,17 +216,17 @@
     margin-bottom: 20px;
 }
 
-.buyerInfo div session {
+.buyerInfo div div {
     width: 50px;
 }
 
-.buyerInfo div session:nth-of-type(2) {
+.buyerInfo div div:nth-of-type(2) {
     width: 200px;
     display: flex;
     background-color: #eee;
 }
 
-.buyerInfo div session:nth-of-type(4) {
+.buyerInfo div div:nth-of-type(4) {
     width: 200px;
     display: flex;
     background-color: #eee;
@@ -242,7 +242,7 @@
 }
 
 
-.buyerInfo div session nav {
+.buyerInfo div div nav {
     position: relative;
     top: 0;
     left: 100px;
@@ -271,27 +271,6 @@
     font-size: 20px;
 }
 
-.rateAndBar {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-}
-
-.rateAndBar session {
-    width: 150px;
-    display: flex;
-    margin-left: 50px;
-    margin-top: 5px;
-    background-color: #eee;
-}
-
-.rateAndBar session .buyer {
-    position: relative;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    background-color: #f5b301;
-}
 
 .rateInfoBackground {
     width: 100px;
@@ -317,6 +296,27 @@
     /* 채워질 별 색상(노란색) */
     width: 20%;
     /* 이 값을 0~100%로 변경하여 점수 조절 */
+}
+
+.rateAndBar {
+    display: flex;
+    flex-direction: row;
+    margin-top:20px;
+}
+
+.rateAndBar .buyerBase {
+    width: 150px;
+    display: flex;
+    margin-left: 50px;
+    margin-top: 5px;
+    background-color: #eee;
+}
+
+.rateAndBar .buyerBase .buyer {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #f5b301;
 }
 
 .rateAndBar .text {

@@ -39,9 +39,9 @@ body {
 
 #main1 {
   width: 90%;
-  background-color: aqua;
+  background-color: rgb(51, 145, 145);
   border-radius: 10px;
-  border-color: aqua;
+  border-color: rgb(40, 135, 135);
 }
 
 .swiper {
@@ -207,17 +207,6 @@ body {
   height: 90%;
 }
 
-.mySwiper20 .swiper-slide {
-  flex-direction: column;
-}
-
-.mySwiper21 .swiper-slide {
-  flex-direction: column;
-}
-
-.mySwiper22 .swiper-slide {
-  flex-direction: column;
-}
 
 #main2left .mySwiper20 {
   position: relative;
@@ -309,7 +298,6 @@ body {
   width: 25%;
   height: 100%;
   flex-direction: row;
-  align-items: space-between;
 }
 
 .top10 .top10-body .top10-list div {
@@ -439,13 +427,11 @@ body {
   background-color: #ddd;
   display: flex;
   flex-direction: row;
-  align-items: space-between;
 }
 
 .mySwiper9 .swiper-slide a {
   display: flex;
   flex-direction: row;
-  align-items: space-between;
 }
 
 .mySwiper9 .swiper-slide img {
@@ -458,9 +444,6 @@ body {
   width: 60%;
   height: 80%;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
-  /* 보여줄 최대 줄 수 (3줄) */
-  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
