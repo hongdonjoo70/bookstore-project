@@ -343,10 +343,22 @@
   justify-items:end;
 }
 
-.mySwiper .swiper-slide img {
+.mySwiper .swiper-slide .image {
   width: 100%;
   height: 70%;
+  display: flex;
+  align-items: flex-end; 
+  justify-content: center;
+  overflow: hidden;
 }
+ .image img{
+  max-width: 90%;
+  max-height: 100%;
+  width: auto;       /* 원본 비율 유지 */
+  height: auto;      /* 원본 비율 유지 */
+  object-fit: contain;  
+}
+
 .mySwiper .swiper-slide h4 {
   width: 100%;
   height: 30%;

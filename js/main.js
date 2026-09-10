@@ -37,10 +37,12 @@ function displayBookData(id, data) {
         }
 
         // 요소 생성 및 추가
-        box[index].innerHTML = `<a href="buybook.html?id=${index % 3}">
-                <img src="${data[index].thumbnail}">
-                <h5>${data[index].title}</h5></a>
-                `;
+        box[index].innerHTML = `<div class="image">
+            <a href="buybook.html?id=${index % 3}">
+            <img src="${data[index].thumbnail}">
+            </a>
+            </div>
+            <h5>${data[index].title}</h5>`;
     }
 }
 
@@ -131,9 +133,9 @@ function displayMain2BookData(id, data) {
 
         // 요소 생성 및 추가
         box[index].innerHTML = `<a href="buybook.html?id=${index % 3}">
-                    <img src="${data[index].thumbnail}" alt="${data[index].title}">
-                    <h5>${data[index].title}</h5></a>
-                `;
+            <img src="${data[index].thumbnail}">
+            <h5>${data[index].title}</h5>
+            </a>`;
     }
 }
 bookData(editorChoiceTitle, editorChoiceBooks2).then(() => {
@@ -233,9 +235,12 @@ function displaySwiperData(id, data) {
         }
 
         // 요소 생성 및 추가
-        box[index].innerHTML = `<a href="buybook.html?id=${index % 3}"">
-                <img src="${data[index].thumbnail}" alt ="${data[index].title}">
-                <h4>${data[index].title}</h4></a>`;
+        box[index].innerHTML = `<div class="image">
+                <a href="buybook.html?id=${index % 3}">
+                  <img src="${data[index].thumbnail}">
+                </a>
+            </div>
+            <h4><a href="buybook.html?id=${index % 3}">${data[index].title}</a></h4>`;
     }
 }
 

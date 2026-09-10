@@ -75,12 +75,39 @@ body {
   border-radius: 10px;
   border-color: aqua;
   display: flex;
+  flex-direction: row;
 }
 
-.swiper-slide img {
+.swiper-slide .image {
   /* display: block; */
   width: 90%;
   height: 90%;
+  display: flex;
+  align-items: flex-end; 
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mySwiper2 .swiper-slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+ .image img{
+  max-width: 90%;
+  max-height: 100%;
+  width: auto;       /* 원본 비율 유지 */
+  height: auto;      /* 원본 비율 유지 */
+  object-fit: contain;  
+}
+
+.swiper-slide h5 {
+  /* display: block; */
+  width: 100%;
+  height: 10%;
 }
 
 .swiper-slide h4 {
@@ -88,6 +115,7 @@ body {
   width: 100%;
   height: 10%;
 }
+
 
 .mySwiper {
   width: 90%;
@@ -119,14 +147,32 @@ body {
 
 .mySwiper2 .swiper-slide .book {
   width: 20%;
-  height: 95%;
-  margin: 10px;
+  height: 100%;
+  margin-left: 10px;
 }
 
 .mySwiper2 .swiper-slide .event {
   width: 30%;
   height: 90%;
-  margin: 10px;
+  margin-left: 10px;
+}
+.mySwiper2 .swiper-slide .image {
+  height: 80%;      /* 원본 비율 유지 */
+  object-fit: contain; 
+}
+
+.mySwiper2 .swiper-slide img {
+  max-width: 90%;
+  max-height: 100%;
+  width: auto;       /* 원본 비율 유지 */
+  height: auto;      /* 원본 비율 유지 */
+  object-fit: contain;  
+}
+
+.mySwiper2 .swiper-slide h5 {
+  width: 100%;       /* 원본 비율 유지 */
+  height: 20%;      /* 원본 비율 유지 */
+  object-fit: contain; 
 }
 
 #stopslide {
@@ -187,13 +233,30 @@ body {
   border: 2px solid #ccc;
 }
 
-#main2header nav-controls {
+#main2header .nav-controls {
   width: 5%;
+  display:flex;
+  flex-direction: row;
+
+}
+.nav-controls .btn-prev {
+  border-color: #333;
+  color: #333;
+  border: solid 1px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-controls .btn-next {
+  border-color: #333;
+  color: #333;
+  border: solid 1px;
+  width: 20px;
+  height: 20px;
 }
 
 #main2main {
   width: 100%;
-  margin-top: 2%;
   height: 90%;
 }
 
@@ -206,7 +269,6 @@ body {
   margin-bottom: 5px;
   height: 90%;
 }
-
 
 #main2left .mySwiper20 {
   position: relative;
@@ -246,6 +308,38 @@ body {
   flex-direction: row;
   border-bottom: #ccc;
   margin-bottom: 5px;
+}
+
+.mySwiper23 img {
+  width: 90%;
+  height: 100%;
+  margin-left: 10px;
+  object-fit: contain;  
+}
+.mySwiper22 img {
+  width: 90%;
+  height: 80%;
+  margin-left: 10px;
+  object-fit: contain;  
+}
+.mySwiper21 img {
+  width: 90%;
+  height: 80%;
+  margin-left: 10px;
+  object-fit: contain;  
+}
+
+.mySwiper20 img {
+  width: 90%;
+  height: 80%;
+  margin-left: 10px;
+  object-fit: contain;  
+}
+.mySwiper3 img {
+  width: 90%;
+  height: 100%;
+  margin-left: 10px;
+  object-fit: contain;  
 }
 
 .swiper-button-next,

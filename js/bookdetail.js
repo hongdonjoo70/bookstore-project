@@ -230,9 +230,12 @@ function displaySwiperDataDetail(id, data) {
         }
 
         // 요소 생성 및 추가
-        box[index].innerHTML = `<a href="buybook.html?id=${index % 3}"">
-                <img src="${data[index].thumbnail}" alt ="${data[index].title}">
-                <h4>${data[index].title}</h4></a>`;
+        box[index].innerHTML = `<div class="image">
+                <a href="buybook.html?id=${index % 3}">
+                   <img src="${data[index].thumbnail}" alt ="${data[index].title}">
+                </a>
+                </div>
+                <h4><a href="buybook.html?id=${index % 3}">${data[index].title}</a></h4>`;
     }
 }
 
